@@ -72,10 +72,13 @@ const DigitalConstruction = () => {
           </div>
 
           <div className="bg-gray-100 rounded-xl overflow-hidden shadow-lg">
-            <img
-              src="/digital-construction.jpg"
-              alt="Digital Construction"
+            <video
+              src="/VR & AR Video.mp4"
               className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
             />
           </div>
         </div>
