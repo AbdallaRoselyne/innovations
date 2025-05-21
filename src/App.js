@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Mission from './components/Mission';
+import WorkSection from './components/WorkSection';
+import DigitalConstruction from './components/DigitalConstruction';
+import ElectricMobility from './components/ElectricMobility';
+import CleanFarming from './components/CleanFarming';
+import Gallery from './components/Gallery';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-sans bg-white">
+      <Header />
+      <Hero />
+      <Mission />
+      <WorkSection />
+      <DigitalConstruction />
+      <ElectricMobility />
+      <CleanFarming />
+      <Gallery />
+      <Contact />
+      <Footer />
     </div>
   );
 }
