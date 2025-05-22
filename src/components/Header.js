@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-auto py-4 px-6 items-center">
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <img src="/PDI - Logo.png" alt="Prodesign Innovation" className="h-[120px]"/>
-          </div>
+      <div className="flex items-center justify-between h-auto py-4 px-12">
+        {/* Logo (flush left) */}
+        <div className="flex-shrink-0">
+          <img
+            src="/PDI - Logo.png"
+            alt="Prodesign Innovation"
+            className="h-[120px] object-contain"
+          />
+        </div>
 
+        {/* Navigation (spaced out on the right) */}
+        <div className="flex items-center">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link
@@ -43,7 +47,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden ml-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-prodesign-blue focus:outline-none"

@@ -5,10 +5,10 @@ const Mission = () => {
     <section id="mission" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-prodesign-blue mb-4">
             Our Mission
           </h2>
-          <div className="w-20 h-1 bg-prodesign-blue mx-auto"></div>
+          <div className="w-20 h-1 bg-gray-800 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">

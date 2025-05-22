@@ -23,7 +23,7 @@ const Gallery = () => {
       id: 3,
       type: "image",
       category: "farming",
-      src: "/gallery/farming-1.jpg",
+      src: "/container-2.jpeg",
       alt: "Clean Farming",
     },
     {
@@ -37,7 +37,7 @@ const Gallery = () => {
       id: 5,
       type: "image",
       category: "ev",
-      src: "/gallery/ev-2.jpg",
+      src: "/scooter.jpg",
       alt: "Electric Scooter",
     },
     {
@@ -79,10 +79,10 @@ const Gallery = () => {
     <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-prodesign-blue mb-4">
             Gallery
           </h2>
-          <div className="w-20 h-1 bg-prodesign-blue mx-auto"></div>
+          <div className="w-20 h-1 bg-gray-800 mx-auto"></div>
         </div>
 
         <div className="flex justify-center mb-12">
