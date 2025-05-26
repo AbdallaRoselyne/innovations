@@ -73,7 +73,7 @@ const DigitalConstruction = () => {
 
           <div className="bg-gray-100 rounded-xl overflow-hidden shadow-lg">
             <video
-              src="/VR & AR Video.mp4"
+              src="/MyVideo_2.mp4"
               className="w-full h-full object-cover"
               autoPlay
               muted

@@ -71,27 +71,12 @@ const CleanFarming = () => {
           <div className="space-y-4">
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
               <img
-                src="/IMG_20220531_073514-cpy.jpg"
+                src="/vertical-farm.jpg"
                 alt="Vertical Farming"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md">
-                <img
-                  src="/farming-2.jpg"
-                  alt="Clean Farming"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md">
-                <img
-                  src="/farming-3.jpg"
-                  alt="Clean Farming"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

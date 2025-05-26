@@ -82,7 +82,7 @@ const ElectricMobility = () => {
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md">
               <video
-                src="/Scooter Video.mp4"
+                src="/Scooter-video.mp4"
                 className="w-full h-full object-cover"
                 autoPlay
                 muted

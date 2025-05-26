@@ -7,65 +7,74 @@ const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      type: "image",
-      category: "construction",
-      src: "/gallery/construction-1.jpg",
+      type: "video",
+      name: "Virtual Reality Prototype",
+      category: "Digital construction",
+      src: "MyVideo_1.mp4",
       alt: "Digital Construction",
     },
     {
       id: 2,
-      type: "image",
-      category: "ev",
-      src: "/gallery/ev-1.jpg",
+      type: "video",
+      name: "Electrical Scooter",
+      category: "Electric mobility",
+      src: "/scooter-video.mp4",
       alt: "Electric Vehicle",
     },
     {
       id: 3,
       type: "image",
-      category: "farming",
-      src: "/container-2.jpeg",
+      name: "Seedlings in Vertical Farm",
+      category: "Clean farming",
+      src: "/seedlings-2.jpg",
       alt: "Clean Farming",
     },
     {
       id: 4,
       type: "video",
-      category: "construction",
-      src: "/Digital Construction Video.mp4",
+      name: "BIM Modelling",
+      category: "Digital construction",
+      src: "/Digital-Construction-Video.mp4",
       alt: "Construction Video",
     },
     {
       id: 5,
       type: "image",
-      category: "ev",
+      name: "Electric Scooter",
+      category: "Electric mobility",
       src: "/scooter.jpg",
       alt: "Electric Scooter",
     },
     {
       id: 6,
       type: "image",
-      category: "farming",
-      src: "/IMG_20220531_073514.jpg",
+      name: "Container Farm",
+      category: "Clean farming",
+      src: "/vertical-farm.jpg",
       alt: "Vertical Farm",
     },
     {
       id: 7,
       type: "image",
-      category: "construction",
-      src: "/gallery/construction-2.jpg",
+      name: "Digital twin feedback loop",
+      category: "Digital construction",
+      src: "prototype.jpg",
       alt: "BIM Model",
     },
     {
       id: 8,
-      type: "video",
-      category: "ev",
-      src: "/gallery/ev-vid.mp4",
+      type: "image",
+      name: "Electric Scooter",
+      category: "Electric mobility",
+      src: "/Electric Scooter -01-Original.jpg",
       alt: "EV Prototype",
     },
     {
       id: 9,
       type: "image",
-      category: "farming",
-      src: "/IMG_20250407_141313913.jpg",
+      name: "Grow Lights",
+      category: "Clean farming",
+      src: "/grow_lights.jpg",
       alt: "Grow Lights",
     },
   ];
@@ -87,7 +96,12 @@ const Gallery = () => {
 
         <div className="flex justify-center mb-12">
           <div className="inline-flex rounded-md shadow-sm">
-            {["all", "construction", "ev", "farming"].map((tab) => (
+            {[
+              "all",
+              "Digital construction",
+              "Electric mobility",
+              "Clean farming",
+            ].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -96,14 +110,14 @@ const Gallery = () => {
                     ? "bg-prodesign-blue text-white"
                     : "bg-white text-gray-700 hover:bg-gray-100"
                 } ${tab === "all" ? "rounded-l-lg" : ""} ${
-                  tab === "farming" ? "rounded-r-lg" : ""
+                  tab === "Clean farming" ? "rounded-r-lg" : ""
                 }`}
               >
                 {tab === "all"
                   ? "All"
-                  : tab === "construction"
+                  : tab === "Digital construction"
                   ? "Digital Construction"
-                  : tab === "ev"
+                  : tab === "Electric mobility"
                   ? "Electric Mobility"
                   : "Clean Farming"}
               </button>
@@ -117,16 +131,22 @@ const Gallery = () => {
               key={item.id}
               className="relative group overflow-hidden rounded-lg shadow-md hover:shadow-lg transition"
             >
+              {item.name && (
+                <div className="absolute top-0 left-0 w-full bg-prodesign-blue bg-opacity-70 text-white p-4 z-10">
+                  <h3 className="text-lg font-semibold">{item.name}</h3>
+                </div>
+              )}
+
               {item.type === "image" ? (
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"
                 />
               ) : (
                 <video
                   src={item.src}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-full object-cover"
                   type="video/mp4"
                   controls
                   autoPlay

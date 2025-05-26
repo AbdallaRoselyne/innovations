@@ -10,7 +10,7 @@ const Header = () => {
         {/* Logo (flush left) */}
         <div className="flex-shrink-0">
           <img
-            src="/PDI - Logo.png"
+            src="/PDI-Logo.png"
             alt="Prodesign Innovation"
             className="h-[120px] object-contain"
           />
