@@ -12,12 +12,12 @@ const DigitalConstruction = () => {
         </div>
 
         <div className="mb-12">
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-6 text-lg leading-relaxed">
             Digital construction reduces waste and inefficiency. It is improving
             design and design teams coordination, identifying problems before
             construction, reducing materials and labour waste on site.
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-lg leading-relaxed">
             Digital tools like BIM, Virtual reality, augmented reality and
             construction digital twins shall change the way buildings shall be
             designed, constructed, operated and maintained.
@@ -30,7 +30,7 @@ const DigitalConstruction = () => {
               Featured Projects
             </h3>
 
-            <div className="space-y-8">
+            <div className="space-y-8 text-lg leading-relaxed">
               {[
                 {
                   title: "Automated BIM coordination process",
