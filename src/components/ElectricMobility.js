@@ -12,14 +12,14 @@ const ElectricMobility = () => {
         </div>
 
         <div className="mb-12">
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 text-lg mb-6 leading-relaxed">
             The main cause of climate change is burning fossil fuels such as
             oil, gas, and coal. They are by far the largest contributor to
             global climate change, accounting for over 75 per cent of global
             greenhouse gas emissions and nearly 90 per cent of all carbon
             dioxide emissions (UN).
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-lg leading-relaxed">
             Transport is one of the most pollutant sectors: it provides more
             than a quarter of greenhouse gas emissions, according to the latest
             study from the European Environment Agency (AEMA). Replacing fuel
@@ -31,8 +31,8 @@ const ElectricMobility = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-              Our Electric Vehicle Projects
+            <h3 className="text-3xl font-bold text-gray-800 mb-6">
+              Our Electric Mobility Projects
             </h3>
 
             <div className="space-y-6">
@@ -40,7 +40,7 @@ const ElectricMobility = () => {
                 <h4 className="text-lg font-semibold text-gray-800 mb-2">
                   Electric Scooters
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Since 2021 we have been researching and prototyping several
                   models of electric scooter which can be used as the last mile
                   transportation. Two prototypes are ready and under testing
@@ -52,7 +52,7 @@ const ElectricMobility = () => {
                 <h4 className="text-lg font-semibold text-gray-800 mb-2">
                   Other Models in Development
                 </h4>
-                <ul className="text-gray-600 list-disc pl-5">
+                <ul className="text-gray-600 text-lg list-disc pl-5 leading-relaxed">
                   <li>Electric cargo scooter</li>
                   <li>Electric delivery vehicle</li>
                   <li>Electric passenger vehicle</li>
