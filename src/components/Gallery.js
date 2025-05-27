@@ -19,7 +19,7 @@ const Gallery = () => {
       name: "Electrical Scooter",
       category: "Electric mobility",
       src: "/scooter_2.mp4",
-      alt: "Electric Vehicle",
+      alt: "Electric scooter",
     },
     {
       id: 3,

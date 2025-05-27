@@ -58,7 +58,7 @@ const Mission = () => {
               ></iframe>
             </div>
             <div className="mt-3 text-sm text-gray-500 text-center sm:text-left">
-              Watch our mission in action ||  © Mauritius Broadcasting Corporation (MBC) 2025
+              Watch our mission in action ||  Extract from MBC: Le Journal Télévisé- 11 Mai 2025
             </div>
           </div>
         </div>
