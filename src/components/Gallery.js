@@ -26,7 +26,7 @@ const Gallery = () => {
       type: "video",
       name: "Virtual Reality Prototype",
       category: "Digital construction",
-      src: "MyVideo_1_wutn7p.mp4",
+      src: "MyVideo_1_wutn7p",
       alt: "Digital Construction",
       tags: ["VR", "prototype", "tech"],
     },
@@ -35,7 +35,7 @@ const Gallery = () => {
       type: "video",
       name: "Electrical Scooter",
       category: "Electric mobility",
-      src: "Scooter_2_clmmtj.mp4",
+      src: "Scooter_2_clmmtj",
       alt: "Electric scooter",
       tags: ["scooter", "electric", "mobility"],
     },
@@ -53,7 +53,7 @@ const Gallery = () => {
       type: "video",
       name: "BIM Modelling",
       category: "Digital construction",
-      src: "Digital-Construction-Video_uy1bb0.mp4",
+      src: "Digital-Construction-Video_uy1bb0",
       alt: "Construction Video",
       tags: ["BIM", "modeling", "construction"],
     },
@@ -131,11 +131,10 @@ const Gallery = () => {
       width = 800,
       height = 450,
       quality = "auto",
-      format = "auto",
-      bitRate = "auto",
+      format = "mp4",
     } = transformations;
 
-    const transformString = `w_${width},h_${height},q_${quality},f_${format},br_${bitRate}`;
+    let transformString = `w_${width},h_${height},q_${quality}`;
     return `${CLOUDINARY_URL}/video/upload/${transformString}/${src}`;
   };
 
