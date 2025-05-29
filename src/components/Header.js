@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
+const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
+const CLOUDINARY_URL = `https://res.cloudinary.com/${cloudName}`;
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -38,7 +41,7 @@ const Header = () => {
           <div className="flex-shrink-0 group">
             <div className="relative">
               <img
-                src="/PD-Innovation.svg"
+                src={`${CLOUDINARY_URL}/image/upload/f_auto,q_auto/PD-Innovation_jx3asb.svg`}
                 alt="Prodesign Innovation"
                 className={`object-contain transition-all duration-500 ${
                   scrolled ? "h-16 md:h-20" : "h-20 md:h-24"

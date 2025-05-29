@@ -1,5 +1,8 @@
 import React from "react";
 
+const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
+const CLOUDINARY_URL = `https://res.cloudinary.com/${cloudName}`;
+
 const CleanFarming = () => {
   return (
     <section id="clean-farming" className="py-20 px-4 bg-white">
@@ -60,7 +63,7 @@ const CleanFarming = () => {
               <div className="relative group">
                 <div className="rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
                   <img
-                    src="/vertical-farm.jpg"
+                    src={`${CLOUDINARY_URL}/image/upload/f_auto,q_auto/vertical-farm_figzcd.jpg`}
                     alt="Vertical Indoor Farm with LED grow lights"
                     className="w-full h-80 md:h-96 object-cover mix-blend-overlay"
                   />
@@ -76,7 +79,7 @@ const CleanFarming = () => {
               <div className="relative group">
                 <div className="rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
                   <img
-                    src="/container.jpg"
+                    src={`${CLOUDINARY_URL}/image/upload/f_auto,q_auto/container_t2umio.jpg`}
                     alt="Containerised Farm with hydroponic systems"
                     className="w-full h-80 md:h-96 object-cover mix-blend-overlay"
                   />
@@ -138,7 +141,7 @@ const CleanFarming = () => {
               <div className="relative group">
                 <div className="rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
                   <img
-                    src="/grow_lights.jpg"
+                    src={`${CLOUDINARY_URL}/image/upload/f_auto,q_auto/grow_lights_vnxg0c.jpg`}
                     alt="LED grow lights with various color spectrums for plant growth"
                     className="w-full h-80 md:h-96 object-cover mix-blend-overlay"
                   />

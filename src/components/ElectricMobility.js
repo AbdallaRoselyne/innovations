@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
+const CLOUDINARY_URL = `https://res.cloudinary.com/${cloudName}`;
+
 const ElectricMobility = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
@@ -177,7 +180,7 @@ const ElectricMobility = () => {
 
                 {/* Video Element */}
                 <video
-                  src="/Scooter_2.mp4"
+                  src={`${CLOUDINARY_URL}/video/upload/q_auto/Scooter_2_clmmtj.mp4`}
                   className="w-full h-64 md:h-80 lg:h-96 object-cover"
                   autoPlay
                   muted
