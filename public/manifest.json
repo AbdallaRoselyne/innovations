@@ -1,0 +1,36 @@
+{
+  "short_name": "Prodesign Innovation",
+  "name": "Prodesign Innovation - Fighting Climate Change Through Innovation",
+  "description": "R&D arm of Prodesign creating innovative green products and services. Digital construction, electric vehicles, and clean farming solutions to combat climate change.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2D5A27",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "technology", "sustainability", "innovation"],
+  "lang": "en-US",
+  "scope": "/",
+  "id": "prodesign-innovation-pwa"
+}

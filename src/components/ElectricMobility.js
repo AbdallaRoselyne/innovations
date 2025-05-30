@@ -166,9 +166,7 @@ const ElectricMobility = () => {
 
           <div className="order-1 lg:order-2">
             <div className="relative">
-              {/* Video Container with Enhanced Styling */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
-                {/* Loading Placeholder */}
                 {!isVideoLoaded && (
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center z-10">
                     <div className="text-center text-white">
@@ -178,7 +176,6 @@ const ElectricMobility = () => {
                   </div>
                 )}
 
-                {/* Video Element */}
                 <video
                   src={`${CLOUDINARY_URL}/video/upload/q_auto/Scooter_2_clmmtj.mp4`}
                   className="w-full h-64 md:h-80 lg:h-96 object-cover"

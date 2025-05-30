@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-scroll';
+import React from "react";
+import { Link } from "react-scroll";
 
 const WorkSection = () => {
   return (
@@ -16,26 +16,34 @@ const WorkSection = () => {
           {[
             {
               title: "Digital Construction",
-              description: "Reducing waste and inefficiency in construction through digital tools.",
-              link: "digital-construction"
+              description:
+                "Reducing waste and inefficiency in construction through digital tools.",
+              link: "digital-construction",
             },
             {
               title: "Electrical Vehicles",
-              description: "Developing clean mobility solutions for a sustainable future.",
-              link: "electric-mobility"
+              description:
+                "Developing clean mobility solutions for a sustainable future.",
+              link: "electric-mobility",
             },
             {
               title: "Clean Farming",
-              description: "Innovative agricultural technologies for food security.",
-              link: "clean-farming"
-            }
+              description:
+                "Innovative agricultural technologies for food security.",
+              link: "clean-farming",
+            },
           ].map((item, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">{item.title}</h3>
+            <div
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                {item.title}
+              </h3>
               <p className="text-gray-600 mb-6">{item.description}</p>
-              <Link 
-                to={item.link} 
-                smooth={true} 
+              <Link
+                to={item.link}
+                smooth={true}
                 duration={500}
                 className="text-prodesign-blue font-medium hover:underline"
               >
