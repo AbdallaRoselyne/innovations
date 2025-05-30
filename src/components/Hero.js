@@ -70,11 +70,11 @@ const Hero = () => {
 
       {/* Content */}
       <div
-        className={`relative z-10 text-center mt-4 px-6 max-w-5xl mx-auto transition-all duration-1000 ${
+        className={`relative z-10 text-center px-6 max-w-5xl mx-auto transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h1 className="text-5xl md:text-7xl font-light mb-8 leading-tight tracking-tight">
+        <h1 className="text-4xl md:text-7xl font-light mb-8 leading-tight tracking-tight">
           We bring innovative{" "}
           <span className="font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             green products
