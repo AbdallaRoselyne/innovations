@@ -70,7 +70,7 @@ const Hero = () => {
 
       {/* Content */}
       <div
-        className={`relative z-10 text-center px-6 max-w-5xl mx-auto transition-all duration-1000 ${
+        className={`relative z-10 text-center mt-4 px-6 max-w-5xl mx-auto transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
