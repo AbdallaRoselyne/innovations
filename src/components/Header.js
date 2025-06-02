@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLeaf, faBolt, faCube, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLeaf,
+  faBolt,
+  faCube,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
 const CLOUDINARY_URL = `https://res.cloudinary.com/${cloudName}`;
@@ -34,10 +39,23 @@ const Header = () => {
     >
       {/* SVG Background Pattern */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-5">
-        <pattern id="pattern-circles" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+        <pattern
+          id="pattern-circles"
+          x="0"
+          y="0"
+          width="40"
+          height="40"
+          patternUnits="userSpaceOnUse"
+        >
           <circle cx="20" cy="20" r="1" fill="#3b82f6" />
         </pattern>
-        <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
+        <rect
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
+          fill="url(#pattern-circles)"
+        />
       </svg>
 
       <div className="relative">
@@ -85,8 +103,21 @@ const Header = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="relative w-10 h-10 rounded-full bg-gradient-to-r from-gray-100 to-gray-50 hover:from-blue-100 hover:to-purple-100 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl"
             >
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="45" fill="none" stroke="#3b82f6" strokeWidth="2" strokeDasharray="283" strokeDashoffset="283" className="transition-all duration-500 group-hover:stroke-dashoffset-0" />
+              <svg
+                className="absolute inset-0 w-full h-full"
+                viewBox="0 0 100 100"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="#3b82f6"
+                  strokeWidth="2"
+                  strokeDasharray="283"
+                  strokeDashoffset="283"
+                  className="transition-all duration-500 group-hover:stroke-dashoffset-0"
+                />
               </svg>
               <div className="relative w-6 h-6 flex flex-col justify-center items-center">
                 <span
@@ -137,7 +168,10 @@ const Header = () => {
                   <span className="relative z-10 transition-transform duration-200 group-hover:scale-105 flex items-center">
                     <FontAwesomeIcon icon={item.icon} className="mr-3" />
                     {item.label}
-                    <FontAwesomeIcon icon={faChevronRight} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
                   </span>
                 </Link>
               ))}

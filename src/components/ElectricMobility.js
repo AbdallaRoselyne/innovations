@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBolt, faMicrochip, faCarSide, faSearchDollar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBolt,
+  faMicrochip,
+  faCarSide,
+  faSearchDollar,
+} from "@fortawesome/free-solid-svg-icons";
 
 const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
 const CLOUDINARY_URL = `https://res.cloudinary.com/${cloudName}`;
@@ -11,10 +16,11 @@ const ElectricMobility = () => {
   const projects = [
     {
       title: "Electric Scooters",
-      description: "Since 2021 we have been researching and prototyping several models of electric scooter which can be used as the last mile transportation. Two prototypes are ready and under testing phase. Production shall begin in early 2023.",
+      description:
+        "Since 2021 we have been researching and prototyping several models of electric scooter which can be used as the last mile transportation. Two prototypes are ready and under testing phase. Production shall begin in early 2023.",
       icon: faBolt,
       tags: ["Prototype Ready", "Testing Phase"],
-      borderColor: "border-blue-500"
+      borderColor: "border-blue-500",
     },
     {
       title: "Other Models in Development",
@@ -23,36 +29,61 @@ const ElectricMobility = () => {
       items: [
         "Electric cargo scooter",
         "Electric delivery vehicle",
-        "Electric passenger vehicle"
+        "Electric passenger vehicle",
       ],
-      borderColor: "border-blue-600"
-    }
+      borderColor: "border-blue-600",
+    },
   ];
 
   return (
-    <section id="electric-mobility" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section
+      id="electric-mobility"
+      className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+    >
       {/* Floating SVG elements */}
-      <svg className="absolute top-20 left-10 w-40 h-40 opacity-10 animate-float" viewBox="0 0 200 200">
-        <path d="M100 0C44.8 0 0 44.8 0 100s44.8 100 100 100 100-44.8 100-100S155.2 0 100 0zm0 180c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z" fill="#3B82F6"/>
+      <svg
+        className="absolute top-20 left-10 w-40 h-40 opacity-10 animate-float"
+        viewBox="0 0 200 200"
+      >
+        <path
+          d="M100 0C44.8 0 0 44.8 0 100s44.8 100 100 100 100-44.8 100-100S155.2 0 100 0zm0 180c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z"
+          fill="#3B82F6"
+        />
       </svg>
-      
-      <svg className="absolute bottom-20 right-10 w-32 h-32 opacity-10 animate-float-delay" viewBox="0 0 200 200">
+
+      <svg
+        className="absolute bottom-20 right-10 w-32 h-32 opacity-10 animate-float-delay"
+        viewBox="0 0 200 200"
+      >
         <polygon points="100,0 200,100 100,200 0,100" fill="#10B981" />
       </svg>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">Electric</span> Mobility
+            <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
+              Electric
+            </span>{" "}
+            Mobility
           </h2>
-          
+
           <div className="relative inline-block">
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto rounded-full"></div>
-            <svg className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-28 h-2" viewBox="0 0 100 10">
-              <path d="M0,5 Q25,10 50,5 T100,5" stroke="#3B82F6" strokeWidth="2" fill="none" strokeDasharray="0,100" className="animate-draw" />
+            <svg
+              className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-28 h-2"
+              viewBox="0 0 100 10"
+            >
+              <path
+                d="M0,5 Q25,10 50,5 T100,5"
+                stroke="#3B82F6"
+                strokeWidth="2"
+                fill="none"
+                strokeDasharray="0,100"
+                className="animate-draw"
+              />
             </svg>
           </div>
-          
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
             Driving the future with sustainable transportation solutions
           </p>
@@ -83,7 +114,10 @@ const ElectricMobility = () => {
         <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
           <div className="order-2 lg:order-1">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 flex items-center">
-              <FontAwesomeIcon icon={faCarSide} className="text-blue-600 mr-3" />
+              <FontAwesomeIcon
+                icon={faCarSide}
+                className="text-blue-600 mr-3"
+              />
               Our Electric Mobility Projects
             </h3>
 
@@ -96,7 +130,10 @@ const ElectricMobility = () => {
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
-                        <FontAwesomeIcon icon={project.icon} className="text-xl" />
+                        <FontAwesomeIcon
+                          icon={project.icon}
+                          className="text-xl"
+                        />
                       </div>
                     </div>
                     <div className="flex-1">
@@ -111,7 +148,10 @@ const ElectricMobility = () => {
                       {project.tags && (
                         <div className="flex flex-wrap gap-2">
                           {project.tags.map((tag, i) => (
-                            <span key={i} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                            <span
+                              key={i}
+                              className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                            >
                               {tag}
                             </span>
                           ))}
@@ -137,7 +177,10 @@ const ElectricMobility = () => {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
-                      <FontAwesomeIcon icon={faSearchDollar} className="text-xl" />
+                      <FontAwesomeIcon
+                        icon={faSearchDollar}
+                        className="text-xl"
+                      />
                     </div>
                   </div>
                   <div>
@@ -203,10 +246,15 @@ const ElectricMobility = () => {
                 {[
                   { value: "2", label: "Prototypes", color: "blue" },
                   { value: "0", label: "CO₂ Emissions", color: "emerald" },
-                  { value: "100%", label: "Electric", color: "cyan" }
+                  { value: "100%", label: "Electric", color: "cyan" },
                 ].map((stat, index) => (
-                  <div key={index} className="text-center bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div className={`text-2xl font-bold text-${stat.color}-600`}>
+                  <div
+                    key={index}
+                    className="text-center bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
+                  >
+                    <div
+                      className={`text-2xl font-bold text-${stat.color}-600`}
+                    >
                       {stat.value}
                     </div>
                     <div className="text-sm text-gray-600">{stat.label}</div>

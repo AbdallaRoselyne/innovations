@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faCogs, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLightbulb,
+  faCogs,
+  faHandshake,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Mission = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,17 +31,17 @@ const Mission = () => {
     {
       text: "Our mission is to combat climate change by developing products and services that improve efficiency, use clean energy, and reduce waste.",
       delay: "delay-200",
-      icon: faLightbulb
+      icon: faLightbulb,
     },
     {
       text: "Backed by 25 years of engineering experience, we design and build production-ready prototypes.",
       delay: "delay-400",
-      icon: faCogs
+      icon: faCogs,
     },
     {
       text: "We're open to investor partnerships to scale our solutions.",
       delay: "delay-600",
-      icon: faHandshake
+      icon: faHandshake,
     },
   ];
 
@@ -48,9 +52,19 @@ const Mission = () => {
       className="py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden"
     >
       {/* Abstract SVG background */}
-      <svg className="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="absolute inset-0 w-full h-full opacity-5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <defs>
-          <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <pattern
+            id="dots"
+            x="0"
+            y="0"
+            width="40"
+            height="40"
+            patternUnits="userSpaceOnUse"
+          >
             <circle cx="10" cy="10" r="1" fill="#3b82f6" />
             <circle cx="30" cy="30" r="1" fill="#10b981" />
           </pattern>
@@ -59,11 +73,20 @@ const Mission = () => {
       </svg>
 
       {/* Floating SVG elements */}
-      <svg className="absolute top-20 left-10 w-40 h-40 opacity-10 animate-float" viewBox="0 0 200 200">
-        <path d="M100 0C44.8 0 0 44.8 0 100s44.8 100 100 100 100-44.8 100-100S155.2 0 100 0zm0 180c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z" fill="#3B82F6"/>
+      <svg
+        className="absolute top-20 left-10 w-40 h-40 opacity-10 animate-float"
+        viewBox="0 0 200 200"
+      >
+        <path
+          d="M100 0C44.8 0 0 44.8 0 100s44.8 100 100 100 100-44.8 100-100S155.2 0 100 0zm0 180c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z"
+          fill="#3B82F6"
+        />
       </svg>
-      
-      <svg className="absolute bottom-20 right-10 w-32 h-32 opacity-10 animate-float-delay" viewBox="0 0 200 200">
+
+      <svg
+        className="absolute bottom-20 right-10 w-32 h-32 opacity-10 animate-float-delay"
+        viewBox="0 0 200 200"
+      >
         <polygon points="100,0 200,100 100,200 0,100" fill="#10B981" />
       </svg>
 
@@ -82,8 +105,20 @@ const Mission = () => {
               </span>
             </h2>
 
-            <svg className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-2" viewBox="0 0 100 10">
-              <path d="M0,5 Q25,10 50,5 T100,5" stroke="#3B82F6" strokeWidth="2" fill="none" strokeDasharray="0,100" className={`transition-all duration-1000 delay-300 ${isVisible ? "stroke-dashoffset-0" : ""}`} />
+            <svg
+              className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-2"
+              viewBox="0 0 100 10"
+            >
+              <path
+                d="M0,5 Q25,10 50,5 T100,5"
+                stroke="#3B82F6"
+                strokeWidth="2"
+                fill="none"
+                strokeDasharray="0,100"
+                className={`transition-all duration-1000 delay-300 ${
+                  isVisible ? "stroke-dashoffset-0" : ""
+                }`}
+              />
             </svg>
           </div>
         </div>
@@ -105,10 +140,26 @@ const Mission = () => {
                 </span>
                 .
               </h3>
-              <svg className="absolute -left-4 top-0 h-full w-1" viewBox="0 0 10 100">
-                <line x1="5" y1="0" x2="5" y2="100" stroke="url(#gradient-line)" strokeWidth="2" />
+              <svg
+                className="absolute -left-4 top-0 h-full w-1"
+                viewBox="0 0 10 100"
+              >
+                <line
+                  x1="5"
+                  y1="0"
+                  x2="5"
+                  y2="100"
+                  stroke="url(#gradient-line)"
+                  strokeWidth="2"
+                />
                 <defs>
-                  <linearGradient id="gradient-line" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <linearGradient
+                    id="gradient-line"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
                     <stop offset="0%" stopColor="#3B82F6" />
                     <stop offset="100%" stopColor="#10B981" />
                   </linearGradient>
@@ -149,12 +200,36 @@ const Mission = () => {
           >
             <div className="relative group">
               {/* SVG decoration around video */}
-              <svg className="absolute -top-6 -left-6 w-24 h-24 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" viewBox="0 0 100 100">
-                <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="#3B82F6" strokeWidth="2" strokeDasharray="400" strokeDashoffset="400" className="group-hover:stroke-dashoffset-0 transition-all duration-1000" />
+              <svg
+                className="absolute -top-6 -left-6 w-24 h-24 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                viewBox="0 0 100 100"
+              >
+                <path
+                  d="M0,0 L100,0 L100,100 L0,100 Z"
+                  fill="none"
+                  stroke="#3B82F6"
+                  strokeWidth="2"
+                  strokeDasharray="400"
+                  strokeDashoffset="400"
+                  className="group-hover:stroke-dashoffset-0 transition-all duration-1000"
+                />
               </svg>
-              
-              <svg className="absolute -bottom-6 -right-6 w-24 h-24 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="40" fill="none" stroke="#10B981" strokeWidth="2" strokeDasharray="251" strokeDashoffset="251" className="group-hover:stroke-dashoffset-0 transition-all duration-1000" />
+
+              <svg
+                className="absolute -bottom-6 -right-6 w-24 h-24 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                viewBox="0 0 100 100"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="none"
+                  stroke="#10B981"
+                  strokeWidth="2"
+                  strokeDasharray="251"
+                  strokeDashoffset="251"
+                  className="group-hover:stroke-dashoffset-0 transition-all duration-1000"
+                />
               </svg>
 
               <div className="relative bg-white p-2 rounded-2xl shadow-xl overflow-hidden">
