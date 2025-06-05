@@ -33,8 +33,8 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
         scrolled
-          ? "bg-white/95 shadow-xl backdrop-blur-sm"
-          : "bg-white/90 shadow-md backdrop-blur-sm"
+          ? "bg-white"
+          : "bg-white"
       }`}
     >
       {/* SVG Background Pattern */}
@@ -73,7 +73,6 @@ const Header = () => {
                   scrolled ? "h-16 md:h-20" : "h-20 md:h-24"
                 }`}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
             </div>
           </div>
 
