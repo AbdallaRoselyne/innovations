@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faLightbulb,
   faCogs,
   faHandshake,
-  faLeaf,
+  faAward,
+  faTv,
+  faGlobe,
   faBolt,
-  faChartLine
 } from "@fortawesome/free-solid-svg-icons";
 
 const Mission = () => {
@@ -20,7 +20,7 @@ const Mission = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -32,68 +32,37 @@ const Mission = () => {
 
   const missionPoints = [
     {
-      text: "We engineer climate-forward solutions through purposeful R&D.",
-      icon: faLeaf,
-      color: "from-emerald-500 to-emerald-700"
-    },
-    {
       text: "We focus on creating technologies that improve energy efficiency, use clean energy, and reduce waste.",
       icon: faBolt,
-      color: "from-amber-500 to-amber-600"
+      color: "from-amber-400 to-amber-500"
     },
     {
-      text: "Backed by over 25 years of engineering experience, we turn ideas into production-ready prototypes.",
+      text: "Led by Vikram Bhujun and backed by over 25 years of engineering experience, we turn ideas into production-ready prototypes.",
       icon: faCogs,
-      color: "from-blue-500 to-blue-700"
+      color: "from-blue-500 to-blue-600"
     },
     {
       text: "We are open to investor partnerships to help scale our solutions.",
       icon: faHandshake,
-      color: "from-cyan-500 to-cyan-700"
+      color: "from-emerald-500 to-emerald-600"
     }
   ];
 
-  const differencePoints = [
+  const achievements = [
     {
-      title: "25+ Years of Excellence",
-      description: "Built on Prodesign's legacy as Mauritius' leading MEP and sustainability firm",
-      icon: (
-        <svg viewBox="0 0 100 100" className="w-8 h-8">
-          <rect x="10" y="10" width="80" height="80" rx="5" fill="none" stroke="currentColor" strokeWidth="4" />
-          <text x="50" y="60" textAnchor="middle" fill="currentColor" fontSize="40" fontFamily="Arial" fontWeight="bold">25</text>
-        </svg>
-      )
+      text: "Successful R&D projects with the Mauritius Research and Innovation Council (MRIC)",
+      icon: faAward,
+      color: "text-blue-600"
     },
     {
-      title: "Award-Winning Innovation",
-      description: "Recipient of Best BIM Company in Africa 2021",
-      icon: (
-        <svg viewBox="0 0 100 100" className="w-8 h-8">
-          <path d="M50,10 L70,40 L100,45 L75,70 L80,100 L50,85 L20,100 L25,70 L0,45 L30,40 Z" fill="none" stroke="currentColor" strokeWidth="4" />
-        </svg>
-      )
+      text: "Featured on CNN Africa and national television",
+      icon: faTv,
+      color: "text-purple-600"
     },
     {
-      title: "Media Recognition",
-      description: "Featured on CNN Africa and national television",
-      icon: (
-        <svg viewBox="0 0 100 100" className="w-8 h-8">
-          <rect x="15" y="20" width="70" height="60" rx="5" fill="none" stroke="currentColor" strokeWidth="4" />
-          <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" strokeWidth="4" />
-          <path d="M50,40 L50,60 M40,50 L60,50" stroke="currentColor" strokeWidth="4" />
-        </svg>
-      )
-    },
-    {
-      title: "Proven R&D Track Record",
-      description: "Successful projects with Mauritius Research and Innovation Council",
-      icon: (
-        <svg viewBox="0 0 100 100" className="w-8 h-8">
-          <path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="currentColor" strokeWidth="4" />
-          <path d="M35,35 L65,35 L65,65 L35,65 Z" fill="none" stroke="currentColor" strokeWidth="4" />
-          <path d="M20,20 L35,35 M80,20 L65,35 M80,80 L65,65 M20,80 L35,65" stroke="currentColor" strokeWidth="4" />
-        </svg>
-      )
+      text: "Best BIM Company in Africa 2021 - leadership in digital engineering and innovation",
+      icon: faGlobe,
+      color: "text-emerald-600"
     }
   ];
 
@@ -101,17 +70,22 @@ const Mission = () => {
     <section
       id="mission"
       ref={sectionRef}
-      className="py-24 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden"
+      className="relative py-24 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden"
     >
       {/* Organic background elements */}
-      <svg className="absolute top-0 left-0 w-full h-full opacity-10" viewBox="0 0 1200 800">
+      <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1200 800">
         <defs>
           <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
             <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.1" />
             <stop offset="100%" stopColor="#10B981" stopOpacity="0.1" />
           </radialGradient>
+          <pattern id="circuitPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M0 20 Q10 10 20 20 T40 20" fill="none" stroke="#3B82F6" strokeWidth="0.5" opacity="0.3" />
+            <path d="M20 0 Q10 10 20 20 T20 40" fill="none" stroke="#10B981" strokeWidth="0.5" opacity="0.3" />
+          </pattern>
         </defs>
-        <path d="M0,0 C200,100 400,50 600,150 C800,250 1000,100 1200,200 L1200,800 L0,800 Z" fill="url(#bgGradient)" />
+        <rect width="100%" height="100%" fill="url(#bgGradient)" />
+        <rect width="100%" height="100%" fill="url(#circuitPattern)" />
       </svg>
 
       {/* Floating abstract shapes */}
@@ -123,9 +97,9 @@ const Mission = () => {
       </svg>
 
       <div className="max-w-6xl mx-auto relative">
-        {/* Mission Section */}
-        <div className="mb-24">
-          <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        {/* Mission Header */}
+        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <div className="relative inline-block">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               <span className="relative">
                 <span className="relative z-10">Our</span>
@@ -135,89 +109,172 @@ const Mission = () => {
                 Mission
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto rounded-full"></div>
+            <svg className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-2" viewBox="0 0 100 10">
+              <path d="M0,5 Q25,10 50,5 T100,5" stroke="#3B82F6" strokeWidth="2" fill="none" className={`transition-all duration-1000 delay-300 ${isVisible ? "stroke-dashoffset-0" : ""}`} />
+            </svg>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}>
-              <div className="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-lg border border-gray-100/50">
-                <svg className="absolute top-0 left-0 w-full h-full opacity-10" viewBox="0 0 200 200">
-                  <path d="M20,20 L180,20 L180,180 L20,180 Z" fill="none" stroke="#3B82F6" strokeWidth="2" strokeDasharray="5,5" />
-                </svg>
-                
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-                  We engineer climate-forward solutions through purposeful R&D.
-                </h3>
-                
-                <p className="text-gray-600 mb-8">
-                  As the research and development arm of Prodesign, we focus on creating technologies that improve energy efficiency, use clean energy, and reduce waste.
+        {/* Mission Statement */}
+        <div className={`mb-16 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100/50 overflow-hidden">
+            {/* Decorative corner elements */}
+            <svg className="absolute top-0 left-0 w-24 h-24 opacity-20">
+              <path d="M0,0 L100,0 L0,100 Z" fill="#3B82F6" />
+            </svg>
+            <svg className="absolute bottom-0 right-0 w-24 h-24 opacity-20">
+              <path d="M100,100 L0,100 L100,0 Z" fill="#10B981" />
+            </svg>
+            
+            <div className="relative z-10 text-center">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-800 leading-relaxed mb-8">
+                We engineer{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent font-semibold">
+                  climate-forward solutions
+                </span>{" "}
+                through purposeful R&D.
+              </h3>
+              
+              <div className="relative max-w-3xl mx-auto">
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                  As the research and development arm of{" "}
+                  <span className="font-semibold text-gray-700">Prodesign</span>, we focus on creating technologies that improve energy efficiency, use clean energy, and reduce waste.
                 </p>
                 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-emerald-100 flex items-center justify-center text-blue-600">
-                    <FontAwesomeIcon icon={faLightbulb} className="text-xl" />
-                  </div>
-                  <p className="text-gray-700">
-                    Led by <span className="font-semibold text-blue-600">Vikram Bhujun</span> and backed by over 25 years of engineering experience.
-                  </p>
-                </div>
+                {/* Animated underline */}
+                <svg className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-2">
+                  <path d="M0,1 Q24,4 48,1 T96,1" stroke="#3B82F6" strokeWidth="2" fill="none" strokeDasharray="0,100" className={`transition-all duration-1000 delay-500 ${isVisible ? "stroke-dashoffset-0" : ""}`} />
+                </svg>
               </div>
-            </div>
-
-            <div className={`space-y-6 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}>
-              {missionPoints.map((point, index) => (
-                <div key={index} className={`group flex items-start gap-6 p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-100 hover:shadow-lg transition-all duration-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}>
-                  <div className="flex-shrink-0 mt-1">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${point.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                      <FontAwesomeIcon icon={point.icon} className="text-xl" />
-                    </div>
-                  </div>
-                  <p className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                    {point.text}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
 
-        {/* Why We're Different Section */}
-        <div className="pt-16 border-t border-gray-200/50">
-          <div className={`text-center mb-16 transition-all duration-1000 delay-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
-                Why We're Different
-              </span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto rounded-full"></div>
-          </div>
-
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-1000 delay-800 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            {differencePoints.map((point, index) => (
-              <div key={index} className="group relative bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100/50 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-emerald-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10">
-                  <div className="w-12 h-12 mb-4 text-blue-600 group-hover:text-emerald-600 transition-colors duration-300">
-                    {point.icon}
+        {/* Mission Points */}
+        <div className={`mb-20 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <div className="grid md:grid-cols-3 gap-6">
+            {missionPoints.map((point, index) => (
+              <div key={index} className="relative group overflow-hidden rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+                {/* Animated background */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${point.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                
+                {/* Decorative SVG */}
+                <svg className="absolute top-4 right-4 w-12 h-12 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                  <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="125.6" strokeDashoffset="125.6" className="group-hover:stroke-dashoffset-0 transition-all duration-1000" />
+                </svg>
+                
+                <div className="relative z-10 p-6">
+                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${point.color} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <FontAwesomeIcon icon={point.icon} className="text-xl" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-gray-900 transition-colors duration-300">
-                    {point.title}
-                  </h3>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                    {point.description}
+                  <p className="text-gray-700 text-lg leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
+                    {point.text}
                   </p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
 
-          <div className={`mt-12 text-center transition-all duration-1000 delay-900 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              At Prodesign Innovations, we combine real-world expertise with forward-looking innovation to carry this legacy forward—by engineering what's next.
-            </p>
+        {/* Why We're Different Section */}
+        <div className={`transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why we're{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
+                different
+              </span>
+            </h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto rounded-full" />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Story */}
+            <div className="relative">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                {/* Decorative elements */}
+                <svg className="absolute top-0 left-0 w-16 h-16 opacity-10">
+                  <path d="M0,0 L80,0 L80,80 L0,80 Z" fill="none" stroke="#3B82F6" strokeWidth="2" strokeDasharray="320" strokeDashoffset="320" className={`transition-all duration-1000 delay-700 ${isVisible ? "stroke-dashoffset-0" : ""}`} />
+                </svg>
+                
+                <p className="text-gray-700 text-lg leading-relaxed mb-6 relative z-10">
+                  <span className="font-semibold text-gray-900">Prodesign Innovations</span> is built on the foundation of over two decades of engineering excellence. As a subsidiary of{" "}
+                  <span className="font-semibold text-blue-600">Prodesign Engineering Consultants Ltd</span>—one of Mauritius's most established MEP and sustainability firms—we combine real-world expertise with forward-looking innovation.
+                </p>
+                
+                <div className="relative pl-6">
+                  <div className="absolute left-0 top-0 w-4 h-4 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full animate-pulse"></div>
+                  <p className="text-gray-600 text-base italic">
+                    At Prodesign Innovations, we carry this legacy forward—by{" "}
+                    <span className="font-semibold text-gray-800">engineering what's next</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Achievements */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                {/* Decorative elements */}
+                <svg className="absolute top-0 right-0 w-16 h-16 opacity-10">
+                  <circle cx="40" cy="40" r="36" fill="none" stroke="#10B981" strokeWidth="2" strokeDasharray="226" strokeDashoffset="226" className={`transition-all duration-1000 delay-700 ${isVisible ? "stroke-dashoffset-0" : ""}`} />
+                </svg>
+                
+                <h4 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3 relative z-10">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                    <FontAwesomeIcon icon={faAward} className="text-white text-sm" />
+                  </div>
+                  Recognition & Impact
+                </h4>
+                
+                <p className="text-gray-700 mb-6 relative z-10">
+                  Our work has been recognised nationally and internationally:
+                </p>
+
+                <div className="space-y-4 relative z-10">
+                  {achievements.map((achievement, index) => (
+                    <div
+                      key={index}
+                      className={`flex items-start gap-4 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/50 transition-all duration-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"}`}
+                      style={{ transitionDelay: isVisible ? `${index * 100 + 700}ms` : "0ms" }}
+                    >
+                      <div className="flex-shrink-0">
+                        <div className={`w-10 h-10 rounded-lg ${achievement.color} bg-opacity-20 flex items-center justify-center`}>
+                          <FontAwesomeIcon icon={achievement.icon} className={`${achievement.color}`} />
+                        </div>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        {achievement.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        @keyframes float-delay {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-15px) rotate(-3deg); }
+        }
+        
+        .animate-float {
+          animation: float 8s ease-in-out infinite;
+        }
+        
+        .animate-float-delay {
+          animation: float-delay 10s ease-in-out infinite;
+          animation-delay: 2s;
+        }
+      `}</style>
     </section>
   );
 };

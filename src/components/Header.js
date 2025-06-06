@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faLeaf,
-  faBolt,
-  faCube,
   faChevronRight,
+  faSeedling,
+  faLightbulb,
+  faUsers,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
@@ -24,17 +25,16 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { to: "mission", label: "Mission", icon: faLeaf },
-    { to: "work", label: "Our Work", icon: faCube },
-    { to: "contact", label: "Contact", icon: faBolt },
+    { to: "mission", label: "Mission", icon: faSeedling },
+    { to: "work", label: "Innovations", icon: faLightbulb },
+    { to: "about", label: "About Us", icon: faUsers },
+    { to: "contact", label: "Contact", icon: faEnvelope },
   ];
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
-        scrolled
-          ? "bg-white"
-          : "bg-white"
+        scrolled ? "bg-white" : "bg-white"
       }`}
     >
       {/* SVG Background Pattern */}
