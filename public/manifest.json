@@ -14,7 +14,13 @@
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "orientation": "portrait-primary",
-  "categories": ["business", "productivity", "technology", "sustainability", "innovation"],
+  "categories": [
+    "business",
+    "productivity",
+    "technology",
+    "sustainability",
+    "innovation"
+  ],
   "lang": "en-US",
   "scope": "/",
   "id": "prodesign-innovation-pwa"

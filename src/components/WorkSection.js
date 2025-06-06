@@ -283,7 +283,7 @@ const WorkSection = () => {
                   duration={500}
                   className="inline-flex items-center font-medium group-hover:text-blue-600 transition-colors duration-300"
                 >
-                  <span className="mr-2">Explore innovation</span>
+                  <span className="mr-2">Learn more</span>
                   <div className="relative w-6 h-6">
                     <FontAwesomeIcon
                       icon={faArrowRight}

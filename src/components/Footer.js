@@ -84,7 +84,7 @@ const Footer = () => {
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-500"></span>
             </h3>
             <ul className="space-y-3">
-              {["mission", "work", "contact"].map((link) => (
+              {["mission", "work", "about", "contact"].map((link) => (
                 <li key={link} className="group">
                   <Link
                     to={link}
@@ -153,12 +153,12 @@ const Footer = () => {
                 {
                   icon: faFacebookF,
                   color: "text-blue-400",
-                  url: "https://www.facebook.com/profile.php?id=100085406322247", 
+                  url: "https://www.facebook.com/profile.php?id=100085406322247",
                 },
                 {
                   icon: faTwitter,
                   color: "text-blue-300",
-                  url: "https://twitter.com/prodesign_inno", 
+                  url: "https://twitter.com/prodesign_inno",
                 },
                 {
                   icon: faLinkedinIn,

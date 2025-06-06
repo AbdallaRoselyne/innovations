@@ -185,8 +185,7 @@ const DigitalConstruction = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto relative">
-            Transforming the construction industry through innovative digital
-            solutions
+            Reinventing construction with digital intelligence{" "}
             <svg
               className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24"
               viewBox="0 0 100 10"

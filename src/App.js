@@ -9,6 +9,8 @@ import CleanFarming from "./components/CleanFarming";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import AboutUs from "./components/AboutUs";
+
 function App() {
   return (
     <div className="font-sans bg-white">
@@ -19,6 +21,7 @@ function App() {
       <DigitalConstruction />
       <ElectricMobility />
       <CleanFarming />
+      <AboutUs />
       <Gallery />
       <Contact />
       <Footer />
