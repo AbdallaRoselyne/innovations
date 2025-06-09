@@ -21,7 +21,6 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
-      {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src={`${CLOUDINARY_URL}/video/upload/q_auto/shutterstock_a0tog9.mp4`}
@@ -31,7 +30,6 @@ const Hero = () => {
         playsInline
       />
 
-      {/* Gradient overlay with organic SVG pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/50 to-black/70">
         <svg
           className="absolute inset-0 w-full h-full opacity-20"
@@ -44,7 +42,6 @@ const Hero = () => {
               height="100"
               patternUnits="userSpaceOnUse"
             >
-              {/* Organic blobs pattern */}
               <path
                 d="M30,50 Q50,30 70,50 T90,50 Q70,70 50,90 T10,50 Q30,30 50,10 T30,50 Z"
                 fill="none"
@@ -53,7 +50,6 @@ const Hero = () => {
                 strokeOpacity="0.5"
               />
             </pattern>
-            {/* Gradient definitions */}
             <radialGradient
               id="radial-glow"
               cx="50%"
@@ -71,7 +67,6 @@ const Hero = () => {
         </svg>
       </div>
 
-      {/* Floating decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated leaf particles */}
         {[...Array(12)].map((_, i) => (
@@ -91,11 +86,9 @@ const Hero = () => {
           </div>
         ))}
 
-        {/* Glowing orbs */}
         <div className="absolute top-1/4 left-1/5 w-16 h-16 rounded-full bg-emerald-400/10 blur-xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/4 w-24 h-24 rounded-full bg-cyan-400/10 blur-xl animate-pulse delay-1000"></div>
 
-        {/* Abstract SVG shapes */}
         <svg
           className="absolute top-10 left-10 w-48 h-48 opacity-10 animate-rotate-slow"
           viewBox="0 0 200 200"
@@ -122,13 +115,11 @@ const Hero = () => {
         </svg>
       </div>
 
-      {/* Main content */}
       <div
         className={`relative z-10 text-center px-6 max-w-5xl mx-auto transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        {/* Animated title with decorative elements */}
         <div className="relative inline-block">
           <h1 className="text-4xl md:text-7xl font-light mb-8 leading-tight tracking-tight">
             We engineer{" "}
@@ -152,11 +143,10 @@ const Hero = () => {
           Solving real problems through research, technology, and purpose
         </p>
 
-        <p className="text-lg md:text-xl mb-12 font-light text-gray-300 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl mb-12 font-bold text-white max-w-2xl mx-auto">
           Designed for impact. Built to scale. Ready for the right partners.{" "}
         </p>
 
-        {/* Enhanced buttons with more visual interest */}
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <Link
             to="work"
