@@ -130,7 +130,7 @@ const Hero = () => {
                 className="absolute -top-4 -right-8 text-emerald-400 text-2xl animate-wiggle"
               />
             </span>{" "}
-            That make a difference
+            that make a difference
           </h1>
           <div className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-emerald-400/0 via-emerald-400/80 to-cyan-400/0 rounded-full"></div>
         </div>
