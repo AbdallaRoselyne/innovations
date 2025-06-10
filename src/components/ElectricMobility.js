@@ -38,7 +38,7 @@ const ElectricMobility = () => {
   return (
     <section
       id="electric-mobility"
-      className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+      className="py-18 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
     >
       {/* Floating SVG elements */}
       <svg

@@ -35,7 +35,7 @@ const DigitalConstruction = () => {
       icon: faCode,
       image:
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495142/VR_zoxeil.jpg",
-      color: "bg-blue-500",
+      color: "bg-prodesign-blue",
       benefits: [
         "Accelerate design approvals",
         "Reduce rework and consultant review time",
@@ -73,7 +73,7 @@ const DigitalConstruction = () => {
       icon: faProjectDiagram,
       image:
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495141/prototype_jnqj9y.png",
-      color: "bg-emerald-500",
+      color: "bg-green-500",
       benefits: [
         "Enhanced decision-making during construction",
         "Early detection of site issues through live synchronisation",
@@ -481,36 +481,6 @@ const DigitalConstruction = () => {
                   />
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl p-8 md:p-12 text-white overflow-hidden relative">
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-
-          <div className="relative z-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Transform Your Construction Process?
-            </h3>
-            <p className="text-white/90 mb-8 max-w-2xl text-lg">
-              Discover how our digital construction solutions can optimize your
-              workflows, reduce costs, and improve project outcomes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/contact"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium text-center transition-colors"
-              >
-                Schedule a Demo
-              </a>
-              <a
-                href="/digital-construction"
-                className="bg-transparent border-2 border-white hover:bg-white/10 px-6 py-3 rounded-lg font-medium text-center transition-colors"
-              >
-                Explore All Solutions
-              </a>
             </div>
           </div>
         </div>
