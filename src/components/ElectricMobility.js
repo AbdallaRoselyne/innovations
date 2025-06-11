@@ -211,7 +211,7 @@ const ElectricMobility = () => {
                 )}
 
                 <video
-                  src={`${CLOUDINARY_URL}/video/upload/q_auto/Scooter_2_clmmtj.mp4`}
+                  src={`${CLOUDINARY_URL}/video/upload/q_auto/scoooterss_rgpouv.mp4`}
                   className="w-full h-64 md:h-80 lg:h-96 object-cover"
                   autoPlay
                   muted

@@ -17,7 +17,7 @@ const CleanFarming = () => {
       description:
         "This project was partially funded by the Mauritius Research and Innovation Council in 2021. We developed an indoor vertical farm which uses a custom designed lighting system that delivers a lighting recipe for the optimal growth of baby leaves and microgreens.",
       image: "vertical-farm_figzcd.jpg",
-      tags: ["Custom Lighting", "Baby Leaves", "Microgreens"],
+      tags: ["Engineered Lighting", "Scalable", "Optimised Growth"],
       icon: faSeedling,
     },
     {
@@ -25,7 +25,7 @@ const CleanFarming = () => {
       description:
         "We are currently working on the development of connected mobile containerised farms. These farms shall be all connected to our IoT platform where data on plant growth from hundreds of farms shall be captured on the IoT platform, analysed, using AI to improve yield and food safety.",
       image: "container_t2umio.jpg",
-      tags: ["IoT Connected", "AI Analytics", "Mobile Farms"],
+      tags: ["Smart farming", "Data driven", "High profitability"],
       icon: faBoxOpen,
     },
     {
@@ -33,7 +33,7 @@ const CleanFarming = () => {
       description:
         "We are continuing the research to develop other indoor farming lighting for optimal growth and high yield of strawberries, tomatoes, capsicum and other fruiting plants. We are running many planting trials to develop the best spectrum using various LED color combinations.",
       image: "grow_lights_vnxg0c.jpg",
-      tags: ["LED Spectrum", "High Yield", "Energy Efficient"],
+      tags: ["Optimised Spectrum", "High efficiency", "Long life"],
       icon: faLightbulb,
     },
   ];

@@ -142,7 +142,7 @@ const AboutUs = () => {
       icon: faAward,
     },
     {
-      year: "2024",
+      year: "2020",
       title: "Innovation Lab",
       description: "Launch of Prodesign Innovations R&D division",
       icon: faLightbulb,

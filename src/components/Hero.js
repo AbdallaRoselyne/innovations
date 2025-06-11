@@ -120,7 +120,7 @@ const Hero = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="relative inline-block">
+        <div className="relative inline-block mt-4">
           <h1 className="text-4xl md:text-7xl font-light mb-8 leading-tight tracking-tight">
             We engineer{" "}
             <span className="relative font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
