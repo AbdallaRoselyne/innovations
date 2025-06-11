@@ -20,7 +20,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-20 pb-8">
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src={`${CLOUDINARY_URL}/video/upload/q_auto/shutterstock_a0tog9.mp4`}
@@ -120,14 +120,14 @@ const Hero = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="relative inline-block mt-8">
-          <h1 className="text-4xl md:text-7xl font-light mb-8 leading-tight tracking-tight">
+        <div className="relative inline-block">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-light mb-6 md:mb-8 leading-tight tracking-tight">
             We engineer{" "}
             <span className="relative font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               green Innovations
               <FontAwesomeIcon
                 icon={faSeedling}
-                className="absolute -top-4 -right-8 text-emerald-400 text-2xl animate-wiggle"
+                className="absolute -top-2 md:-top-4 -right-4 md:-right-8 text-emerald-400 text-lg md:text-2xl animate-wiggle"
               />
             </span>{" "}
             that make a difference
@@ -135,27 +135,27 @@ const Hero = () => {
           <div className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-emerald-400/0 via-emerald-400/80 to-cyan-400/0 rounded-full"></div>
         </div>
 
-        <p className="text-xl md:text-2xl mb-8 font-light text-gray-200 max-w-3xl mx-auto relative">
+        <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 font-light text-gray-200 max-w-3xl mx-auto relative">
           <FontAwesomeIcon
             icon={faLightbulb}
-            className="absolute -left-8 top-1 text-emerald-400/50"
+            className="absolute -left-6 md:-left-8 top-1 text-emerald-400/50"
           />
           Solving real problems through research, technology, and purpose
         </p>
 
-        <p className="text-lg md:text-xl mb-12 font-bold text-white max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-12 font-bold text-white max-w-2xl mx-auto">
           Designed for impact. Built to scale. Ready for the right partners.{" "}
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
           <Link
             to="work"
             smooth={true}
             duration={800}
-            className="group relative bg-white text-gray-900 px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden"
+            className="group relative bg-white text-gray-900 px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative z-10 flex items-center justify-center gap-2">
+            <span className="relative z-10 flex items-center justify-center gap-2 text-sm md:text-base">
               Explore Our Innovations
               <span className="relative inline-block">
                 <FontAwesomeIcon
@@ -171,11 +171,11 @@ const Hero = () => {
             to="contact"
             smooth={true}
             duration={800}
-            className="group relative border-2 border-white/80 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300 cursor-pointer overflow-hidden"
+            className="group relative border-2 border-white/80 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300 cursor-pointer overflow-hidden"
           >
             <div className="absolute inset-0 bg-white/5 backdrop-blur-sm group-hover:bg-white/10 transition-colors duration-300" />
             <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-emerald-400/30 transition-all duration-500"></div>
-            <span className="relative z-10 flex items-center justify-center gap-2">
+            <span className="relative z-10 flex items-center justify-center gap-2 text-sm md:text-base">
               <FontAwesomeIcon icon={faPlay} className="text-emerald-400" />
               Partner with Us
             </span>
