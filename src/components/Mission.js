@@ -292,13 +292,13 @@ const Mission = () => {
                   />
                 </svg>
 
-                <p className="text-gray-700 text-2xl leading-relaxed mb-6 relative z-10">
+                <p className="text-gray-700 text-lg leading-relaxed mb-6 relative z-10">
                   <span className="font-semibold text-gray-900">
                     Prodesign Innovation
                   </span>{" "}
                   is built on the foundation of over two decades of engineering
                   excellence. As a subsidiary of{" "}
-                  <span className="font-bold text-blue-600">
+                  <span className="font-semibold text-blue-600">
                     ProDesign Engineering Consultants Ltd
                   </span>
                   —one of Mauritius's most established MEP and sustainability
@@ -306,9 +306,20 @@ const Mission = () => {
                   innovation.
                 </p>
 
+                <p className="text-gray-600 text-lg mb-6 relative z-10">
+                  Our team, led by{" "}
+                  <span className="font-semibold text-gray-800">
+                    experts
+                  </span>
+                  , has a proven track record in delivering cutting-edge
+                  engineering solutions. From pioneering energy-efficient
+                  systems to developing smart technologies, we are committed to
+                  sustainability and innovation.
+                </p>
+
                 <div className="relative pl-6">
                   <div className="absolute left-0 top-0 w-4 h-4 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full animate-pulse"></div>
-                  <p className="text-gray-600 text-base font-bold">
+                  <p className="text-gray-600 text-base italic">
                     At Prodesign Innovation, we carry this legacy forward—by{" "}
                     <span className="font-semibold text-gray-800">
                       engineering what's next
