@@ -298,10 +298,11 @@ const Mission = () => {
                   </span>{" "}
                   is built on the foundation of over two decades of engineering
                   excellence. As a subsidiary of{" "}
+                  <br />
                   <span className="font-semibold text-blue-600">
                     Pro-Design Engineering Consultants Ltd
                   </span>
-                  —one of Mauritius's most established MEP and sustainability
+                  - one of Mauritius's most established MEP and sustainability
                   firms—we combine real-world expertise with forward-looking
                   innovation.
                 </p>
