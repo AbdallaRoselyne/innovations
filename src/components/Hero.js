@@ -177,7 +177,7 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-emerald-400/30 transition-all duration-500"></div>
             <span className="relative z-10 flex items-center justify-center gap-2 text-sm md:text-base">
               <FontAwesomeIcon icon={faPlay} className="text-emerald-400" />
-              Partner with Us
+              Partner With Us
             </span>
           </Link>
         </div>
