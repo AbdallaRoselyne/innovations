@@ -6,7 +6,6 @@ import {
   faAward,
   faTv,
   faGlobe,
-  faBolt,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Mission = () => {
@@ -31,11 +30,6 @@ const Mission = () => {
   }, []);
 
   const missionPoints = [
-    {
-      text: "We focus on creating technologies that improve energy efficiency, use clean energy, and reduce waste.",
-      icon: faBolt,
-      color: "from-amber-400 to-amber-500",
-    },
     {
       text: "Led by Vikram Bhujun and backed by over 25 years of engineering experience, we turn ideas into production-ready prototypes.",
       icon: faCogs,
@@ -222,7 +216,7 @@ const Mission = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {missionPoints.map((point, index) => (
               <div
                 key={index}
