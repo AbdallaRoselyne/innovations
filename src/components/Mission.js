@@ -292,13 +292,13 @@ const Mission = () => {
                   />
                 </svg>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-6 relative z-10">
+                <p className="text-gray-700 text-2xl leading-relaxed mb-6 relative z-10">
                   <span className="font-semibold text-gray-900">
                     Prodesign Innovation
                   </span>{" "}
                   is built on the foundation of over two decades of engineering
                   excellence. As a subsidiary of{" "}
-                  <span className="font-semibold text-blue-600">
+                  <span className="font-bold text-blue-600">
                     ProDesign Engineering Consultants Ltd
                   </span>
                   —one of Mauritius's most established MEP and sustainability
@@ -308,7 +308,7 @@ const Mission = () => {
 
                 <div className="relative pl-6">
                   <div className="absolute left-0 top-0 w-4 h-4 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full animate-pulse"></div>
-                  <p className="text-gray-600 text-base italic">
+                  <p className="text-gray-600 text-base font-bold">
                     At Prodesign Innovation, we carry this legacy forward—by{" "}
                     <span className="font-semibold text-gray-800">
                       engineering what's next
