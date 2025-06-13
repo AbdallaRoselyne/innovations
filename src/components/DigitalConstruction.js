@@ -277,7 +277,7 @@ const DigitalConstruction = () => {
                 Digital Intelligence in Construction
               </h3>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                At Prodesign Innovations, our digital construction R&D tackles
+                At Prodesign Innovation, our digital construction R&D tackles
                 one of the industry's biggest challenges: inefficiency. We're
                 building advanced tools that optimize workflows, reduce material
                 waste, and prevent costly on-site errors—before construction

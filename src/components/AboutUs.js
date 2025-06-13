@@ -63,8 +63,7 @@ const AboutUs = () => {
   const achievements = [
     {
       icon: faAward,
-      title: "Best BIM Company in Africa",
-      year: "2021",
+      title: "Best BIM Company in Africa in 2021",
       description:
         "Recognized for leadership in digital engineering innovation",
       color: "from-yellow-400 to-orange-500",
@@ -72,24 +71,23 @@ const AboutUs = () => {
     },
     {
       icon: faRocket,
-      title: "MRIC R&D Projects",
-      year: "Multiple",
-      description: "Successfully delivered government-funded research projects",
+      title: "Research and Development Projects",
+      description:
+        "Successfully delivered government-funded research projects with MRIC",
       color: "from-blue-500 to-purple-600",
       delay: "delay-400",
     },
     {
       icon: faTv,
-      title: "CNN Africa Feature",
-      year: "Recent",
-      description: "International recognition on global media platforms",
+      title: "Media Visibility",
+      description:
+        "Featured on CNN Africa, national television, and leading regional media",
       color: "from-green-500 to-teal-600",
       delay: "delay-600",
     },
     {
       icon: faCubes,
       title: "BIM Pioneer",
-      year: "Since 2008",
       description: "First engineering firm in Mauritius to implement BIM",
       color: "from-purple-500 to-pink-600",
       delay: "delay-800",
@@ -135,7 +133,7 @@ const AboutUs = () => {
         "First engineering firm in Mauritius to implement BIM technology",
       icon: faCubes,
     },
-     {
+    {
       year: "2020",
       title: "Innovation Lab",
       description: "Launch of Prodesign Innovations R&D division",
@@ -144,10 +142,9 @@ const AboutUs = () => {
     {
       year: "2021",
       title: "African Recognition",
-      description: "Awarded Best BIM Company in Africa",
+      description: "Awarded Best BIM Company in Africa in 2021",
       icon: faAward,
     },
-  
   ];
 
   return (
@@ -490,12 +487,6 @@ const AboutUs = () => {
                       icon={achievement.icon}
                       className="text-white text-2xl"
                     />
-                  </div>
-
-                  <div className="mb-3">
-                    <span className="text-sm font-bold text-gray-500 uppercase tracking-wide">
-                      {achievement.year}
-                    </span>
                   </div>
 
                   <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
