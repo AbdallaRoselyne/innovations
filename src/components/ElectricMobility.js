@@ -6,12 +6,10 @@ import {
   Cpu,
   Car,
   DollarSign,
-  Target,
   MapPin,
   Battery,
   Wrench,
   TrendingUp,
-  Globe,
   Users,
   CheckCircle,
 } from "lucide-react";
@@ -21,38 +19,9 @@ const CLOUDINARY_URL = `https://res.cloudinary.com/${cloudName}`;
 
 const ElectricMobility = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const [activeTab, setActiveTab] = useState("prototypes");
   const [isVisible, setIsVisible] = useState(false);
-  const [currentStat, setCurrentStat] = useState(0);
   const [activePrototype, setActivePrototype] = useState(0);
   const sectionRef = useRef(null);
-
-  const stats = [
-    {
-      value: "2",
-      label: "Working Prototypes",
-      icon: Target,
-      color: "from-blue-500 to-blue-600",
-    },
-    {
-      value: "0",
-      label: "CO₂ Emissions",
-      icon: Globe,
-      color: "from-emerald-500 to-emerald-600",
-    },
-    {
-      value: "100%",
-      label: "Electric Power",
-      icon: Battery,
-      color: "from-cyan-500 to-cyan-600",
-    },
-    {
-      value: "2021",
-      label: "Development Start",
-      icon: TrendingUp,
-      color: "from-purple-500 to-purple-600",
-    },
-  ];
 
   const prototypes = [
     {
@@ -181,13 +150,6 @@ const ElectricMobility = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section
       ref={sectionRef}
@@ -263,45 +225,155 @@ const ElectricMobility = () => {
           </div>
         </div>
 
-        {/* Interactive Stats Bar */}
-        <div className="mb-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              const isActive = index === currentStat;
-              return (
-                <div
-                  key={index}
-                  className={`relative bg-white rounded-2xl p-6 shadow-lg transition-all duration-500 ${
-                    isActive ? "scale-105 shadow-2xl" : "hover:scale-102"
-                  }`}
-                >
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${
-                      stat.color
-                    } opacity-0 ${
-                      isActive ? "opacity-10" : ""
-                    } rounded-2xl transition-opacity duration-500`}
-                  ></div>
-
-                  <div className="relative z-10">
-                    <div
-                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stat.color} text-white flex items-center justify-center mb-3 mx-auto`}
-                    >
-                      <IconComponent className="w-6 h-6" />
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+          {/* Video Section */}
+          <div className="order-2 lg:order-1">
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-900 to-black">
+                {!isVideoLoaded && (
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center z-10">
+                    <div className="text-center text-white">
+                      <div className="animate-spin rounded-full h-16 w-16 border-4 border-white border-t-transparent mx-auto mb-4"></div>
+                      <p className="text-xl font-semibold">
+                        Loading Innovation...
+                      </p>
                     </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-gray-800 mb-1">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-gray-600 font-medium">
-                        {stat.label}
-                      </div>
+                  </div>
+                )}
+
+                <video
+                  src={`${CLOUDINARY_URL}/video/upload/q_auto/scoooterss_rgpouv.mp4`}
+                  className="w-full h-80 lg:h-96 object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  onLoadedData={() => setIsVideoLoaded(true)}
+                  poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzc0MTUxIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkVsZWN0cmljIFNjb290ZXIgUHJvdG90eXBlPC90ZXh0Pjwvc3ZnPg=="
+                />
+
+                {/* Enhanced Video Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                <div className="absolute top-6 left-6 flex gap-3">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
+                    <span className="text-sm font-bold text-gray-800 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      Live Demo
+                    </span>
+                  </div>
+                  <div className="bg-emerald-500/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
+                    <span className="text-sm font-bold text-white">
+                      Zero Emissions
+                    </span>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                  <h4 className="text-white font-bold text-2xl mb-2">
+                    Electric Scooter Prototype
+                  </h4>
+                  <p className="text-white/90 text-lg mb-4">
+                    Sustainable last-mile transportation solution
+                  </p>
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-2 text-white/80">
+                      <MapPin className="w-4 h-4" />
+                      <span className="text-sm">Made in Mauritius</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/80">
+                      <Battery className="w-4 h-4" />
+                      <span className="text-sm">100% Electric</span>
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+          </div>
+
+          {/* Project Details */}
+          <div className="order-1 lg:order-2">
+            <div className="space-y-8">
+              {projects.map((project, index) => {
+                const IconComponent = project.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-100/50 hover:shadow-2xl transition-all duration-500 hover:scale-102"
+                  >
+                    <div className="flex items-start gap-6">
+                      <div
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} text-white flex items-center justify-center shadow-lg`}
+                      >
+                        <IconComponent className="w-8 h-8" />
+                      </div>
+
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-3">
+                          <h4 className="text-2xl font-bold text-gray-800">
+                            {project.title}
+                          </h4>
+                          <span className="text-sm font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                            {project.subtitle}
+                          </span>
+                        </div>
+
+                        <p className="text-gray-600 leading-relaxed mb-6 text-lg">
+                          {project.description}
+                        </p>
+
+                        {/* Progress Bar */}
+                        <div className="mb-6">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm font-medium text-gray-700">
+                              Development Progress
+                            </span>
+                            <span className="text-sm font-bold text-gray-800">
+                              {project.progress}%
+                            </span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-3">
+                            <div
+                              className={`h-3 bg-gradient-to-r ${project.gradient} rounded-full transition-all duration-1000 ease-out`}
+                              style={{
+                                width: isVisible
+                                  ? `${project.progress}%`
+                                  : "0%",
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+
+                        {/* Features */}
+                        <div className="space-y-3 mb-6">
+                          {project.features.map((feature, i) => (
+                            <div key={i} className="flex items-center gap-3">
+                              <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                              <span className="text-gray-700 font-medium">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2">
+                          {project.tags.map((tag, i) => (
+                            <span
+                              key={i}
+                              className={`px-4 py-2 bg-gradient-to-r ${project.gradient} text-white rounded-full text-sm font-semibold shadow-lg`}
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -525,157 +597,7 @@ const ElectricMobility = () => {
           </div>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
-          {/* Video Section */}
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-900 to-black">
-                {!isVideoLoaded && (
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center z-10">
-                    <div className="text-center text-white">
-                      <div className="animate-spin rounded-full h-16 w-16 border-4 border-white border-t-transparent mx-auto mb-4"></div>
-                      <p className="text-xl font-semibold">
-                        Loading Innovation...
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                <video
-                  src={`${CLOUDINARY_URL}/video/upload/q_auto/scoooterss_rgpouv.mp4`}
-                  className="w-full h-80 lg:h-96 object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  onLoadedData={() => setIsVideoLoaded(true)}
-                  poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzc0MTUxIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkVsZWN0cmljIFNjb290ZXIgUHJvdG90eXBlPC90ZXh0Pjwvc3ZnPg=="
-                />
-
-                {/* Enhanced Video Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-
-                <div className="absolute top-6 left-6 flex gap-3">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                    <span className="text-sm font-bold text-gray-800 flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                      Live Demo
-                    </span>
-                  </div>
-                  <div className="bg-emerald-500/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                    <span className="text-sm font-bold text-white">
-                      Zero Emissions
-                    </span>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
-                  <h4 className="text-white font-bold text-2xl mb-2">
-                    Electric Scooter Prototype
-                  </h4>
-                  <p className="text-white/90 text-lg mb-4">
-                    Sustainable last-mile transportation solution
-                  </p>
-                  <div className="flex gap-4">
-                    <div className="flex items-center gap-2 text-white/80">
-                      <MapPin className="w-4 h-4" />
-                      <span className="text-sm">Made in Mauritius</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-white/80">
-                      <Battery className="w-4 h-4" />
-                      <span className="text-sm">100% Electric</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Project Details */}
-          <div className="order-1 lg:order-2">
-            <div className="space-y-8">
-              {projects.map((project, index) => {
-                const IconComponent = project.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-100/50 hover:shadow-2xl transition-all duration-500 hover:scale-102"
-                  >
-                    <div className="flex items-start gap-6">
-                      <div
-                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} text-white flex items-center justify-center shadow-lg`}
-                      >
-                        <IconComponent className="w-8 h-8" />
-                      </div>
-
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-3">
-                          <h4 className="text-2xl font-bold text-gray-800">
-                            {project.title}
-                          </h4>
-                          <span className="text-sm font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                            {project.subtitle}
-                          </span>
-                        </div>
-
-                        <p className="text-gray-600 leading-relaxed mb-6 text-lg">
-                          {project.description}
-                        </p>
-
-                        {/* Progress Bar */}
-                        <div className="mb-6">
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="text-sm font-medium text-gray-700">
-                              Development Progress
-                            </span>
-                            <span className="text-sm font-bold text-gray-800">
-                              {project.progress}%
-                            </span>
-                          </div>
-                          <div className="w-full bg-gray-200 rounded-full h-3">
-                            <div
-                              className={`h-3 bg-gradient-to-r ${project.gradient} rounded-full transition-all duration-1000 ease-out`}
-                              style={{
-                                width: isVisible
-                                  ? `${project.progress}%`
-                                  : "0%",
-                              }}
-                            ></div>
-                          </div>
-                        </div>
-
-                        {/* Features */}
-                        <div className="space-y-3 mb-6">
-                          {project.features.map((feature, i) => (
-                            <div key={i} className="flex items-center gap-3">
-                              <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                              <span className="text-gray-700 font-medium">
-                                {feature}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2">
-                          {project.tags.map((tag, i) => (
-                            <span
-                              key={i}
-                              className={`px-4 py-2 bg-gradient-to-r ${project.gradient} text-white rounded-full text-sm font-semibold shadow-lg`}
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        
 
         {/* Investment Opportunity Section */}
         <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-emerald-900 text-white p-12 rounded-3xl shadow-2xl relative overflow-hidden">
