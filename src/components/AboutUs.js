@@ -135,18 +135,19 @@ const AboutUs = () => {
         "First engineering firm in Mauritius to implement BIM technology",
       icon: faCubes,
     },
+     {
+      year: "2020",
+      title: "Innovation Lab",
+      description: "Launch of Prodesign Innovations R&D division",
+      icon: faLightbulb,
+    },
     {
       year: "2021",
       title: "African Recognition",
       description: "Awarded Best BIM Company in Africa",
       icon: faAward,
     },
-    {
-      year: "2020",
-      title: "Innovation Lab",
-      description: "Launch of Prodesign Innovations R&D division",
-      icon: faLightbulb,
-    },
+  
   ];
 
   return (
