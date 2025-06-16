@@ -154,7 +154,7 @@ const ElectricMobility = () => {
     <section
       ref={sectionRef}
       id="electric-mobility"
-      className="py-20 px-4 bg-gradient-to-br from-slate-50 via-blue-50/30 to-emerald-50/30 relative overflow-hidden min-h-screen"
+      className="py-20 px-4 bg-gray-800 relative overflow-hidden min-h-screen"
     >
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
