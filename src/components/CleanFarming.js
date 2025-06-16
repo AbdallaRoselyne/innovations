@@ -142,7 +142,7 @@ const CleanFarming = () => {
   );
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-500 via-white to-emerald-500 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating particles */}
