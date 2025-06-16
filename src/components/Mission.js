@@ -297,11 +297,15 @@ const Mission = () => {
                     Prodesign Innovation
                   </span>{" "}
                   is built on the foundation of over two decades of engineering
-                  excellence. As a subsidiary of{" "}
-                  <br />
-                  <span className="font-semibold text-blue-600">
+                  excellence. As a subsidiary of <br />
+                  <a
+                    href="https://www.prodesign.mu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-blue-600"
+                  >
                     Pro-Design Engineering Consultants Ltd
-                  </span>
+                  </a>
                   - one of Mauritius's most established MEP and sustainability
                   firms—we combine real-world expertise with forward-looking
                   innovation.
@@ -309,10 +313,8 @@ const Mission = () => {
 
                 <p className="text-gray-600 text-lg mb-6 relative z-10">
                   Our team, led by{" "}
-                  <span className="font-semibold text-gray-800">
-                    experts
-                  </span>
-                  , has a proven track record in delivering cutting-edge
+                  <span className="font-semibold text-gray-800">experts</span>,
+                  has a proven track record in delivering cutting-edge
                   engineering solutions. From pioneering energy-efficient
                   systems to developing smart technologies, we are committed to
                   sustainability and innovation.

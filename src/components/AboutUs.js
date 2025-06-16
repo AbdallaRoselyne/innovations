@@ -296,9 +296,14 @@ const AboutUs = () => {
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-500">
                   <p className="text-lg text-gray-700 leading-relaxed mb-6">
                     Founded in 1997,{" "}
-                    <span className="font-bold text-prodesign-blue">
+                    <a
+                      href="https://www.prodesign.mu/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-blue-600"
+                    >
                       Pro-Design Engineering Consultants Ltd
-                    </span>{" "}
+                    </a>{" "}
                     is one of Mauritius's leading MEP and sustainability
                     consultancies.
                   </p>

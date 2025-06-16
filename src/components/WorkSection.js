@@ -76,7 +76,7 @@ const WorkSection = () => {
         "Clean mobility, engineered for real-world use. Our R&D in electric vehicle platforms focuses on short-range cargo and urban solutions—practical, efficient, and designed for tropical conditions.",
       link: "electric-mobility",
       icon: faCar,
-      color: "from-emerald-500 to-emerald-700",
+      color: "from-cyan-500 to-cyan-700",
       svg: (
         <svg
           viewBox="0 0 200 200"
@@ -119,7 +119,7 @@ const WorkSection = () => {
         "Technology-driven farming for a food-secure future. We design compact, automated farming systems—ideal for urban areas, food deserts, and climate-vulnerable regions.",
       link: "clean-farming",
       icon: faLeaf,
-      color: "from-cyan-500 to-cyan-700",
+      color: "from-emerald-500 to-emerald-700",
       svg: (
         <svg
           viewBox="0 0 200 200"
