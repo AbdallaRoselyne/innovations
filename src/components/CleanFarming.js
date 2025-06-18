@@ -28,19 +28,14 @@ const CleanFarming = () => {
       description:
         "Developed with support from the Mauritius Research and Innovation Council (MRIC), our vertical indoor farm is a high-performance, precision-controlled solution for growing baby leaves and microgreens—without soil, pesticides, or excess water. At its core is a custom-designed horticultural lighting system, engineered to deliver targeted light spectra that optimise plant growth and energy efficiency.",
       image:
-        "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800&h=600&fit=crop",
-      tags: [
-        "Tech-Ready",
-        "Commercially Scalable",
-        "Zero Pesticides",
-        "Minimal Water",
-      ],
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495156/vertical-farm_figzcd.jpg",
+      tags: ["Engineered lighting", "Scalable", "Optimised growth"],
       icon: faSeedling,
       features: [
-        "Custom horticultural lighting system",
-        "Precision-controlled environment",
-        "Two years of R&D and refinement",
-        "Turnkey solution for urban spaces",
+        "Custom lighting that gives plants the exact light they need to grow better and use less energy.",
+        "After two years of testing, our system is fully developed and ready for commercial use.",
+        "Compact tools and controls built to support efficient indoor farming in any space.",
+        "A plug-and-play indoor farm that fits cities, resorts, and remote locations alike.",
       ],
       gradient: "from-emerald-500 to-teal-600",
     },
@@ -50,13 +45,8 @@ const CleanFarming = () => {
       description:
         "Our containerised farm is a fully integrated, IoT-connected growing system designed for rapid deployment and remote monitoring. Unlike mass-produced alternatives, every element has been engineered for performance, durability, and plant health—from custom-designed LED lighting and precision nutrient control to automated irrigation and real-time data analytics.",
       image:
-        "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=800&h=600&fit=crop",
-      tags: [
-        "IoT-Connected",
-        "Rapid Deployment",
-        "Real-time Analytics",
-        "Smart Food Production",
-      ],
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495158/container_t2umio.jpg",
+      tags: ["Smart farming", "Data driven", "High profitability"],
       icon: faBoxOpen,
       features: [
         "Fully integrated IoT connectivity",
@@ -70,15 +60,10 @@ const CleanFarming = () => {
       title: "Energy-Efficient Grow Lighting",
       subtitle: "Lighting reimagined—for plants, not just people",
       description:
-        "At Prodesign Innovations, we've been studying how plants respond to different light spectra in controlled indoor environments. This field—called photomorphogenesis—is the science behind our lighting innovation. We don't just use LEDs—we engineer light the way plants want it.",
+        "Most indoor farms rely on generic, mass-produced LEDs that aren't optimized for plant growth—leading to poor yields and wasted energy. At Prodesign Innovation, we’ve spent over two years studying plant responses to light through photomorphogenesis, the science of how light shapes plant development. We've tested different LED colour combinations, tracked growth under various wavelengths and intensities, and fine-tuned lighting based on how plants react to timing and environmental shifts. Instead of just using LEDs, we design lighting systems that give plants exactly what they need to thrive.",
       image:
-        "https://images.unsplash.com/photo-1574263867128-a3d5c1b1deaa?w=800&h=600&fit=crop",
-      tags: [
-        "Photomorphogenesis",
-        "Custom PCBs",
-        "High-Grade Components",
-        "24/7 Operation",
-      ],
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495156/grow_lights_vnxg0c.jpg",
+      tags: ["Optimised spectrum", "High efficiency", "Long life"],
       icon: faLightbulb,
       features: [
         "Tailored lighting recipes for crops",
@@ -115,34 +100,20 @@ const CleanFarming = () => {
       description:
         "Every component designed and tested for longevity, from circuit board up",
     },
+
+    {
+      icon: faLeaf,
+      title: "Sustainable Practices",
+      description:
+        "Zero pesticides, minimal water use, and energy-efficient systems for a cleaner future",
+    },
   ];
 
-  // Custom leaf pattern background
-  const LeafPattern = () => (
-    <svg
-      className="absolute inset-0 w-full h-full opacity-10"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        <pattern
-          id="leaf-pattern"
-          width="40"
-          height="40"
-          patternUnits="userSpaceOnUse"
-        >
-          <path
-            d="M20,0 Q30,10 20,20 Q10,10 20,0"
-            fill="#0072CE"
-            transform="rotate(45 20 20)"
-          />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#leaf-pattern)" />
-    </svg>
-  );
-
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-500 via-white to-emerald-500 overflow-hidden">
+    <section
+      id="clean-farming"
+      className="relative min-h-screen bg-gradient-to-br from-slate-500 via-white to-emerald-500 overflow-hidden"
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating particles */}
@@ -184,12 +155,15 @@ const CleanFarming = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h1 className="text-4xl md:text-5xl font-black mb-8">
-            <span className="bg-gradient-to-r from-[#0072CE] to-emerald-600 bg-clip-text text-transparent inline-block transform hover:scale-105 transition-transform duration-300">
-              Clean
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <span className="relative">
+              <span className="relative z-10">Clean</span>
+              <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-400/30 -rotate-1 -z-0"></span>
+            </span>{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
+              Farming
             </span>
-            <span className="text-slate-800"> Farming</span>
-          </h1>
+          </h2>
 
           <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full border border-emerald-200 mb-8 shadow-sm">
             <FontAwesomeIcon
@@ -201,7 +175,7 @@ const CleanFarming = () => {
             </span>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6 text-lg text-slate-600 leading-relaxed">
+          <div className="mx-auto space-y-6 text-lg text-slate-600 leading-relaxed">
             <p className="bg-white/80 backdrop-blur-sm p-6 py-16 px-6 rounded-2xl border border-slate-200/50 shadow-sm">
               Farming relies on the use of pesticides, chemical fertilizers and
               water. 70% of our global fresh water is used in agriculture.
@@ -209,33 +183,29 @@ const CleanFarming = () => {
               major concern to our health. A high prevalence of cancer has been
               associated with exposure to pesticides in the vegetables we
               consume.
-
               <p className="p-6 rounded-2x ">
-              <strong className="text-slate-800">
-                The future of food will be grown indoors—cleaner, smarter, and
-                closer to home.
-              </strong>
+                <strong className="text-slate-800">
+                  The future of food will be grown indoors—cleaner, smarter, and
+                  closer to home.
+                </strong>
+              </p>
+              <p className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/50 shadow-sm">
+                At Prodesign Innovation, we are developing scalable,
+                tech-enabled farming systems that address food security, water
+                scarcity, and chemical overuse. Our vertical and containerised
+                farms use precision-engineered lighting, IoT connectivity, and
+                data-driven insights to grow high-value crops with zero
+                pesticides and minimal water. Backed by real-world trials,
+                proprietary designs, and over two years of focused R&D, we’re
+                not just experimenting—we’re building a viable model for clean,
+                local food production in a climate-uncertain world.
+              </p>
             </p>
-            <p className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/50 shadow-sm">
-              At Prodesign Innovations, we are developing scalable, tech-enabled
-              farming systems that address food security, water scarcity, and
-              chemical overuse. Our vertical and containerised farms use
-              precision-engineered lighting, IoT connectivity, and data-driven
-              insights to grow high-value crops with zero pesticides and minimal
-              water. Backed by real-world trials, proprietary designs, and over
-              two years of focused R&D, we’re not just experimenting—we’re
-              building a viable model for clean, local food production in a
-              climate-uncertain world.
-            </p>
-            </p>
-            
-            
           </div>
         </div>
 
         {/* Main Projects Section */}
         <div className="mb-20 bg-[#0072CE]/5 py-16 px-6 rounded-3xl relative overflow-hidden">
-          <LeafPattern />
           <div className="relative z-10">
             {/* Project Navigation */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -353,7 +323,7 @@ const CleanFarming = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {keyDifferentiators.map((item, index) => (
               <div
                 key={index}

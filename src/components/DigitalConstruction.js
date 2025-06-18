@@ -164,7 +164,7 @@ const DigitalConstruction = () => {
   return (
     <section
       id="digital-construction"
-      className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+      className="py-20 px-4 bg-gradient-to-br from-sky-200 to-white relative overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -200,38 +200,14 @@ const DigitalConstruction = () => {
 
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 relative">
-            <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-prodesign-blue to-cyan-500 bg-clip-text text-transparent">
-                Digital Construction
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <span className="relative">
+                <span className="relative z-10">Digital</span>
+                <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-400/30 -rotate-1 -z-0"></span>
+              </span>{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
+                Construction
               </span>
-
-              <svg
-                className="absolute -bottom-2 left-0 w-full"
-                height="6"
-                viewBox="0 0 120 6"
-              >
-                <path
-                  d="M0 3 C30 5, 90 1, 120 3"
-                  stroke="url(#underline-gradient)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  fill="none"
-                />
-                <defs>
-                  <linearGradient
-                    id="underline-gradient"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stopColor="#3B82F6" />
-                    <stop offset="100%" stopColor="#06B6D4" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </span>
           </h2>
           <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 rounded-full mb-4">
             <FontAwesomeIcon icon={faBolt} className="mr-2" />
