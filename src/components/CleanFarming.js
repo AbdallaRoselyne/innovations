@@ -112,7 +112,7 @@ const CleanFarming = () => {
   return (
     <section
       id="clean-farming"
-      className="relative min-h-screen bg-gradient-to-br from-slate-500 via-white to-emerald-500 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-emerald-500 via-white to-emerald-200 overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
