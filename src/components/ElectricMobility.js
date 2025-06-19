@@ -91,60 +91,6 @@ const ElectricMobility = () => {
       id="electric-mobility"
       className="py-20 px-4 bg-gray-900 relative overflow-hidden min-h-screen"
     >
-      {/* Dynamic Background Elements with SVG Patterns */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-
-        {/* SVG Circuit Pattern */}
-        <svg
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M20,20 L80,20 L80,80 L20,80 Z"
-            stroke="#3B82F6"
-            strokeWidth="1"
-            fill="none"
-            strokeDasharray="5,5"
-          />
-          <path
-            d="M120,120 L180,120 L180,180 L120,180 Z"
-            stroke="#10B981"
-            strokeWidth="1"
-            fill="none"
-            strokeDasharray="5,5"
-          />
-          <path
-            d="M20,120 L80,120 L80,180 L20,180 Z"
-            stroke="#8B5CF6"
-            strokeWidth="1"
-            fill="none"
-            strokeDasharray="5,5"
-          />
-          <path
-            d="M120,20 L180,20 L180,80 L120,80 Z"
-            stroke="#EC4899"
-            strokeWidth="1"
-            fill="none"
-            strokeDasharray="5,5"
-          />
-          <path
-            d="M20,100 L180,100"
-            stroke="#F59E0B"
-            strokeWidth="1"
-            strokeDasharray="5,5"
-          />
-          <path
-            d="M100,20 L100,180"
-            stroke="#F59E0B"
-            strokeWidth="1"
-            strokeDasharray="5,5"
-          />
-        </svg>
-      </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-8 relative">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-4">
@@ -164,10 +110,8 @@ const ElectricMobility = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Hero Section with Scooter Image */}
-          <div className="relative mb-28 rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-gray-800 opacity-90"></div>
-
-            <div className="relative z-10 flex flex-col lg:flex-row items-center py-16 lg:py-20">
+          <div className="relative mb-10 rounded-3xl overflow-hidden">
+            <div className="relative z-10 flex flex-col lg:flex-row items-center py-6 lg:py-1">
               {/* Text Content */}
               <div className="lg:w-1/2 px-8 lg:px-12">
                 <div className="space-y-8">
@@ -201,21 +145,15 @@ const ElectricMobility = () => {
               </div>
 
               {/* Scooter Image */}
-              <div className="lg:w-1/2 flex justify-center relative mt-12 lg:mt-0">
+              <div className="lg:w-1/2 flex justify-center relative mt-4 lg:mt-0">
                 <div className="relative w-full max-w-2xl">
                   {/* Main scooter image with enhanced effects */}
                   <div className="relative group">
-                    {/* Glow effect behind image */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 via-transparent to-emerald-500/20 rounded-lg blur-xl scale-105 opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-
                     <img
-                      src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750240551/transparent_d56tcf.png"
+                      src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750326323/image_x5ueyv.png"
                       alt="Electric Scooter"
-                      className="relative z-10 w-full h-auto max-h-[600px] object-contain transition-all duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 drop-shadow-2xl"
+                      className="relative z-10 w-full h-auto max-h-[600px] object-contain transition-all duration-700 group-hover:scale-105 group-hover:scale-x-[-1] opacity-90 group-hover:opacity-100 drop-shadow-2xl"
                     />
-
-                    {/* Subtle shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                   </div>
                 </div>
               </div>
