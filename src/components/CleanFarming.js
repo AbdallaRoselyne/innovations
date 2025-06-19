@@ -364,28 +364,6 @@ const CleanFarming = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="relative bg-gradient-to-br from-[#0072CE] to-emerald-600 rounded-3xl p-12 text-white overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <svg className="w-full h-full" viewBox="0 0 100 100">
-                <defs>
-                  <pattern
-                    id="grid"
-                    width="10"
-                    height="10"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <path
-                      d="M 10 0 L 0 0 0 10"
-                      fill="none"
-                      stroke="white"
-                      strokeWidth="0.5"
-                    />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" />
-              </svg>
-            </div>
-
             <div className="relative z-10">
               <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <FontAwesomeIcon icon={faChartLine} className="text-3xl" />
@@ -398,9 +376,7 @@ const CleanFarming = () => {
                 years of focused R&D, we're not just experimenting—we're
                 engineering the future of farming in a climate-uncertain world.
               </p>
-              <button className="px-8 py-4 bg-white text-[#0072CE] rounded-full font-bold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                Get Started with Clean Farming
-              </button>
+
               <div className="mt-8 inline-flex items-center gap-2 text-white/90 font-semibold">
                 <FontAwesomeIcon icon={faLeaf} />
                 <span>Clean • Smart • Sustainable</span>
