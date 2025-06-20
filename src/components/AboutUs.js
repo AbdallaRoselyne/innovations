@@ -252,27 +252,17 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-
-           {/* Video Column */}
-<div className="relative group h-full">
-  <div className="relative h-full rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl border-2 border-white/20 bg-gray-100 transition-all duration-300 group-hover:shadow-blue-200/30">
-    {/* Video Container - now with forced dimensions */}
-    <div className="relative h-0 pb-[56.25%] overflow-hidden"> {/* 16:9 aspect ratio */}
-      <iframe
-        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D723835840068794&show_text=false"
-        className="absolute top-0 left-0 w-full h-full"
-        style={{ border: 'none', overflow: 'hidden' }}
-        allowFullScreen
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        title="Prodesign Mission Video"
-      />
-    </div>
-    <div className="absolute -right-6 -top-6 w-16 h-16 md:w-24 md:h-24 bg-blue-400/10 rounded-full blur-xl"></div>
-  </div>
-  <div className="mt-2 md:mt-3 text-xs md:text-sm text-gray-500 text-center">
-    Watch our mission in action
-  </div>
-</div>
+            {/* 3d logo image in cloudinary */}
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-md">
+                <img
+                  src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750422147/ChatGPT_Image_Jun_20_2025_04_22_03_PM_vyfqqn.png"
+                  alt="Prodesign Logo"
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="hidden md:block md:absolute md:-right-6 md:-top-6 md:w-24 md:h-24 bg-blue-400/10 rounded-full blur-xl"></div>
+            </div>
           </div>
         </div>
         {/* Timeline Section */}
