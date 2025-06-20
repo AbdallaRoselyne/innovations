@@ -120,12 +120,12 @@ const ElectricMobility = () => {
             {/* Full-width background elements */}
             <div className="absolute inset-0 overflow-hidden">
               {/* Background gradient covering entire section */}
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-00 via-gray-900/70 to-gray-900/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-200/70 to-gray-200/20"></div>
 
               {/* Large scooter image in background */}
-              <div className="absolute -right-40 -bottom-20 w-[800px] h-[800px] opacity-20">
+              <div className="absolute -right-40 -bottom-20 w-[800px] h-[800px]">
                 <img
-                  src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750326323/image_x5ueyv.png"
+                  src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750417463/hero_qznp2j.png"
                   alt="Electric Scooter Background"
                   className="w-full h-full object-contain"
                 />
@@ -155,20 +155,6 @@ const ElectricMobility = () => {
                 </div>
               </div>
 
-              {/* Scooter Image */}
-              <div className="lg:w-1/2 flex justify-center relative mt-8 lg:mt-0">
-                <div className="relative w-full max-w-2xl">
-                  <div className="relative group">
-                    <img
-                      src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750326323/image_x5ueyv.png"
-                      alt="Electric Scooter"
-                      className="relative z-10 w-full h-auto max-h-[700px] object-contain transition-all duration-700 group-hover:scale-105 opacity-95 group-hover:opacity-100 drop-shadow-[0_0_30px_rgba(0,150,255,0.3)]"
-                    />
-                    {/* Glow effect */}
-                    <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl scale-90 group-hover:scale-100 transition-all duration-700"></div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
