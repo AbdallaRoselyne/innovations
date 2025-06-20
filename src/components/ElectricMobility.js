@@ -86,11 +86,11 @@ const ElectricMobility = () => {
     <section
       ref={sectionRef}
       id="electric-mobility"
-      className="py-20 px-4 bg-gray-500 relative overflow-hidden min-h-screen"
+      className="py-20 px-4 bg-gray-900 relative overflow-hidden min-h-screen"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-8 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="relative">
               <span className="relative z-10">Electric</span>
             </span>{" "}
@@ -98,17 +98,31 @@ const ElectricMobility = () => {
               Mobility
             </span>
           </h2>
-          <span className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-blue-900/50 rounded-full border border-blue-700/50">
+          <span className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-900/50 rounded-full border border-blue-700/50">
             <FontAwesomeIcon icon={faBolt} className="mr-2 text-blue-300" />
             Driving sustainable transport, from last mile to local manufacturing
           </span>
+
+          <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+            The global shift to electric vehicles is accelerating—but most
+            solutions are built for wealthy markets, not for small island
+            states, dense urban zones, or emerging economies.
+            <span className="font-semibold text-prodesign-blue">
+              {" "}
+              Prodesign Innovation is solving that gap.
+            </span>
+          </p>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Hero Section with Scooter Image */}
           <div className="relative mb-10 rounded-3xl overflow-hidden">
-            {/* Background elements */}
+            {/* Full-width background elements */}
             <div className="absolute inset-0 overflow-hidden">
+              {/* Background gradient covering entire section */}
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-00 via-gray-900/70 to-gray-900/20"></div>
+
+              {/* Large scooter image in background */}
               <div className="absolute -right-40 -bottom-20 w-[800px] h-[800px] opacity-20">
                 <img
                   src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750326323/image_x5ueyv.png"
@@ -116,23 +130,12 @@ const ElectricMobility = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/30 to-transparent"></div>
             </div>
 
-            <div className="relative z-10 flex flex-col lg:flex-row items-center py-6 lg:py-12">
+            <div className="relative z-10 flex flex-col lg:flex-row items-center py-6 lg:py-12 px-4 sm:px-6 lg:px-8">
               {/* Text Content */}
-              <div className="lg:w-1/2 px-8 lg:px-12">
+              <div className="lg:w-1/2 px-4 lg:px-8">
                 <div className="space-y-8">
-                  <p className="text-xl text-gray-300 leading-relaxed">
-                    The global shift to electric vehicles is accelerating—but
-                    most solutions are built for wealthy markets, not for small
-                    island states, dense urban zones, or emerging economies.
-                    <span className="font-semibold text-white">
-                      {" "}
-                      Prodesign Innovation is solving that gap.
-                    </span>
-                  </p>
-
                   <p className="text-lg text-gray-400 leading-relaxed">
                     We're designing and prototyping{" "}
                     <span className="font-semibold text-blue-300">
@@ -143,8 +146,8 @@ const ElectricMobility = () => {
                   </p>
 
                   <div className="p-6 bg-blue-900/20 rounded-xl border border-blue-700/30 backdrop-blur-sm relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
-                    <p className="text-lg font-semibold text-blue-200 relative z-10">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gray-500 rounded-full blur-3xl"></div>
+                    <p className="text-xl font-bold text-blackrelative z-10">
                       This is not just an environmental solution—it's a business
                       opportunity in a fast-growing, underserved segment.
                     </p>
@@ -152,8 +155,8 @@ const ElectricMobility = () => {
                 </div>
               </div>
 
-              {/* Scooter Image - Now larger and more prominent */}
-              <div className="lg:w-1/2 flex justify-center relative mt-4 lg:mt-0">
+              {/* Scooter Image */}
+              <div className="lg:w-1/2 flex justify-center relative mt-8 lg:mt-0">
                 <div className="relative w-full max-w-2xl">
                   <div className="relative group">
                     <img

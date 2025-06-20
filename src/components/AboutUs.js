@@ -4,11 +4,10 @@ import {
   faAward,
   faTv,
   faRocket,
-  faBuildingColumns,
-  faLeaf,
   faLightbulb,
+  faPlay,
+  faExternalLinkAlt,
   faCubes,
-  faChartLine,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -91,31 +90,6 @@ const AboutUs = () => {
       description: "First engineering firm in Mauritius to implement BIM",
       color: "from-purple-500 to-pink-600",
       delay: "delay-800",
-    },
-  ];
-
-  const expertise = [
-    {
-      icon: faBuildingColumns,
-      title: "MEP Engineering",
-      description:
-        "Comprehensive mechanical, electrical, and plumbing solutions",
-    },
-    {
-      icon: faLeaf,
-      title: "Sustainability",
-      description: "LEED consultancy and sustainable design leadership",
-    },
-    {
-      icon: faLightbulb,
-      title: "Innovation",
-      description: "Cutting-edge technology and research-driven solutions",
-    },
-    {
-      icon: faChartLine,
-      title: "Project Excellence",
-      description:
-        "Hundreds of successful building and infrastructure projects",
     },
   ];
 
@@ -339,31 +313,53 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* Expertise Cards */}
-            <div className="grid grid-cols-2 gap-6">
-              {expertise.map((item, index) => (
-                <div
-                  key={index}
-                  className={`group bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-500 ${
-                    isVisible
-                      ? `opacity-100 translate-y-0 delay-${index * 200 + 400}`
-                      : "opacity-0 translate-y-8"
-                  }`}
-                >
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:from-blue-200 group-hover:to-emerald-200 transition-colors duration-300">
-                    <FontAwesomeIcon
-                      icon={item.icon}
-                      className="text-blue-600 text-xl"
-                    />
+            {/* Facebook Video Container - Redesigned */}
+            <div className="relative group">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 bg-gradient-to-br from-gray-50 to-white transition-all duration-500 group-hover:shadow-blue-200/40 group-hover:border-blue-300/30">
+                {/* Video placeholder with play button */}
+                <div className="aspect-w-16 aspect-h-9 bg-gray-100 relative">
+                  <img
+                    src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1718792345/video-placeholder-prodesign_yygq1x.jpg"
+                    alt="Video thumbnail"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100085406322247"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all transform hover:scale-110"
+                    >
+                      <FontAwesomeIcon
+                        icon={faPlay}
+                        className="text-white text-xl ml-1"
+                      />
+                    </a>
                   </div>
-                  <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {item.description}
-                  </p>
                 </div>
-              ))}
+
+                {/* Video Embed - Using iframe directly */}
+          <div className="order-1 lg:order-2 w-full">
+            <div className="relative pb-[56.25%] h-0 rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-100">
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D723835840068794&show_text=false"
+                className="absolute top-0 left-0 w-full h-full border-0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Prodesign Mission Video"
+              ></iframe>
+            </div>
+            <div className="mt-3 text-sm text-gray-500 text-center sm:text-left">
+              Watch our mission in action
+            </div>
+          
+                </div>
+
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-2xl pointer-events-none overflow-hidden">
+                  <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

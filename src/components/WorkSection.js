@@ -12,8 +12,8 @@ const WorkSection = () => {
   const workItems = [
     {
       title: "Digital Construction",
-      description:
-        "Smarter tools for a more efficient built environment. We develop digital platforms that reduce waste, cut delays, and improve coordination across the construction lifecycle.",
+      subheading: "Smarter tools for a more efficient built environment.",  
+      description:"We develop digital platforms that reduce waste, cut delays, and improve coordination across the construction lifecycle.",
       link: "digital-construction",
       icon: faBuilding,
       color: "from-blue-500 to-blue-700",
@@ -72,8 +72,9 @@ const WorkSection = () => {
     },
     {
       title: "Electric Vehicles",
+      subheading: "Clean mobility, engineered for real-world use.",
       description:
-        "Clean mobility, engineered for real-world use. Our R&D in electric vehicle platforms focuses on short-range cargo and urban solutions—practical, efficient, and designed for tropical conditions.",
+        "Our R&D in electric vehicle platforms focuses on short-range cargo and urban solutions—practical, efficient, and designed for tropical conditions.",
       link: "electric-mobility",
       icon: faCar,
       color: "from-cyan-500 to-cyan-700",
@@ -115,8 +116,9 @@ const WorkSection = () => {
     },
     {
       title: "Clean Farming",
+      subheading: "Technology-driven farming for a food-secure future.",
       description:
-        "Technology-driven farming for a food-secure future. We design compact, automated farming systems—ideal for urban areas, food deserts, and climate-vulnerable regions.",
+        "We design compact, automated farming systems—ideal for urban areas, food deserts, and climate-vulnerable regions.",
       link: "clean-farming",
       icon: faLeaf,
       color: "from-emerald-500 to-emerald-700",
@@ -274,6 +276,9 @@ const WorkSection = () => {
                 <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-gray-900 transition-colors duration-300">
                   {item.title}
                 </h3>
+                <h4 className="text-lg font-semibold text-prodesign-blue mb-2 group-hover:text-gray-800 transition-colors duration-300">
+                  {item.subheading}
+                </h4>
                 <p className="text-gray-600 mb-6 group-hover:text-gray-700 transition-colors duration-300">
                   {item.description}
                 </p>

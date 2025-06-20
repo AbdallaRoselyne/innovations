@@ -46,17 +46,17 @@ const Mission = () => {
     {
       text: "Successful R&D projects with the Mauritius Research and Innovation Council (MRIC)",
       icon: faAward,
-      color: "text-blue-600",
+      color: "text-black",
     },
     {
       text: "Featured on CNN Africa and national television",
       icon: faTv,
-      color: "text-purple-600",
+      color: "text-purple-900",
     },
     {
       text: "Best BIM Company in Africa 2021 - leadership in digital engineering and innovation",
       icon: faGlobe,
-      color: "text-emerald-600",
+      color: "text-emerald-900",
     },
   ];
 
@@ -321,10 +321,9 @@ const Mission = () => {
                 </p>
 
                 <div className="relative pl-6">
-                  <div className="absolute left-0 top-0 w-4 h-4 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full animate-pulse"></div>
-                  <p className="text-gray-600 text-base italic">
+                  <p className="text-prodesign-blue text-lg font-bold leading-relaxed">
                     At Prodesign Innovation, we carry this legacy forward—by{" "}
-                    <span className="font-semibold text-gray-800">
+                    <span className="text-gray-800 font-semibold">
                       engineering what's next
                     </span>
                     .
@@ -371,7 +370,7 @@ const Mission = () => {
                   {achievements.map((achievement, index) => (
                     <div
                       key={index}
-                      className={`flex items-start gap-4 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/50 transition-all duration-500 ${
+                      className={`flex items-start gap-4 p-4 bg-prodesign-blue/50 backdrop-blur-sm rounded-xl border border-white/50 transition-all duration-500 ${
                         isVisible
                           ? "opacity-100 translate-x-0"
                           : "opacity-0 translate-x-4"
@@ -382,7 +381,7 @@ const Mission = () => {
                           : "0ms",
                       }}
                     >
-                      <div className="flex-shrink-0">
+                      <div className="flex-shrink-0 bg">
                         <div
                           className={`w-10 h-10 rounded-lg ${achievement.color} bg-opacity-20 flex items-center justify-center`}
                         >
@@ -392,7 +391,7 @@ const Mission = () => {
                           />
                         </div>
                       </div>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-black text-sm leading-relaxed ">
                         {achievement.text}
                       </p>
                     </div>
