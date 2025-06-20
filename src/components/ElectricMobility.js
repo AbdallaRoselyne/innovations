@@ -4,10 +4,7 @@ import {
   faBolt,
   faWeightHanging,
   faLeaf,
-  faCogs,
   faIndustry,
-  faChartLine,
-  faHandHoldingUsd,
 } from "@fortawesome/free-solid-svg-icons";
 import { CheckCircle } from "lucide-react";
 
@@ -44,7 +41,7 @@ const ElectricMobility = () => {
       title: "Electric Scooters",
       subtitle: "Flagship Project",
       description:
-        "Since 2021, our engineering team has been developing multiple prototypes of electric scooters tailored for short-range, high-frequency use—perfect for delivery, service, and urban commuting.",
+        "We currently have two working prototypes in testing, with production targeted for launch. These models are designed for:",
       icon: faBolt,
       status: "prototype-ready",
       features: [
@@ -89,20 +86,19 @@ const ElectricMobility = () => {
     <section
       ref={sectionRef}
       id="electric-mobility"
-      className="py-20 px-4 bg-gray-900 relative overflow-hidden min-h-screen"
+      className="py-20 px-4 bg-gray-500 relative overflow-hidden min-h-screen"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-8 relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             <span className="relative">
               <span className="relative z-10">Electric</span>
-              <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-400/30 -rotate-1 -z-0"></span>
             </span>{" "}
             <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
               Mobility
             </span>
           </h2>
-          <span className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-400 bg-blue-900/30 rounded-full border border-blue-700/50">
+          <span className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-blue-900/50 rounded-full border border-blue-700/50">
             <FontAwesomeIcon icon={faBolt} className="mr-2 text-blue-300" />
             Driving sustainable transport, from last mile to local manufacturing
           </span>
@@ -111,7 +107,19 @@ const ElectricMobility = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Hero Section with Scooter Image */}
           <div className="relative mb-10 rounded-3xl overflow-hidden">
-            <div className="relative z-10 flex flex-col lg:flex-row items-center py-6 lg:py-1">
+            {/* Background elements */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute -right-40 -bottom-20 w-[800px] h-[800px] opacity-20">
+                <img
+                  src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750326323/image_x5ueyv.png"
+                  alt="Electric Scooter Background"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/30 to-transparent"></div>
+            </div>
+
+            <div className="relative z-10 flex flex-col lg:flex-row items-center py-6 lg:py-12">
               {/* Text Content */}
               <div className="lg:w-1/2 px-8 lg:px-12">
                 <div className="space-y-8">
@@ -144,16 +152,17 @@ const ElectricMobility = () => {
                 </div>
               </div>
 
-              {/* Scooter Image */}
+              {/* Scooter Image - Now larger and more prominent */}
               <div className="lg:w-1/2 flex justify-center relative mt-4 lg:mt-0">
                 <div className="relative w-full max-w-2xl">
-                  {/* Main scooter image with enhanced effects */}
                   <div className="relative group">
                     <img
                       src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750326323/image_x5ueyv.png"
                       alt="Electric Scooter"
-                      className="relative z-10 w-full h-auto max-h-[600px] object-contain transition-all duration-700 group-hover:scale-105 group-hover:scale-x-[-1] opacity-90 group-hover:opacity-100 drop-shadow-2xl"
+                      className="relative z-10 w-full h-auto max-h-[700px] object-contain transition-all duration-700 group-hover:scale-105 opacity-95 group-hover:opacity-100 drop-shadow-[0_0_30px_rgba(0,150,255,0.3)]"
                     />
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl scale-90 group-hover:scale-100 transition-all duration-700"></div>
                   </div>
                 </div>
               </div>
@@ -165,18 +174,22 @@ const ElectricMobility = () => {
         <div className="mb-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our{" "}
+              Electric{" "}
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Flagship Project
+                Scooters
               </span>
             </h2>
             <div className="inline-flex items-center gap-2 bg-blue-900/50 text-blue-300 px-4 py-2 rounded-full text-sm mb-6 border border-blue-800/50">
               <FontAwesomeIcon icon={faBolt} />
-              <span>Currently in Prototype Phase</span>
+              <span>
+                Rethinking last-mile transport with compact electric solutions
+              </span>
             </div>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              We're pioneering electric mobility solutions designed specifically
-              for island economies and emerging markets.
+              Since 2021, our engineering team has been developing multiple
+              prototypes of electric scooters tailored for short-range,
+              high-frequency use—perfect for delivery, service, and urban
+              commuting.
             </p>
           </div>
 
@@ -299,7 +312,6 @@ const ElectricMobility = () => {
           </div>
         </div>
 
-        {/* Investment Section */}
         <div className="relative rounded-3xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 to-emerald-900/80 backdrop-blur-sm"></div>
           <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1750240551/transparent_d56tcf.png')] bg-contain bg-no-repeat bg-right opacity-10"></div>
@@ -331,68 +343,6 @@ const ElectricMobility = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              <div className="lg:w-1/2 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <FontAwesomeIcon
-                    icon={faHandHoldingUsd}
-                    className="text-cyan-400"
-                  />
-                  <span>Why Invest With Us?</span>
-                </h3>
-
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center flex-shrink-0">
-                      <FontAwesomeIcon icon={faChartLine} />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-bold mb-1">
-                        Growing Market
-                      </h4>
-                      <p className="text-gray-300 text-sm">
-                        Electric mobility in island nations is projected to grow
-                        300% in the next 5 years.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center flex-shrink-0">
-                      <FontAwesomeIcon icon={faCogs} />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-bold mb-1">
-                        Local Production
-                      </h4>
-                      <p className="text-gray-300 text-sm">
-                        Lower costs and faster delivery through Mauritius-based
-                        assembly.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center flex-shrink-0">
-                      <FontAwesomeIcon icon={faLeaf} />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-bold mb-1">
-                        Sustainable Impact
-                      </h4>
-                      <p className="text-gray-300 text-sm">
-                        Contribute to reducing carbon emissions in island
-                        transportation.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <button className="mt-8 w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-4 rounded-xl text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3">
-                  <FontAwesomeIcon icon={faHandHoldingUsd} />
-                  Request Investor Package
-                </button>
               </div>
             </div>
           </div>
