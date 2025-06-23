@@ -149,7 +149,6 @@ const ElectricMobility = () => {
 
   const projects = [
     {
-      title: "Electric Scooters",
       subtitle: "Flagship Project",
       description:
         "We currently have two working prototypes in testing, with production targeted for launch. These models are designed for:",
@@ -309,7 +308,7 @@ const ElectricMobility = () => {
         className="relative h-screen bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1750673174/hero_jacnlo.png')",
+            "url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1750675949/hero_2_vmxjx6.png')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent"></div>
@@ -393,39 +392,36 @@ const ElectricMobility = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="relative bg-neutral-100 rounded-3xl p-8 shadow-2xl border border-neutral-100 mb-12 overflow-hidden"
+                className="relative bg-neutral-100 rounded-3xl p-6 shadow-2xl border border-gray-900 mb-12 overflow-hidden"
               >
-                <div className="flex flex-col lg:flex-row gap-8">
-                  <div className="lg:w-2/3">
-                    <div className="flex items-center gap-4 mb-6 ">
+                <div className="flex flex-col lg:flex-row gap-6">
+                  <div className="w-full">
+                    <div className="flex items-center gap-4 mb-4">
                       <div
-                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} text-white flex items-center justify-center shadow-lg`}
+                        className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${project.gradient} text-white flex items-center justify-center shadow-lg`}
                       >
                         <FontAwesomeIcon
                           icon={project.icon}
-                          className="text-3xl"
+                          className="text-xl"
                         />
                       </div>
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900">
-                          {project.title}
-                        </h3>
                         <div className="text-blue-600 font-medium text-lg">
                           {project.subtitle}
                         </div>
                       </div>
                     </div>
 
-                    <p className="text-gray-900 text-lg leading-relaxed mb-8 ">
+                    <p className="text-gray-900 text-base leading-relaxed mb-6">
                       {project.description}
                     </p>
 
                     {/* Features */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                       {project.features.map((feature, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                          <span className="text-gray-700 font-medium">
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-700 font-medium text-sm">
                             {feature}
                           </span>
                         </div>
@@ -433,18 +429,18 @@ const ElectricMobility = () => {
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="mb-10">
-                      <div className="flex justify-between items-center mb-3">
-                        <span className="text-lg font-medium text-gray-700">
+                    <div className="mb-6">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-base font-medium text-gray-700">
                           Development Progress
                         </span>
-                        <span className="text-lg font-bold text-gray-900">
+                        <span className="text-base font-bold text-gray-900">
                           {project.progress}%
                         </span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-3 shadow-inner">
+                      <div className="w-full bg-gray-200 rounded-full h-2 shadow-inner">
                         <div
-                          className={`h-3 bg-gradient-to-r ${project.gradient} rounded-full transition-all duration-1000 ease-out`}
+                          className={`h-2 bg-gradient-to-r ${project.gradient} rounded-full transition-all duration-1000 ease-out`}
                           style={{
                             width: isVisible ? `${project.progress}%` : "0%",
                           }}
@@ -453,11 +449,11 @@ const ElectricMobility = () => {
                     </div>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className={`px-5 py-2 bg-gradient-to-r ${project.gradient} text-white rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow`}
+                          className={`px-3 py-1 bg-gradient-to-r ${project.gradient} text-white rounded-full text-xs font-semibold shadow-md hover:shadow-lg transition-shadow`}
                         >
                           {tag}
                         </span>
