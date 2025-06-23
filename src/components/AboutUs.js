@@ -206,7 +206,7 @@ const AboutUs = () => {
         </div>
 
         {/* Story & Video Section - Updated for equal height */}
-        <div className="bg-gray-100/50 rounded-2xl p-8 md:p-12 mb-12 md:mb-20">
+        <div className="bg-gray-200/50 rounded-2xl p-8 md:p-12 mb-12 md:mb-20">
           <div
             className={`mb-12 md:mb-20 transition-all duration-700 delay-200 ${
               isVisible

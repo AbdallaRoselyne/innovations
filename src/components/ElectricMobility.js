@@ -309,7 +309,7 @@ const ElectricMobility = () => {
         className="relative h-screen bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1750417463/hero_qznp2j.png')",
+            "url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1750673174/hero_jacnlo.png')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent"></div>
