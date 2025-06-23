@@ -7,9 +7,6 @@ import {
   faIndustry,
   faChevronRight,
   faBatteryFull,
-  faTachometerAlt,
-  faRoute,
-  faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import { CheckCircle } from "lucide-react";
 
@@ -25,7 +22,7 @@ const ElectricMobility = () => {
       title: "3-Wheeled Electric Scooter for Children",
       tagline: "Safe. Stylish. Built for Fun.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750417463/hero_qznp2j.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750671017/M002B_fltsyu.png",
       description:
         "The M002 is a fun and reliable electric scooter designed especially for children. With its stable 3-wheel configuration and durable aluminium frame, it's perfect for young riders who are just getting started. Easy to use, quick to fold, and available in vibrant colours – this scooter is made to move.",
       features: [
@@ -39,12 +36,7 @@ const ElectricMobility = () => {
       ],
       summary:
         "Whether it's a quick ride to the park or cruising around the yard, the M002 turns everyday moments into adventures.",
-      stats: [
-        { icon: faTachometerAlt, label: "Max Speed", value: "15 km/h" },
-        { icon: faRoute, label: "Range", value: "12 km" },
-        { icon: faBatteryFull, label: "Battery", value: "24V 4Ah" },
-        { icon: faClock, label: "Charge Time", value: "3 hrs" },
-      ],
+      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 4Ah" }],
     },
     {
       id: 2,
@@ -52,7 +44,7 @@ const ElectricMobility = () => {
       title: "2 Wheeled Electric Scooter for Kids",
       tagline: "Compact. Safe. Ready to Ride.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750417463/hero_qznp2j.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750670841/M004-B1_dg0bj0.png",
       description:
         "Designed for younger riders, the M004-B1 brings the excitement of electric scooters in a smaller, easy-to-control package. With a lightweight design and a smooth, stable ride, it's perfect for kids taking their first steps into electric mobility.",
       features: [
@@ -64,12 +56,7 @@ const ElectricMobility = () => {
         "Lightweight Aluminium Frame – Easy for kids and parents to carry.",
         "Colour Options – Available in cheerful Blue, Green, Yellow, Orange and Pink finishes.",
       ],
-      stats: [
-        { icon: faTachometerAlt, label: "Max Speed", value: "18 km/h" },
-        { icon: faRoute, label: "Range", value: "15 km" },
-        { icon: faBatteryFull, label: "Battery", value: "24V 5Ah" },
-        { icon: faClock, label: "Charge Time", value: "3.5 hrs" },
-      ],
+      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 5Ah" }],
     },
     {
       id: 3,
@@ -77,7 +64,7 @@ const ElectricMobility = () => {
       title: "2 Wheeled Electric Scooter for Kids",
       tagline: "Gentle Power. Confident Starts. Kid-Friendly Design.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750417463/hero_qznp2j.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750670559/M004-B3_kyifq9.png",
       description:
         "The M004-B3 is our most beginner-friendly electric scooter, made for little riders just starting their journey. With a low-power 100W motor, it's designed to offer a safe and smooth introduction to electric scooting while keeping all the fun.",
       features: [
@@ -91,12 +78,7 @@ const ElectricMobility = () => {
       ],
       summary:
         "With the M004-B3, kids can explore their world with confidence—at a pace parents will appreciate.",
-      stats: [
-        { icon: faTachometerAlt, label: "Max Speed", value: "12 km/h" },
-        { icon: faRoute, label: "Range", value: "10 km" },
-        { icon: faBatteryFull, label: "Battery", value: "24V 3.5Ah" },
-        { icon: faClock, label: "Charge Time", value: "2.5 hrs" },
-      ],
+      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 3.5Ah" }],
     },
     {
       id: 4,
@@ -104,7 +86,7 @@ const ElectricMobility = () => {
       title: "Adult Electric Scooter",
       tagline: "Strong. Smooth. Built to Go Further.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750417463/hero_qznp2j.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750671164/M004_yh16bx.png",
       description:
         "Engineered for everyday commutes and weekend adventures, the M004 is a high-performance electric scooter that blends power, control, and comfort into a sleek, durable package. With a robust 500W rear motor, dual disc brakes, and front suspension, it's designed to handle urban streets with ease and style.",
       features: [
@@ -117,12 +99,7 @@ const ElectricMobility = () => {
       ],
       summary:
         "Whether you're navigating busy streets or cruising down bike paths, the M004 offers a refined, dependable ride with the performance adults need and the quality they deserve.",
-      stats: [
-        { icon: faTachometerAlt, label: "Max Speed", value: "45 km/h" },
-        { icon: faRoute, label: "Range", value: "80 km" },
-        { icon: faBatteryFull, label: "Battery", value: "36V 11.6Ah" },
-        { icon: faClock, label: "Charge Time", value: "4 hrs" },
-      ],
+      stats: [{ icon: faBatteryFull, label: "Battery", value: "36V 11.6Ah" }],
     },
     {
       id: 5,
@@ -130,7 +107,7 @@ const ElectricMobility = () => {
       title: "Mountain Electric Scooter",
       tagline: "Rugged. Reinforced. Ready for Adventure.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750417463/hero_qznp2j.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750670388/M005_ozl9fw.png",
       description:
         "The M005 is built for riders who crave more than smooth city streets. With a reinforced all-aluminium frame, large 12-inch wheels, and upgraded motor and battery, this electric scooter is designed to take on rougher terrain with confidence and control.",
       features: [
@@ -142,12 +119,7 @@ const ElectricMobility = () => {
       ],
       summary:
         "Whether you're exploring mountain paths, tackling hilly streets, or just looking for a tougher, more capable scooter — the M005 is ready to ride wherever you are.",
-      stats: [
-        { icon: faTachometerAlt, label: "Max Speed", value: "50 km/h" },
-        { icon: faRoute, label: "Range", value: "90 km" },
-        { icon: faBatteryFull, label: "Battery", value: "48V 15Ah" },
-        { icon: faClock, label: "Charge Time", value: "5 hrs" },
-      ],
+      stats: [{ icon: faBatteryFull, label: "Battery", value: "48V 15Ah" }],
     },
   ];
 
@@ -359,6 +331,15 @@ const ElectricMobility = () => {
                 —engineered for local assembly, short-range use, and
                 affordability.
               </p>
+              <p className="text-lg text-gray-200 leading relaxed mb-8">
+                Our focus is on{" "}
+                <span className="font-semibold text-cyan-300">
+                  cargo scooters, delivery vehicles, and compact EVs
+                </span>
+                —tailored to the unique constraints and opportunities of
+                Mauritius and similar markets across Africa and the Indian
+                Ocean.
+              </p>
               <div className="p-6 bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-xl border border-cyan-500/30 backdrop-blur-sm max-w-lg">
                 <p className="text-xl font-bold text-white">
                   This is not just an environmental solution—it's a business
@@ -416,7 +397,7 @@ const ElectricMobility = () => {
               >
                 <div className="flex flex-col lg:flex-row gap-8">
                   <div className="lg:w-2/3">
-                    <div className="flex items-center gap-4 mb-6">
+                    <div className="flex items-center gap-4 mb-6 ">
                       <div
                         className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} text-white flex items-center justify-center shadow-lg`}
                       >
@@ -435,7 +416,7 @@ const ElectricMobility = () => {
                       </div>
                     </div>
 
-                    <p className="text-gray-900 text-lg leading-relaxed mb-8">
+                    <p className="text-gray-900 text-lg leading-relaxed mb-8 ">
                       {project.description}
                     </p>
 
@@ -544,26 +525,6 @@ const ElectricMobility = () => {
                       {model.tagline}
                     </p>
 
-                    {/* Quick stats */}
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      {model.stats.slice(0, 2).map((stat, i) => (
-                        <div key={i} className="bg-gray-50 p-2 rounded-lg">
-                          <div className="flex items-center gap-2">
-                            <FontAwesomeIcon
-                              icon={stat.icon}
-                              className="text-blue-500 text-xs"
-                            />
-                            <span className="text-xs text-gray-500">
-                              {stat.label}
-                            </span>
-                          </div>
-                          <div className="text-sm font-bold text-gray-900">
-                            {stat.value}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
                     <div className="flex items-center text-blue-600 text-sm font-medium group-hover:text-blue-700 transition-colors">
                       <span>View Full Specifications</span>
                       <FontAwesomeIcon
@@ -637,10 +598,6 @@ const ElectricMobility = () => {
                             </div>
                           ))}
                         </div>
-
-                        <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-bold hover:shadow-lg transition-all">
-                          Request Quote
-                        </button>
                       </div>
                     </div>
 
