@@ -67,7 +67,7 @@ const Header = () => {
           <div className="flex-shrink-0 group">
             <div className="relative">
               <img
-                src={`${CLOUDINARY_URL}/image/upload/f_auto,q_auto/PD-Innovation_jx3asb.svg`}
+                src={`${CLOUDINARY_URL}/image/upload/f_auto,q_auto/logo_kfzpbo.png`}
                 alt="Prodesign Innovation"
                 className={`object-contain transition-all duration-500 ${
                   scrolled ? "h-16 md:h-20" : "h-20 md:h-24"

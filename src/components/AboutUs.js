@@ -206,65 +206,70 @@ const AboutUs = () => {
         </div>
 
         {/* Story & Video Section - Updated for equal height */}
-        <div
-          className={`mb-12 md:mb-20 transition-all duration-700 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
-            {/* Story Column */}
-            <div className="flex flex-col gap-6 md:gap-8 h-full">
-              <div className="relative flex-1">
-                <div className="absolute -left-4 md:-left-6 top-0 w-0.5 md:w-1 h-full bg-gradient-to-b from-blue-500 to-emerald-500 rounded-full"></div>
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl md:rounded-2xl p-6 md:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 h-full">
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                    Founded in 1997,{" "}
-                    <a
-                      href="https://www.prodesign.mu/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-semibold text-blue-600 hover:text-blue-700 transition-colors"
-                    >
-                      Pro-Design Engineering Consultants Ltd
-                    </a>{" "}
-                    is one of Mauritius's leading MEP and sustainability
-                    consultancies.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    With hundreds of successful projects, we combine technical
-                    expertise with local knowledge and global best practices.
-                  </p>
+        <div className="bg-gray-100/50 rounded-2xl p-8 md:p-12 mb-12 md:mb-20">
+          <div
+            className={`mb-12 md:mb-20 transition-all duration-700 delay-200 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+              {/* Story Column */}
+              <div className="flex flex-col gap-6 md:gap-8 h-full">
+                <div className="relative flex-1">
+                  <div className="absolute -left-4 md:-left-6 top-0 w-0.5 md:w-1 h-full bg-gradient-to-b from-blue-500 to-emerald-500 rounded-full"></div>
+                  <div className="bg-white/90 backdrop-blur-sm rounded-xl md:rounded-2xl p-6 md:p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
+                      Founded in 1997,{" "}
+                      <a
+                        href="https://www.prodesign.mu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                      >
+                        Pro-Design Engineering Consultants Ltd
+                      </a>{" "}
+                      is one of Mauritius's leading MEP and sustainability
+                      consultancies.
+                    </p>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      With hundreds of successful projects, we combine technical
+                      expertise with local knowledge and global best practices.
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl md:rounded-2xl p-6 md:p-8 border border-blue-100 shadow-sm flex-1">
-                <div className="flex items-center mb-4 md:mb-6">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900">
-                    Innovation Heritage
-                  </h3>
+                <div className="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl md:rounded-2xl p-6 md:p-8 border border-blue-100 shadow-sm flex-1">
+                  <div className="flex items-center mb-4 md:mb-6">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900">
+                      Innovation Heritage
+                    </h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                    <span className="font-semibold text-blue-600">
+                      Prodesign Innovation
+                    </span>{" "}
+                    carries our innovative spirit forward through research,
+                    prototyping, and scalable technology development.
+                  </p>
                 </div>
-                <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                  <span className="font-semibold text-blue-600">
-                    Prodesign Innovation
-                  </span>{" "}
-                  carries our innovative spirit forward through research,
-                  prototyping, and scalable technology development.
-                </p>
               </div>
-            </div>
-            {/* 3d logo image in cloudinary */}
-            <div className="flex items-center justify-center">
-              <div className="w-full max-w-md">
-                <img
-                  src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750422147/ChatGPT_Image_Jun_20_2025_04_22_03_PM_vyfqqn.png"
-                  alt="Prodesign Logo"
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
+              {/* 3d logo image in cloudinary */}
+              <div className="flex items-center justify-center">
+                <div className="w-full max-w-md">
+                  <img
+                    src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750663378/3d-no-background_bsfztn.png"
+                    alt="Prodesign Logo"
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="hidden md:block md:absolute md:-right-6 md:-top-6 md:w-24 md:h-20 bg-blue-400/10 rounded-full blur-xl"></div>
               </div>
-              <div className="hidden md:block md:absolute md:-right-6 md:-top-6 md:w-24 md:h-24 bg-blue-400/10 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
+
         {/* Timeline Section */}
         <div
           ref={timelineRef}
