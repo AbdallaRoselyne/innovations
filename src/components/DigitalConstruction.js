@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCode,
@@ -24,104 +24,151 @@ const DigitalConstruction = () => {
   const [expandedProject, setExpandedProject] = useState(null);
   const [isHovering, setIsHovering] = useState(false);
 
-  const projects = [
-    {
-      id: "bim-automation",
-      title: "Automated BIM Coordination & Compliance",
-      shortDescription:
-        "Smart code-checking and coordination through automation. We're developing rule-based systems that verify compliance and detect conflicts automatically.",
-      fullDescription:
-        "We are developing a rule-based automation engine that enhances BIM coordination by embedding code compliance and clash detection into the design process. Our system can automatically verify fire safety requirements, detect design conflicts, and flag non-compliant layouts—all within the BIM environment.",
-      icon: faCode,
-      image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495142/VR_zoxeil.jpg",
-      color: "bg-prodesign-blue",
-      benefits: [
-        "Accelerate design approvals",
-        "Reduce rework and consultant review time",
-        "Minimise manual errors in complex projects",
-        "Create traceable, auditable compliance records",
-      ],
-      status: "Research Phase",
-    },
-    {
-      id: "ar-integration",
-      title: "BIM Integration with Augmented Reality",
-      shortDescription:
-        "Precision-built spaces through immersive technology. Superimpose BIM models onto real-world spaces for millimetre-level accuracy.",
-      fullDescription:
-        "We've successfully demonstrated how Building Information Modelling (BIM) can be integrated with Augmented Reality (AR) to enhance construction accuracy—especially in complex, services-dense environments like plant rooms. By superimposing BIM models directly onto real-world spaces through AR, contractors can visualise the exact installation layout before any work begins.",
-      icon: faVrCardboard,
-      image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495142/VR_zoxeil.jpg",
-      color: "bg-purple-500",
-      benefits: [
-        "Millimetre-level precision during installation",
-        "Reduction of rework, material waste, and delays",
-        "Faster execution with fewer coordination errors",
-        "Scalable framework for high-value construction",
-      ],
-      status: "Pilot Complete",
-    },
-    {
-      id: "digital-twin",
-      title: "Construction Digital Twin Research",
-      shortDescription:
-        "Building smarter, from design to operation. Real-time digital replicas that bridge virtual planning with physical performance.",
-      fullDescription:
-        "We are developing a construction-focused digital twin framework to improve how buildings are designed, constructed, and managed throughout their lifecycle. This initiative is co-funded by the Mauritius Research and Innovation Council (MRIC) and aims to bridge the gap between virtual planning and physical performance.",
-      icon: faProjectDiagram,
-      image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495141/prototype_jnqj9y.png",
-      color: "bg-green-500",
-      benefits: [
-        "Enhanced decision-making during construction",
-        "Early detection of site issues through live synchronisation",
-        "Streamlined facility management through connected data",
-        "Reduced lifecycle costs and improved sustainability",
-      ],
-      status: "MRIC Co-funded",
-    },
-    {
-      id: "procurement-platform",
-      title: "Construction Procurement Platform",
-      shortDescription:
-        "Connecting the supply chain for a smarter construction economy. Digital platform streamlining sourcing and creating new opportunities.",
-      fullDescription:
-        "We're building a digital procurement platform tailored to the construction industry—designed to streamline sourcing, improve transparency, and create new business opportunities for contractors and suppliers.",
-      icon: faShoppingCart,
-      image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748867506/ibid_a92qfm.png",
-      color: "bg-rose-500",
-      benefits: [
-        "Browse and compare suppliers in real-time",
-        "Submit and manage quotations efficiently",
-        "Track procurement across multiple projects",
-        "Access wider network of verified partners",
-      ],
-      status: "In Development",
-    },
-    {
-      id: "interactive-manual",
-      title: "Interactive User Manuals",
-      shortDescription:
-        "Smart documentation for building operations. Interactive web-based guides that make building maintenance intuitive and accessible.",
-      fullDescription:
-        "We have produced an interactive user guide for building owners. This guide is easy to use and contains information on how to operate and maintain installation through an interactive web browser.",
-      icon: faBookOpen,
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      color: "bg-amber-500",
-      benefits: [
-        "Easy-to-use interactive interface",
-        "Comprehensive operation instructions",
-        "Maintenance scheduling and tracking",
-        "Web-based accessibility from any device",
-      ],
-      status: "Live Production",
-    },
-  ];
+  const projects = useMemo(
+    () => [
+      {
+        id: "ar-integration",
+        title: "BIM Integration with Augmented Reality",
+        shortDescription:
+          "Precision-built spaces through immersive technology. Superimpose BIM models onto real-world spaces for millimetre-level accuracy.",
+        fullDescription:
+          "We've successfully demonstrated how Building Information Modelling (BIM) can be integrated with Augmented Reality (AR) to enhance construction accuracy—especially in complex, services-dense environments like plant rooms. By superimposing BIM models directly onto real-world spaces through AR, contractors can visualise the exact installation layout before any work begins.",
+        icon: faVrCardboard,
+        image:
+          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495142/VR_zoxeil.jpg",
+        color: "bg-purple-500",
+        benefits: [
+          "Millimetre-level precision during installation",
+          "Reduction of rework, material waste, and delays",
+          "Faster execution with fewer coordination errors",
+          "Scalable framework for high-value construction",
+        ],
+        status: "Pilot Complete",
+      },
+      {
+        id: "bim-automation",
+        title: "Automated BIM Coordination & Compliance",
+        shortDescription:
+          "Smart code-checking and coordination through automation. We're developing rule-based systems that verify compliance and detect conflicts automatically.",
+        fullDescription:
+          "We are developing a rule-based automation engine that enhances BIM coordination by embedding code compliance and clash detection into the design process. Our system can automatically verify fire safety requirements, detect design conflicts, and flag non-compliant layouts—all within the BIM environment.",
+        icon: faCode,
+        image:
+          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750678520/Clash-detection_k1yzvb.png",
+        color: "bg-prodesign-blue",
+        benefits: [
+          "Accelerate design approvals",
+          "Reduce rework and consultant review time",
+          "Minimise manual errors in complex projects",
+          "Create traceable, auditable compliance records",
+        ],
+        status: "Research Phase",
+      },
+      {
+        id: "digital-twin",
+        title: "Construction Digital Twin Research",
+        shortDescription:
+          "Building smarter, from design to operation. Real-time digital replicas that bridge virtual planning with physical performance.",
+        fullDescription:
+          "We are developing a construction-focused digital twin framework to improve how buildings are designed, constructed, and managed throughout their lifecycle. This initiative is co-funded by the Mauritius Research and Innovation Council (MRIC) and aims to bridge the gap between virtual planning and physical performance.",
+        icon: faProjectDiagram,
+        image:
+          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495141/prototype_jnqj9y.png",
+        color: "bg-green-500",
+        benefits: [
+          "Enhanced decision-making during construction",
+          "Early detection of site issues through live synchronisation",
+          "Streamlined facility management through connected data and Reduced lifecycle costs and improved sustainability",
+        ],
+        status: "MRIC Co-funded",
+      },
+      {
+        id: "procurement-platform",
+        title: "Construction Procurement Platform",
+        shortDescription:
+          "Connecting the supply chain for a smarter construction economy. Digital platform streamlining sourcing and creating new opportunities.",
+        fullDescription:
+          "We're building a digital procurement platform tailored to the construction industry—designed to streamline sourcing, improve transparency, and create new business opportunities for contractors and suppliers.",
+        icon: faShoppingCart,
+        image:
+          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748867506/ibid_a92qfm.png",
+        color: "bg-rose-500",
+        benefits: [
+          "Browse and compare suppliers in real-time",
+          "Submit and manage quotations efficiently",
+          "Track procurement across multiple projects",
+          "Access wider network of verified partners",
+        ],
+        status: "In Development",
+      },
+      {
+        id: "interactive-manual",
+        title: "Interactive User Manuals",
+        shortDescription:
+          "Smart documentation for building operations. Interactive web-based guides that make building maintenance intuitive and accessible.",
+        fullDescription:
+          "We have produced an interactive user guide for building owners. This guide is easy to use and contains information on how to operate and maintain installation through an interactive web browser.",
+        icon: faBookOpen,
+        image:
+          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750678133/interactive_vst5ht.png",
+        color: "bg-amber-500",
+        benefits: [
+          "Easy-to-use interactive interface",
+          "Comprehensive operation instructions",
+          "Maintenance scheduling and tracking",
+          "Web-based accessibility from any device",
+        ],
+        status: "Live Production",
+      },
+    ],
+    []
+  );
 
+  const findProjectIndexById = useCallback(
+    (id) => {
+      return projects.findIndex((project) => project.id === id);
+    },
+    [projects]
+  );
+
+  const handleNextProject = useCallback(() => {
+    const currentIndex = findProjectIndexById(expandedProject);
+    const nextIndex = (currentIndex + 1) % projects.length;
+    setCurrentSlide(nextIndex);
+    setExpandedProject(projects[nextIndex].id);
+  }, [expandedProject, projects, findProjectIndexById]);
+
+  const handlePrevProject = useCallback(() => {
+    const currentIndex = findProjectIndexById(expandedProject);
+    const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
+    setCurrentSlide(prevIndex);
+    setExpandedProject(projects[prevIndex].id);
+  }, [expandedProject, projects, findProjectIndexById]);
+
+  const closeProject = useCallback(() => {
+    setExpandedProject(null);
+    setIsPlaying(true);
+  }, []);
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (expandedProject) {
+        if (e.key === "ArrowRight") {
+          handleNextProject();
+        } else if (e.key === "ArrowLeft") {
+          handlePrevProject();
+        } else if (e.key === "Escape") {
+          closeProject();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [expandedProject, handleNextProject, handlePrevProject, closeProject]);
+
+  // Remove currentSlide from dependency array since it's not used in the effect
   useEffect(() => {
     let interval;
     if (isPlaying && !isHovering && !expandedProject) {
@@ -132,6 +179,7 @@ const DigitalConstruction = () => {
     return () => clearInterval(interval);
   }, [isPlaying, projects.length, isHovering, expandedProject]);
 
+  // Keep these as regular functions since they don't need to be in dependency arrays
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % projects.length);
   };
@@ -151,11 +199,6 @@ const DigitalConstruction = () => {
   const openProject = (projectId) => {
     setExpandedProject(projectId);
     setIsPlaying(false);
-  };
-
-  const closeProject = () => {
-    setExpandedProject(null);
-    setIsPlaying(true);
   };
 
   const currentProject = projects[currentSlide];
@@ -201,13 +244,13 @@ const DigitalConstruction = () => {
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16 relative">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              <span className="relative">
-                <span className="relative z-10">Digital</span>
-                <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-400/30 -rotate-1 -z-0"></span>
-              </span>{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
-                Construction
-              </span>
+            <span className="relative">
+              <span className="relative z-10">Digital</span>
+              <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-400/30 -rotate-1 -z-0"></span>
+            </span>{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
+              Construction
+            </span>
           </h2>
           <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 rounded-full mb-4">
             <FontAwesomeIcon icon={faBolt} className="mr-2" />
@@ -308,7 +351,6 @@ const DigitalConstruction = () => {
             </div>
           </div>
         </div>
-
         {/* Projects Section */}
         <div
           className="mb-8 flex items-center justify-between"
@@ -381,22 +423,22 @@ const DigitalConstruction = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 z-10"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 z-10 border border-gray-200"
               aria-label="Previous slide"
             >
               <FontAwesomeIcon
                 icon={faChevronLeft}
-                className="text-blue-600 text-lg"
+                className="text-blue-600 text-xl"
               />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 z-10"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 z-10 border border-gray-200"
               aria-label="Next slide"
             >
               <FontAwesomeIcon
                 icon={faChevronRight}
-                className="text-blue-600 text-lg"
+                className="text-blue-600 text-xl"
               />
             </button>
           </div>
@@ -462,10 +504,32 @@ const DigitalConstruction = () => {
         </div>
       </div>
 
-      {/* Expanded Project Modal */}
+      {/* Expanded Project Modal - Improved with better navigation */}
       {expandedProject && expandedProjectData && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+            {/* Navigation Arrows for Case Study */}
+            <button
+              onClick={handlePrevProject}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 z-20 border border-gray-200"
+              aria-label="Previous project"
+            >
+              <FontAwesomeIcon
+                icon={faChevronLeft}
+                className="text-blue-600 text-xl"
+              />
+            </button>
+            <button
+              onClick={handleNextProject}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 z-20 border border-gray-200"
+              aria-label="Next project"
+            >
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                className="text-blue-600 text-xl"
+              />
+            </button>
+
             <div className="relative">
               {/* Header Image */}
               <div className="relative h-64 overflow-hidden rounded-t-3xl">
@@ -481,13 +545,18 @@ const DigitalConstruction = () => {
                 <button
                   onClick={closeProject}
                   className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                  aria-label="Close case study"
                 >
                   <FontAwesomeIcon icon={faXmark} className="w-5 h-5" />
                 </button>
 
-                <div className="absolute bottom-4 left-6">
+                <div className="absolute bottom-4 left-6 flex items-center gap-3">
                   <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
                     {expandedProjectData.status}
+                  </span>
+                  <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+                    Project {findProjectIndexById(expandedProject) + 1} of{" "}
+                    {projects.length}
                   </span>
                 </div>
               </div>
@@ -539,7 +608,7 @@ const DigitalConstruction = () => {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="mt-8 pt-6 border-t border-gray-200 flex justify-between items-center">
                   <button
                     onClick={closeProject}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
@@ -547,6 +616,29 @@ const DigitalConstruction = () => {
                     <FontAwesomeIcon icon={faChevronLeft} className="w-4 h-4" />
                     Back to Projects
                   </button>
+
+                  <div className="flex items-center gap-4">
+                    <button
+                      onClick={handlePrevProject}
+                      className="inline-flex items-center gap-2 text-gray-700 hover:text-blue-700 font-semibold"
+                    >
+                      <FontAwesomeIcon
+                        icon={faChevronLeft}
+                        className="w-4 h-4"
+                      />
+                      Previous
+                    </button>
+                    <button
+                      onClick={handleNextProject}
+                      className="inline-flex items-center gap-2 text-gray-700 hover:text-blue-700 font-semibold"
+                    >
+                      Next
+                      <FontAwesomeIcon
+                        icon={faChevronRight}
+                        className="w-4 h-4"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
