@@ -24,18 +24,18 @@ const Gallery = () => {
     {
       id: 1,
       type: "video",
-      name: "Virtual Reality Prototype",
+      name: "BIM Integration with Augmented Reality",
       category: "Digital construction",
       src: "MyVideo_1_wutn7p",
-      alt: "Digital Construction",
-      tags: ["VR", "prototype", "tech"],
+      alt: "BIM AR Integration",
+      tags: ["VR", "prototype", "BIM"],
     },
     {
       id: 2,
       type: "video",
-      name: "Electrical Scooter",
+      name: "Electrical Scooter Prototype",
       category: "Electric mobility",
-      src: "Scooter_2_clmmtj",
+      src: "Video-Scooter_clsepe.mp4",
       alt: "Electric scooter",
       tags: ["scooter", "electric", "mobility"],
     },
@@ -51,7 +51,7 @@ const Gallery = () => {
     {
       id: 4,
       type: "video",
-      name: "BIM Modelling",
+      name: "Automated BIM Coordination & Compliance",
       category: "Digital construction",
       src: "Digital-Construction-Video_uy1bb0",
       alt: "Construction Video",
@@ -60,36 +60,36 @@ const Gallery = () => {
     {
       id: 5,
       type: "image",
-      name: "Electric Scooter",
+      name: "Mountain Electric Scooter",
       category: "Electric mobility",
-      src: "scooter_devnn8.jpg",
+      src: "scooter3_v76kl8.jpg",
       alt: "Electric Scooter",
-      tags: ["scooter", "electric", "design"],
+      tags: ["scooter", "electric", "prototype"],
     },
     {
       id: 6,
       type: "image",
-      name: "Container Farm",
+      name: "Vertical Indoor Farm",
       category: "Clean farming",
       src: "vertical-farm_figzcd.jpg",
-      alt: "Vertical Farm",
+      alt: "Vertical indoor farm",
       tags: ["container", "farming", "innovation"],
     },
     {
       id: 7,
-      type: "image",
-      name: "Digital Twin Feedback Loop",
+      type: "video",
+      name: "Interactive User Manuals",
       category: "Digital construction",
-      src: "prototype_jnqj9y.jpg",
-      alt: "BIM Model",
-      tags: ["digital twin", "feedback", "BIM"],
+      src: "interactive_sq5pte.mp4",
+      alt: "interactive user manuals",
+      tags: ["manuals", "interactive", "construction"],
     },
     {
       id: 8,
       type: "image",
       name: "Electric Scooter Prototype",
       category: "Electric mobility",
-      src: "scooter-2_ro7sag.jpg",
+      src: "scooter5_bafl3x.jpg",
       alt: "EV Prototype",
       tags: ["prototype", "electric", "scooter"],
     },
@@ -250,7 +250,7 @@ const Gallery = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {filteredItems.map((item) => (
             <div
               key={item.id}

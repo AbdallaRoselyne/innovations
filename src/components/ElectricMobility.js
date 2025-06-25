@@ -22,7 +22,7 @@ const ElectricMobility = () => {
       title: "3-Wheeled Electric Scooter for Children",
       tagline: "Safe. Stylish. Built for Fun.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750671017/M002B_fltsyu.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750852197/scooter6_svxfc8.png",
       description:
         "The M002 is a fun and reliable electric scooter designed especially for children. With its stable 3-wheel configuration and durable aluminium frame, it's perfect for young riders who are just getting started. Easy to use, quick to fold, and available in vibrant colours – this scooter is made to move.",
       features: [
@@ -39,54 +39,12 @@ const ElectricMobility = () => {
       stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 4Ah" }],
     },
     {
-      id: 2,
-      name: "M004-B1",
-      title: "2 Wheeled Electric Scooter for Kids",
-      tagline: "Compact. Safe. Ready to Ride.",
-      image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750670841/M004-B1_dg0bj0.png",
-      description:
-        "Designed for younger riders, the M004-B1 brings the excitement of electric scooters in a smaller, easy-to-control package. With a lightweight design and a smooth, stable ride, it's perfect for kids taking their first steps into electric mobility.",
-      features: [
-        "200W Front Wheel Motor – Gentle power delivery ideal for young riders learning the ropes.",
-        "24V Battery System – Reliable and efficient",
-        "6.5-Inch Wheels – Compact size for nimble handling and safe cruising.",
-        "Anti-Slip Deck – Textured surface for better foot grip and safety.",
-        "Quick-Fold Design – Folds down in seconds for easy storage or transport.",
-        "Lightweight Aluminium Frame – Easy for kids and parents to carry.",
-        "Colour Options – Available in cheerful Blue, Green, Yellow, Orange and Pink finishes.",
-      ],
-      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 5Ah" }],
-    },
-    {
-      id: 3,
-      name: "M004-B3",
-      title: "2 Wheeled Electric Scooter for Kids",
-      tagline: "Gentle Power. Confident Starts. Kid-Friendly Design.",
-      image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750670559/M004-B3_kyifq9.png",
-      description:
-        "The M004-B3 is our most beginner-friendly electric scooter, made for little riders just starting their journey. With a low-power 100W motor, it's designed to offer a safe and smooth introduction to electric scooting while keeping all the fun.",
-      features: [
-        "100W Front Wheel Motor – Soft acceleration and safe speeds for first-time riders.",
-        "24V Battery System – Long enough for daily play, short enough for worry-free use (Battery capacity customizable).",
-        "6.5-Inch Wheels – Small and stable for easy handling by younger kids.",
-        "Anti-Slip Deck – Textured for secure footing and improved safety.",
-        "Quick-Fold Design – Effortless folding for easy transport and storage.",
-        "Lightweight Aluminium Frame – Built tough but easy to carry.",
-        "Colour Options – Available in Blue, Green, Yellow, Orange and Pink to match every personality.",
-      ],
-      summary:
-        "With the M004-B3, kids can explore their world with confidence—at a pace parents will appreciate.",
-      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 3.5Ah" }],
-    },
-    {
       id: 4,
       name: "M004",
       title: "Adult Electric Scooter",
       tagline: "Strong. Smooth. Built to Go Further.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750671164/M004_yh16bx.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750852824/scooter7_gjdipw.png",
       description:
         "Engineered for everyday commutes and weekend adventures, the M004 is a high-performance electric scooter that blends power, control, and comfort into a sleek, durable package. With a robust 500W rear motor, dual disc brakes, and front suspension, it's designed to handle urban streets with ease and style.",
       features: [
@@ -107,7 +65,7 @@ const ElectricMobility = () => {
       title: "Mountain Electric Scooter",
       tagline: "Rugged. Reinforced. Ready for Adventure.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750670388/M005_ozl9fw.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750846141/scooter5_bafl3x.jpg",
       description:
         "The M005 is built for riders who crave more than smooth city streets. With a reinforced all-aluminium frame, large 12-inch wheels, and upgraded motor and battery, this electric scooter is designed to take on rougher terrain with confidence and control.",
       features: [
@@ -120,6 +78,48 @@ const ElectricMobility = () => {
       summary:
         "Whether you're exploring mountain paths, tackling hilly streets, or just looking for a tougher, more capable scooter — the M005 is ready to ride wherever you are.",
       stats: [{ icon: faBatteryFull, label: "Battery", value: "48V 15Ah" }],
+    },
+    {
+      id: 2,
+      name: "M004-B1",
+      title: "2 Wheeled Electric Scooter for Kids",
+      tagline: "Compact. Safe. Ready to Ride.",
+      image:
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750852950/scooter8_m52n4x.jpg",
+      description:
+        "Designed for younger riders, the M004-B1 brings the excitement of electric scooters in a smaller, easy-to-control package. With a lightweight design and a smooth, stable ride, it's perfect for kids taking their first steps into electric mobility.",
+      features: [
+        "200W Front Wheel Motor – Gentle power delivery ideal for young riders learning the ropes.",
+        "24V Battery System – Reliable and efficient",
+        "6.5-Inch Wheels – Compact size for nimble handling and safe cruising.",
+        "Anti-Slip Deck – Textured surface for better foot grip and safety.",
+        "Quick-Fold Design – Folds down in seconds for easy storage or transport.",
+        "Lightweight Aluminium Frame – Easy for kids and parents to carry.",
+        "Colour Options – Available in cheerful Blue, Green, Yellow, Orange and Pink finishes.",
+      ],
+      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 5Ah" }],
+    },
+    {
+      id: 3,
+      name: "M004-B3",
+      title: "2 Wheeled Electric Scooter for Kids",
+      tagline: "Gentle Power. Confident Starts. Kid-Friendly Design.",
+      image:
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750852971/scooter9_olw90w.png",
+      description:
+        "The M004-B3 is our most beginner-friendly electric scooter, made for little riders just starting their journey. With a low-power 100W motor, it's designed to offer a safe and smooth introduction to electric scooting while keeping all the fun.",
+      features: [
+        "100W Front Wheel Motor – Soft acceleration and safe speeds for first-time riders.",
+        "24V Battery System – Long enough for daily play, short enough for worry-free use (Battery capacity customizable).",
+        "6.5-Inch Wheels – Small and stable for easy handling by younger kids.",
+        "Anti-Slip Deck – Textured for secure footing and improved safety.",
+        "Quick-Fold Design – Effortless folding for easy transport and storage.",
+        "Lightweight Aluminium Frame – Built tough but easy to carry.",
+        "Colour Options – Available in Blue, Green, Yellow, Orange and Pink to match every personality.",
+      ],
+      summary:
+        "With the M004-B3, kids can explore their world with confidence—at a pace parents will appreciate.",
+      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 3.5Ah" }],
     },
   ];
 
@@ -488,8 +488,8 @@ const ElectricMobility = () => {
                 </svg>
               </h2>
               <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed">
-                Discover our complete range of electric scooters, designed for
-                every rider and every adventure.
+                Discover our complete range of electric scooters' prototypes,
+                designed for every rider and every adventure.
               </p>
             </div>
 
@@ -505,7 +505,7 @@ const ElectricMobility = () => {
                     {model.name}
                   </div>
 
-                  <div className="aspect-video bg-gradient-to-br from-blue-50 to-gray-100 p-6 flex items-center justify-center relative overflow-hidden">
+                  <div className="aspect-square bg-gradient-to-br from-blue-50 to-gray-100 p-8 flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1716383219/grid-pattern_ml4s0d.png')] opacity-10"></div>
                     <img
                       src={model.image}
