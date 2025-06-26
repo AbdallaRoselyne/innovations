@@ -60,9 +60,9 @@ const Gallery = () => {
     {
       id: 5,
       type: "image",
-      name: "Model 003",
+      name: "Model 001",
       category: "Electric mobility",
-      src: "scooter3_v76kl8.jpg",
+      src: "Three_wheel_Scooter_kdsfdm.png",
       alt: "Electric Scooter",
       tags: ["scooter", "electric", "prototype"],
     },
@@ -87,9 +87,9 @@ const Gallery = () => {
     {
       id: 8,
       type: "image",
-      name: "Model 003",
+      name: "Model 002",
       category: "Electric mobility",
-      src: "Mountain_Scooter_unnic9.png",
+      src: "image_5_atsbxp.png",
       alt: "EV Prototype",
       tags: ["prototype", "electric", "scooter"],
     },
@@ -110,6 +110,34 @@ const Gallery = () => {
       src: "container_dfex3i.jpg",
       alt: "Electric Scooter Prototype",
       tags: ["scooter", "electric", "prototype"],
+    },
+    {
+      id: 11,
+      type: "image",
+      name: "Model 003",
+      category: "Electric mobility",
+      src: "Mountain_Scooter_ygvfzb.png",
+      alt: "Model 003",
+      tags: ["scooter", "electric", "prototype"],
+    },
+
+    {
+      id: 12,
+      type: "image",
+      name: "Model 004",
+      category: "Electric mobility",
+      src: "Kids_Scooter-B1_bh2b9s.png",
+      alt: "Model 004",
+      tags: ["scooter", "electric", "prototype"],
+    },
+    {
+      id: 15,
+      type: "image",
+      name: "Model 005",
+      category: "Electric mobility",
+      src: "image_6_jmalij.png",
+      alt: "Model 005",
+      tags: ["irrigation", "farming", "technology"],
     },
   ];
 

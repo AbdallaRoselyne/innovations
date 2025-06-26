@@ -45,7 +45,7 @@ const ElectricMobility = () => {
       title: "Model 003",
       tagline: "Rugged. Reinforced. Ready for Adventure.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922690/Mountain_Scooter_unnic9.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750933269/Mountain_Scooter_ygvfzb.png",
       detailImages: [
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922692/1000018575_egu2hw.jpg",
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922697/1000018578_g81k9z.jpg",
@@ -494,8 +494,11 @@ const ElectricMobility = () => {
               >
                 <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center shadow-sm z-10">
                   <div>
-                    <p className="text-gray-600 font-bold">
+                    <h3 className="text-blue-500 font-bold">
                       {selectedModel.title}
+                    </h3>
+                    <p className="text-gray-900 font-semibold">
+                      {selectedModel.tagline}
                     </p>
                   </div>
                   <button
@@ -553,12 +556,6 @@ const ElectricMobility = () => {
                             className="w-5 h-5"
                           />
                         </button>
-                      </div>
-
-                      <div className="text-center">
-                        <h3 className="text-2xl font-bold text-blue-600 mb-4">
-                          {selectedModel.tagline}
-                        </h3>
                       </div>
                     </div>
 
