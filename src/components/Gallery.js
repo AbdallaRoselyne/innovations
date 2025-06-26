@@ -89,7 +89,7 @@ const Gallery = () => {
       type: "image",
       name: "Model 003",
       category: "Electric mobility",
-      src: "scooter5_bafl3x.jpg",
+      src: "Mountain_Scooter_unnic9.png",
       alt: "EV Prototype",
       tags: ["prototype", "electric", "scooter"],
     },
