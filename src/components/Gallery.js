@@ -33,9 +33,9 @@ const Gallery = () => {
     {
       id: 2,
       type: "video",
-      name: "Electrical Scooter Prototype",
+      name: "Electrical Scooter Video",
       category: "Electric mobility",
-      src: "Video-Scooter_clsepe.mp4",
+      src: "electric-scooter_zozkiu.mp4",
       alt: "Electric scooter",
       tags: ["scooter", "electric", "mobility"],
     },
@@ -60,7 +60,7 @@ const Gallery = () => {
     {
       id: 5,
       type: "image",
-      name: "Mountain Electric Scooter",
+      name: "Model 003",
       category: "Electric mobility",
       src: "scooter3_v76kl8.jpg",
       alt: "Electric Scooter",
@@ -87,7 +87,7 @@ const Gallery = () => {
     {
       id: 8,
       type: "image",
-      name: "Electric Scooter Prototype",
+      name: "Model 003",
       category: "Electric mobility",
       src: "scooter5_bafl3x.jpg",
       alt: "EV Prototype",
