@@ -69,7 +69,7 @@ const ElectricMobility = () => {
       image:
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931467/image_6_jmalij.png",
       detailImages: [
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922685/Kids_Scooter-B3_m7jdid.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931467/image_6_jmalij.png",
       ],
     },
   ];

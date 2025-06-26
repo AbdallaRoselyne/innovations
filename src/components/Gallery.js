@@ -42,7 +42,7 @@ const Gallery = () => {
     {
       id: 3,
       type: "image",
-      name: "Seedlings in Vertical Farm",
+      name: "Seedlings in Vertical Indoor Farm",
       category: "Clean farming",
       src: "seedlings-2_jaz2aw.jpg",
       alt: "Clean Farming",
@@ -96,11 +96,20 @@ const Gallery = () => {
     {
       id: 9,
       type: "image",
-      name: "Advanced Grow Lights",
+      name: "Energy-Efficient Grow Lighting",
       category: "Clean farming",
       src: "grow_lights_vnxg0c.jpg",
-      alt: "Grow Lights",
+      alt: "Energy-efficient grow lights",
       tags: ["grow lights", "LED", "farming"],
+    },
+    {
+      id: 10,
+      type: "image",
+      name: "Automated Container Farm",
+      category: "Clean farming",
+      src: "container_dfex3i.jpg",
+      alt: "Electric Scooter Prototype",
+      tags: ["scooter", "electric", "prototype"],
     },
   ];
 
