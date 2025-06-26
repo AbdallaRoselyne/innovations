@@ -6,7 +6,7 @@ import {
   faLeaf,
   faIndustry,
   faChevronRight,
-  faBatteryFull,
+  faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { CheckCircle } from "lucide-react";
 
@@ -18,108 +18,59 @@ const ElectricMobility = () => {
   const scooterModels = [
     {
       id: 1,
-      name: "M002B",
-      title: "3-Wheeled Electric Scooter for Children",
+      title: "Model 001",
       tagline: "Safe. Stylish. Built for Fun.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750852197/scooter6_svxfc8.png",
-      description:
-        "The M002 is a fun and reliable electric scooter designed especially for children. With its stable 3-wheel configuration and durable aluminium frame, it's perfect for young riders who are just getting started. Easy to use, quick to fold, and available in vibrant colours – this scooter is made to move.",
-      features: [
-        "Powerful 200W Front Wheel Motor – Smooth acceleration with just the right amount of kick for young riders.",
-        "24V Battery System – Long-lasting battery for extended play sessions",
-        "6.5-Inch Wheels – Balanced and grippy for added safety on sidewalks and playground paths.",
-        "Anti-Slip Deck – Keeps feet firmly planted for confident riding.",
-        "Quick-Fold Mechanism – Effortless folding for easy storage and transport.",
-        "Sturdy Aluminium Frame – Lightweight yet tough enough for everyday use.",
-        "Colour Options – Available in playful Blue and Pink finishes.",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922690/Three_wheel_Scooter_kdsfdm.png",
+      detailImages: [
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922693/1000018469_tbfpxr.jpg",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922695/1000018453_oyh3v0.jpg",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922692/1000018456_bqhebv.jpg",
       ],
-      summary:
-        "Whether it's a quick ride to the park or cruising around the yard, the M002 turns everyday moments into adventures.",
-      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 4Ah" }],
-    },
-    {
-      id: 4,
-      name: "M004",
-      title: "Adult Electric Scooter",
-      tagline: "Strong. Smooth. Built to Go Further.",
-      image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750852824/scooter7_gjdipw.png",
-      description:
-        "Engineered for everyday commutes and weekend adventures, the M004 is a high-performance electric scooter that blends power, control, and comfort into a sleek, durable package. With a robust 500W rear motor, dual disc brakes, and front suspension, it's designed to handle urban streets with ease and style.",
-      features: [
-        "500W Rear Hub Motor – Delivers powerful torque and acceleration, even on inclines.",
-        "36V 11.6Ah Battery – Long-range capability for daily commuting or extended rides.",
-        '10-Inch Pneumatic Tires – Rear Wheel: 10×3" wide tire with disc brake and integrated motor for superior grip and control. Front Wheel: Standard 10" with disc brake for balanced stopping power.',
-        "Front & Rear Disc Brakes – Confident, reliable braking in all conditions.",
-        "Front Fork Suspension – Absorbs shocks from rough pavement for a smoother ride.",
-        "Full Aluminium Frame – Lightweight yet rugged for long-lasting durability.",
-      ],
-      summary:
-        "Whether you're navigating busy streets or cruising down bike paths, the M004 offers a refined, dependable ride with the performance adults need and the quality they deserve.",
-      stats: [{ icon: faBatteryFull, label: "Battery", value: "36V 11.6Ah" }],
-    },
-    {
-      id: 5,
-      name: "M005",
-      title: "Mountain Electric Scooter",
-      tagline: "Rugged. Reinforced. Ready for Adventure.",
-      image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750846141/scooter5_bafl3x.jpg",
-      description:
-        "The M005 is built for riders who crave more than smooth city streets. With a reinforced all-aluminium frame, large 12-inch wheels, and upgraded motor and battery, this electric scooter is designed to take on rougher terrain with confidence and control.",
-      features: [
-        "Heavy-Duty Aluminium Frame – Reinforced construction for added durability on trails and uneven surfaces.",
-        "12-Inch All-Terrain Wheels – Larger diameter for better ground clearance, grip, and shock absorption.",
-        "High-Power Motor – Delivers more torque and traction for off-road conditions",
-        "Upgraded Battery – Extended range and power for long, demanding rides.",
-        "Built for Tough Rides – Ideal for countryside paths, gravel roads, and adventurous detours.",
-      ],
-      summary:
-        "Whether you're exploring mountain paths, tackling hilly streets, or just looking for a tougher, more capable scooter — the M005 is ready to ride wherever you are.",
-      stats: [{ icon: faBatteryFull, label: "Battery", value: "48V 15Ah" }],
     },
     {
       id: 2,
-      name: "M004-B1",
-      title: "2 Wheeled Electric Scooter for Kids",
-      tagline: "Compact. Safe. Ready to Ride.",
+      title: "Model 002",
+      tagline: "Strong. Smooth. Built to Go Further.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750852950/scooter8_m52n4x.jpg",
-      description:
-        "Designed for younger riders, the M004-B1 brings the excitement of electric scooters in a smaller, easy-to-control package. With a lightweight design and a smooth, stable ride, it's perfect for kids taking their first steps into electric mobility.",
-      features: [
-        "200W Front Wheel Motor – Gentle power delivery ideal for young riders learning the ropes.",
-        "24V Battery System – Reliable and efficient",
-        "6.5-Inch Wheels – Compact size for nimble handling and safe cruising.",
-        "Anti-Slip Deck – Textured surface for better foot grip and safety.",
-        "Quick-Fold Design – Folds down in seconds for easy storage or transport.",
-        "Lightweight Aluminium Frame – Easy for kids and parents to carry.",
-        "Colour Options – Available in cheerful Blue, Green, Yellow, Orange and Pink finishes.",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922688/Adult_Scooter_fyreco.png",
+      detailImages: [
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922690/1000018434_meyukq.jpg",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922692/1000018419_tebab2.jpg",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750240551/transparent_d56tcf.png",
       ],
-      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 5Ah" }],
     },
     {
       id: 3,
-      name: "M004-B3",
-      title: "2 Wheeled Electric Scooter for Kids",
+      title: "Model 003",
+      tagline: "Rugged. Reinforced. Ready for Adventure.",
+      image:
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922690/Mountain_Scooter_unnic9.png",
+      detailImages: [
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922692/1000018575_egu2hw.jpg",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922697/1000018578_g81k9z.jpg",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922691/1000018579_savpdl.jpg",
+      ],
+    },
+    {
+      id: 4,
+      title: "Model 004",
+      tagline: "Compact. Safe. Ready to Ride.",
+      image:
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922688/Kids_Scooter-B1_bh2b9s.png",
+      detailImages: [
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922688/Kids_Scooter-B1_bh2b9s.png",
+      ],
+    },
+    {
+      id: 5,
+      title: "Model 005",
       tagline: "Gentle Power. Confident Starts. Kid-Friendly Design.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750852971/scooter9_olw90w.png",
-      description:
-        "The M004-B3 is our most beginner-friendly electric scooter, made for little riders just starting their journey. With a low-power 100W motor, it's designed to offer a safe and smooth introduction to electric scooting while keeping all the fun.",
-      features: [
-        "100W Front Wheel Motor – Soft acceleration and safe speeds for first-time riders.",
-        "24V Battery System – Long enough for daily play, short enough for worry-free use (Battery capacity customizable).",
-        "6.5-Inch Wheels – Small and stable for easy handling by younger kids.",
-        "Anti-Slip Deck – Textured for secure footing and improved safety.",
-        "Quick-Fold Design – Effortless folding for easy transport and storage.",
-        "Lightweight Aluminium Frame – Built tough but easy to carry.",
-        "Colour Options – Available in Blue, Green, Yellow, Orange and Pink to match every personality.",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922685/Kids_Scooter-B3_m7jdid.png",
+      detailImages: [
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922685/Kids_Scooter-B3_m7jdid.png",
       ],
-      summary:
-        "With the M004-B3, kids can explore their world with confidence—at a pace parents will appreciate.",
-      stats: [{ icon: faBatteryFull, label: "Battery", value: "24V 3.5Ah" }],
     },
   ];
 
@@ -501,15 +452,12 @@ const ElectricMobility = () => {
                   onClick={() => setSelectedModel(model)}
                 >
                   {/* Model badge */}
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
-                    {model.name}
-                  </div>
 
                   <div className="aspect-square bg-gradient-to-br from-blue-50 to-gray-100 p-8 flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1716383219/grid-pattern_ml4s0d.png')] opacity-10"></div>
                     <img
                       src={model.image}
-                      alt={model.name}
+                      alt={model.title}
                       className="relative max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -541,15 +489,14 @@ const ElectricMobility = () => {
               onClick={() => setSelectedModel(null)}
             >
               <div
-                className="bg-white rounded-2xl max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl"
+                className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center shadow-sm z-10">
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-900">
-                      {selectedModel.name}
-                    </h2>
-                    <p className="text-gray-600">{selectedModel.title}</p>
+                    <p className="text-gray-600 font-bold">
+                      {selectedModel.title}
+                    </p>
                   </div>
                   <button
                     onClick={() => setSelectedModel(null)}
@@ -570,59 +517,80 @@ const ElectricMobility = () => {
                           className="relative max-w-full max-h-full object-contain"
                         />
                       </div>
+
+                      {/* Navigation Arrows */}
+                      <div className="flex justify-between mb-4">
+                        <button
+                          onClick={() => {
+                            const currentIndex = scooterModels.findIndex(
+                              (model) => model.id === selectedModel.id
+                            );
+                            const prevIndex =
+                              (currentIndex - 1 + scooterModels.length) %
+                              scooterModels.length;
+                            setSelectedModel(scooterModels[prevIndex]);
+                          }}
+                          className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        >
+                          <FontAwesomeIcon
+                            icon={faChevronLeft}
+                            className="w-5 h-5"
+                          />
+                        </button>
+                        <button
+                          onClick={() => {
+                            const currentIndex = scooterModels.findIndex(
+                              (model) => model.id === selectedModel.id
+                            );
+                            const nextIndex =
+                              (currentIndex + 1) % scooterModels.length;
+                            setSelectedModel(scooterModels[nextIndex]);
+                          }}
+                          className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        >
+                          <FontAwesomeIcon
+                            icon={faChevronRight}
+                            className="w-5 h-5"
+                          />
+                        </button>
+                      </div>
+
                       <div className="text-center">
                         <h3 className="text-2xl font-bold text-blue-600 mb-4">
                           {selectedModel.tagline}
                         </h3>
-
-                        {/* Stats grid */}
-                        <div className="grid grid-cols-2 gap-4 mb-8">
-                          {selectedModel.stats.map((stat, i) => (
-                            <div key={i} className="bg-gray-50 p-4 rounded-lg">
-                              <div className="flex items-center justify-center gap-2 mb-2">
-                                <FontAwesomeIcon
-                                  icon={stat.icon}
-                                  className="text-blue-500"
-                                />
-                                <span className="text-sm text-gray-600">
-                                  {stat.label}
-                                </span>
-                              </div>
-                              <div className="text-lg font-bold text-gray-900">
-                                {stat.value}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
                       </div>
                     </div>
 
                     <div>
-                      <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                        {selectedModel.description}
-                      </p>
+                      <h3 className="text-xl font-bold text-gray-900 mb-6">
+                        Detailed Views
+                      </h3>
 
-                      <h4 className="text-xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
-                        Key Features:
-                      </h4>
-                      <ul className="space-y-4 mb-10">
-                        {selectedModel.features.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-4">
-                            <div className="bg-blue-100 p-2 rounded-full flex-shrink-0">
-                              <CheckCircle className="w-5 h-5 text-blue-600" />
+                      {/* Small images grid */}
+                      <div className="grid grid-cols-2 gap-4 mb-8">
+                        {selectedModel.detailImages
+                          .slice(0, 3)
+                          .map((img, index) => (
+                            <div
+                              key={index}
+                              className="aspect-square bg-gradient-to-br from-blue-50 to-gray-100 rounded-lg p-4 flex items-center justify-center cursor-pointer hover:shadow-md transition-all"
+                              onClick={() => {
+                                // Set the clicked image as the main image
+                                setSelectedModel({
+                                  ...selectedModel,
+                                  image: img,
+                                });
+                              }}
+                            >
+                              <img
+                                src={img}
+                                alt={`Detail ${index + 1}`}
+                                className="max-w-full max-h-full object-contain"
+                              />
                             </div>
-                            <span className="text-gray-700">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      {selectedModel.summary && (
-                        <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
-                          <p className="text-gray-700 italic text-lg">
-                            {selectedModel.summary}
-                          </p>
-                        </div>
-                      )}
+                          ))}
+                      </div>
                     </div>
                   </div>
                 </div>
