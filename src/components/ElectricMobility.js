@@ -33,11 +33,11 @@ const ElectricMobility = () => {
       title: "Model 002",
       tagline: "Strong. Smooth. Built to Go Further.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922688/Adult_Scooter_fyreco.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931216/image_5_atsbxp.png",
       detailImages: [
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922690/1000018434_meyukq.jpg",
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922692/1000018419_tebab2.jpg",
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750240551/transparent_d56tcf.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931088/image_s5f0bl.jpg",
       ],
     },
     {
@@ -67,7 +67,7 @@ const ElectricMobility = () => {
       title: "Model 005",
       tagline: "Gentle Power. Confident Starts. Kid-Friendly Design.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922685/Kids_Scooter-B3_m7jdid.png",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931467/image_6_jmalij.png",
       detailImages: [
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922685/Kids_Scooter-B3_m7jdid.png",
       ],
