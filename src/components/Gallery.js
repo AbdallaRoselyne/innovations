@@ -168,7 +168,6 @@ const Gallery = () => {
       width = 800,
       height = 450,
       quality = "auto",
-      format = "mp4",
     } = transformations;
 
     let transformString = `w_${width},h_${height},q_${quality}`;

@@ -1,34 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
   faPhone,
   faMapMarkerAlt,
-  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
-  };
-
   // Decorative SVG elements
   const BlueWave = () => (
     <svg
@@ -69,7 +47,7 @@ const Contact = () => {
       </div>
       <BlueWave />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-3xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="relative inline-block">
@@ -96,193 +74,82 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative p-8 bg-blue-900 bg-opacity-30 rounded-2xl backdrop-blur-sm border border-blue-700 shadow-xl">
-            <div className="absolute -top-3 -left-3 w-16 h-16 rounded-full bg-blue-600 opacity-30"></div>
-            <div className="absolute -bottom-3 -right-3 w-16 h-16 rounded-full bg-blue-400 opacity-30"></div>
+        <div className="relative p-8 bg-blue-900 bg-opacity-30 rounded-2xl backdrop-blur-sm border border-blue-700 shadow-xl">
+          <div className="absolute -top-3 -left-3 w-16 h-16 rounded-full bg-blue-600 opacity-30"></div>
+          <div className="absolute -bottom-3 -right-3 w-16 h-16 rounded-full bg-blue-400 opacity-30"></div>
 
-            <h3 className="text-2xl font-semibold mb-6 flex items-center">
-              <svg
-                className="w-8 h-8 mr-3"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M9 9H9.01"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M15 9H15.01"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-              Get in Touch
-            </h3>
+          <h3 className="text-2xl font-semibold mb-6 flex items-center">
+            <svg
+              className="w-8 h-8 mr-3"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+              <path
+                d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M9 9H9.01"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M15 9H15.01"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+            Get in Touch
+          </h3>
 
-            <p className="mb-8 text-blue-100">
-              Interested in our projects or want to partner with us? Send us a
-              message and we'll get back to you as soon as possible.
-            </p>
+          <p className="mb-8 text-blue-100">
+            Interested in our projects or want to partner with us? Here's how you can reach us.
+          </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start group">
-                <div className="p-3 mr-4 rounded-full bg-blue-800 group-hover:bg-blue-700 transition">
-                  <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg">Email</h4>
-                  <p className="text-blue-100">admin@prodesign.mu</p>
-                </div>
+          <div className="space-y-6">
+            <div className="flex items-start group">
+              <div className="p-3 mr-4 rounded-full bg-blue-800 group-hover:bg-blue-700 transition">
+                <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
               </div>
-
-              <div className="flex items-start group">
-                <div className="p-3 mr-4 rounded-full bg-blue-800 group-hover:bg-blue-700 transition">
-                  <FontAwesomeIcon icon={faPhone} className="text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg">Phone</h4>
-                  <p className="text-blue-100">+230 660 4545</p>
-                </div>
-              </div>
-
-              <div className="flex items-start group">
-                <div className="p-3 mr-4 rounded-full bg-blue-800 group-hover:bg-blue-700 transition">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} className="text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg">Address</h4>
-                  <p className="text-blue-100">
-                    First Floor, Building No.2,
-                    <br />
-                    Industrial Building, Valentina, Phoenix, 73553
-                  </p>
-                </div>
+              <div>
+                <h4 className="font-semibold text-lg">Email</h4>
+                <p className="text-blue-100">admin@prodesign.mu</p>
               </div>
             </div>
-          </div>
 
-          <div className="relative">
-            <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-blue-600 opacity-20 -z-10"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-blue-400 opacity-20 -z-10"></div>
-
-            <form
-              onSubmit={handleSubmit}
-              className="space-y-6 bg-blue-900 bg-opacity-30 p-8 rounded-2xl backdrop-blur-sm border border-blue-700 shadow-xl"
-            >
-              <div className="relative">
-                <label
-                  htmlFor="name"
-                  className="block mb-2 font-medium text-blue-100"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg bg-blue-800 bg-opacity-50 border border-blue-600 focus:border-white focus:outline-none text-white placeholder-blue-300 transition"
-                  placeholder="John Doe"
-                  required
-                />
-                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none opacity-0 group-focus-within:opacity-100 transition">
-                  <svg
-                    className="w-5 h-5 text-blue-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    ></path>
-                  </svg>
-                </div>
+            <div className="flex items-start group">
+              <div className="p-3 mr-4 rounded-full bg-blue-800 group-hover:bg-blue-700 transition">
+                <FontAwesomeIcon icon={faPhone} className="text-xl" />
               </div>
-
-              <div className="relative">
-                <label
-                  htmlFor="email"
-                  className="block mb-2 font-medium text-blue-100"
-                >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg bg-blue-800 bg-opacity-50 border border-blue-600 focus:border-white focus:outline-none text-white placeholder-blue-300 transition"
-                  placeholder="john@example.com"
-                  required
-                />
-                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none opacity-0 group-focus-within:opacity-100 transition">
-                  <svg
-                    className="w-5 h-5 text-blue-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-
               <div>
-                <label
-                  htmlFor="message"
-                  className="block mb-2 font-medium text-blue-100"
-                >
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg bg-blue-800 bg-opacity-50 border border-blue-600 focus:border-white focus:outline-none text-white placeholder-blue-300 transition"
-                  placeholder="Tell us about your project or inquiry..."
-                  required
-                ></textarea>
+                <h4 className="font-semibold text-lg">Phone</h4>
+                <p className="text-blue-100">+230 660 4545</p>
               </div>
+            </div>
 
-              <button
-                type="submit"
-                className="w-full bg-white text-prodesign-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition flex items-center justify-center group"
-              >
-                <span className="mr-2">Send Message</span>
-                <FontAwesomeIcon
-                  icon={faPaperPlane}
-                  className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition"
-                />
-              </button>
-            </form>
+            <div className="flex items-start group">
+              <div className="p-3 mr-4 rounded-full bg-blue-800 group-hover:bg-blue-700 transition">
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="text-xl" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg">Address</h4>
+                <p className="text-blue-100">
+                  First Floor, Building No.2,
+                  <br />
+                  Industrial Building, Valentina, Phoenix, 73553
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
