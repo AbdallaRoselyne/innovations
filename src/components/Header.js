@@ -26,7 +26,7 @@ const Header = () => {
 
   const navItems = [
     { to: "mission", label: "Mission", icon: faSeedling },
-    { to: "work", label: "Innovations", icon: faLightbulb },
+    { to: "work", label: "Our Innovations", icon: faLightbulb },
     { to: "about", label: "About Us", icon: faUsers },
     { to: "contact", label: "Contact", icon: faEnvelope },
   ];
