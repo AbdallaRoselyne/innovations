@@ -233,7 +233,9 @@ const Gallery = () => {
   }, [selectedMedia]);
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 min-h-screen">
+    <section 
+    id="gallery"
+    className="py-20 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-prodesign-blue bg-clip-text text-transparent mb-4 md:mb-6">
