@@ -61,7 +61,7 @@ const Footer = () => {
             <div className="absolute -top-2 -left-2 w-8 h-8 rounded-full bg-green-500 opacity-20"></div>
             <h3 className="text-2xl font-bold mb-4 flex items-center">
               <FontAwesomeIcon icon={faLeaf} className="text-green-400 mr-2" />
-              Prodesign Innovation
+              Prodesign Innovation Limited
             </h3>
             <p className="text-gray-400 mb-4">
               We bring innovative green products and services to life, fighting
@@ -221,7 +221,7 @@ const Footer = () => {
             </svg>
           </div>
           <p className="text-gray-500">
-            © {new Date().getFullYear()} Prodesign Innovation. All rights
+            © {new Date().getFullYear()} Prodesign Innovation Limited. All rights
             reserved.
           </p>
           <p className="text-gray-600 text-sm mt-1">

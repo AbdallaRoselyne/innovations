@@ -294,11 +294,11 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Responsive controls */}
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8 gap-4">
-          {/* Search bar - full width on mobile, auto on larger screens */}
-          <div className="w-full sm:w-auto sm:flex-1 sm:max-w-md">
-            <div className="relative">
+        {/* Responsive controls container */}
+        <div className="flex flex-col sm:flex-row justify-between items-stretch mb-6 sm:mb-8 gap-3 sm:gap-4">
+          {/* Search bar - full width on mobile, flexible on desktop */}
+          <div className="w-full sm:flex-1 min-w-[200px]">
+            <div className="relative h-full">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search
                   className={`h-5 w-5 ${
@@ -311,7 +311,7 @@ const Gallery = () => {
                 placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className={`block w-full pl-10 pr-3 py-2 rounded-lg border ${
+                className={`block w-full h-full pl-10 pr-3 py-2 rounded-lg border ${
                   darkMode
                     ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
                     : "bg-white border-gray-300 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500"
@@ -320,47 +320,52 @@ const Gallery = () => {
             </div>
           </div>
 
-          {/* Filter tabs - centered on mobile, right-aligned on larger screens */}
-          <div className="flex space-x-2 overflow-x-auto w-full sm:w-auto">
-            {[
-              "all",
-              "Digital construction",
-              "Electric mobility",
-              "Clean farming",
-            ].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium rounded-full transition-all ${
-                  activeTab === tab
-                    ? "bg-blue-600 text-white shadow-md"
-                    : darkMode
-                    ? "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                    : "bg-white text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                {tab === "all" ? "All" : tab.split(" ")[0]}
-              </button>
-            ))}
+          {/* Filter tabs - scrollable on small screens, natural flow on larger */}
+          <div className="flex-1 sm:flex-none overflow-x-auto pb-1 sm:pb-0">
+            <div className="flex space-x-2 w-max min-w-full sm:min-w-0">
+              {[
+                "all",
+                "Digital construction",
+                "Electric mobility",
+                "Clean farming",
+              ].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`shrink-0 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full transition-all whitespace-nowrap ${
+                    activeTab === tab
+                      ? "bg-blue-600 text-white shadow-md"
+                      : darkMode
+                      ? "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                      : "bg-white text-gray-700 hover:bg-gray-100"
+                  }`}
+                >
+                  {tab === "all"
+                    ? "All"
+                    : window.innerWidth < 640
+                    ? tab.split(" ")[0]
+                    : tab}
+                </button>
+              ))}
+            </div>
           </div>
 
+          {/* Dark mode toggle - fixed on mobile, inline on desktop */}
           <button
             onClick={() => setDarkMode(!darkMode)}
             aria-label={
               darkMode ? "Switch to light mode" : "Switch to dark mode"
             }
-            className={`
-    fixed sm:static bottom-4 right-4 sm:bottom-auto sm:right-auto
-    p-2 sm:p-2 rounded-full z-20
-    transition-all duration-300
-    ${
-      darkMode
-        ? "bg-gray-700 text-yellow-300 hover:bg-gray-600 shadow-lg"
-        : "bg-gray-200 text-gray-700 hover:bg-gray-300 shadow-lg"
-    }
-    ${darkMode ? "shadow-yellow-400/20" : "shadow-gray-700/20"}
-    hover:scale-110 active:scale-95
-  `}
+            className="fixed sm:static bottom-4 right-4 sm:bottom-auto sm:right-auto
+               p-2 sm:p-2 rounded-full z-20 sm:ml-2
+               transition-all duration-300
+               bg-opacity-90 backdrop-blur-sm
+               hover:scale-110 active:scale-95
+               border dark:border-gray-600 border-gray-300
+               dark:bg-gray-800/90 dark:hover:bg-gray-700
+               bg-white/90 hover:bg-gray-100
+               dark:text-yellow-300 text-gray-700
+               shadow-lg dark:shadow-yellow-400/20 shadow-gray-700/20"
           >
             {darkMode ? (
               <span className="flex items-center">
