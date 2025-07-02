@@ -269,14 +269,6 @@ const Gallery = () => {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [selectedMedia]);
 
-  useEffect(() => {
-    // Check user's preferred color scheme
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    setDarkMode(prefersDark);
-  }, []);
-
   return (
     <div
       className={`min-h-screen transition-colors duration-300 ${
@@ -352,16 +344,35 @@ const Gallery = () => {
             ))}
           </div>
 
-          {/* Dark mode toggle - hidden on smallest screens */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className={`hidden sm:block p-2 rounded-full ${
-              darkMode
-                ? "bg-gray-700 text-yellow-300"
-                : "bg-gray-200 text-gray-700"
-            }`}
+            aria-label={
+              darkMode ? "Switch to light mode" : "Switch to dark mode"
+            }
+            className={`
+    fixed sm:static bottom-4 right-4 sm:bottom-auto sm:right-auto
+    p-2 sm:p-2 rounded-full z-20
+    transition-all duration-300
+    ${
+      darkMode
+        ? "bg-gray-700 text-yellow-300 hover:bg-gray-600 shadow-lg"
+        : "bg-gray-200 text-gray-700 hover:bg-gray-300 shadow-lg"
+    }
+    ${darkMode ? "shadow-yellow-400/20" : "shadow-gray-700/20"}
+    hover:scale-110 active:scale-95
+  `}
           >
-            {darkMode ? "☀️" : "🌙"}
+            {darkMode ? (
+              <span className="flex items-center">
+                <span className="hidden sm:inline mr-1 text-sm">Light</span>
+                <span>☀️</span>
+              </span>
+            ) : (
+              <span className="flex items-center">
+                <span className="hidden sm:inline mr-1 text-sm">Dark</span>
+                <span>🌙</span>
+              </span>
+            )}
           </button>
         </div>
 
