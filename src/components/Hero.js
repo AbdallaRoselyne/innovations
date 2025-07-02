@@ -183,18 +183,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Enhanced scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="flex flex-col items-center">
-          <div className="text-xs text-gray-300 mb-2 animate-bounce">
-            Scroll
-          </div>
-          <div className="relative w-8 h-14 rounded-full border-2 border-white/30 flex justify-center">
-            <div className="absolute top-2 w-1 h-4 bg-gradient-to-b from-emerald-400 to-cyan-400 rounded-full animate-scroll"></div>
-          </div>
-        </div>
-      </div>
-
       {/* Enhanced SVG Wave at bottom */}
       <svg
         className="absolute bottom-0 left-0 w-full h-32"

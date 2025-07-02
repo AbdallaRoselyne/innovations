@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSeedling,
@@ -17,6 +18,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -24,20 +26,26 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHomePage = location.pathname === "/";
+
   const navItems = [
-    { to: "mission", label: "Mission", icon: faSeedling },
+    { to: "mission", label: "Mission", icon: faSeedling, scroll: true },
     {
       label: "Our Innovations",
       icon: faLightbulb,
       submenu: [
-        { to: "digital-construction", label: "Digital Construction" },
-        { to: "electric-mobility", label: "Electric Mobility" },
-        { to: "clean-farming", label: "Clean Farming" },
+        {
+          to: "digital-construction",
+          label: "Digital Construction",
+          scroll: true,
+        },
+        { to: "electric-mobility", label: "Electric Mobility", scroll: true },
+        { to: "clean-farming", label: "Clean Farming", scroll: true },
       ],
     },
-    { to: "about", label: "About Us", icon: faUsers },
-    { to: "gallery", label: "Gallery", icon: faImage },
-    { to: "contact", label: "Contact", icon: faEnvelope },
+    { to: "about", label: "About Us", icon: faUsers, scroll: true },
+    { to: "/gallery", label: "Gallery", icon: faImage, isRouterLink: true },
+    { to: "contact", label: "Contact", icon: faEnvelope, scroll: true },
   ];
 
   return (
@@ -74,21 +82,39 @@ const Header = () => {
                       <FontAwesomeIcon icon={faChevronDown} className="ml-2" />
                     </div>
                     <div className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 min-w-[200px] z-40">
-                      {item.submenu.map((sub, i) => (
-                        <Link
-                          key={i}
-                          to={sub.to}
-                          smooth={true}
-                          duration={800}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
-                        >
-                          {sub.label}
-                        </Link>
-                      ))}
+                      {item.submenu.map((sub, i) =>
+                        isHomePage ? (
+                          <ScrollLink
+                            key={i}
+                            to={sub.to}
+                            smooth={true}
+                            duration={800}
+                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                          >
+                            {sub.label}
+                          </ScrollLink>
+                        ) : (
+                          <RouterLink
+                            key={i}
+                            to={`/#${sub.to}`}
+                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                          >
+                            {sub.label}
+                          </RouterLink>
+                        )
+                      )}
                     </div>
                   </>
-                ) : (
-                  <Link
+                ) : item.isRouterLink ? (
+                  <RouterLink
+                    to={item.to}
+                    className="px-6 py-3 text-gray-700 font-medium hover:text-blue-600"
+                  >
+                    <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                    {item.label}
+                  </RouterLink>
+                ) : isHomePage ? (
+                  <ScrollLink
                     to={item.to}
                     smooth={true}
                     duration={800}
@@ -96,7 +122,15 @@ const Header = () => {
                   >
                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
                     {item.label}
-                  </Link>
+                  </ScrollLink>
+                ) : (
+                  <RouterLink
+                    to={`/#${item.to}`}
+                    className="px-6 py-3 text-gray-700 font-medium hover:text-blue-600"
+                  >
+                    <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                    {item.label}
+                  </RouterLink>
                 )}
               </div>
             ))}
@@ -120,51 +154,107 @@ const Header = () => {
           }`}
         >
           <div className="px-6 py-4 space-y-3">
-            {navItems.map((item, index) => (
-              <div key={index}>
-                {item.submenu ? (
-                  <div>
-                    <button
-                      className="w-full flex justify-between items-center px-4 py-3 text-gray-700 font-medium border rounded"
-                      onClick={() => setOpenSubmenu((prev) => !prev)}
-                    >
-                      <span>
+            {/* Mobile Menu */}
+            <div
+              className={`md:hidden transition-all duration-500 ease-out overflow-hidden bg-white ${
+                isOpen ? "max-h-screen" : "max-h-0"
+              }`}
+            >
+              <div className="px-6 py-4 space-y-3">
+                {navItems.map((item, index) => (
+                  <div key={index}>
+                    {item.submenu ? (
+                      <div>
+                        <button
+                          className="w-full flex justify-between items-center px-4 py-3 text-gray-700 font-medium border rounded"
+                          onClick={() => setOpenSubmenu((prev) => !prev)}
+                        >
+                          <span>
+                            <FontAwesomeIcon
+                              icon={item.icon}
+                              className="mr-2"
+                            />
+                            {item.label}
+                          </span>
+                          <FontAwesomeIcon icon={faChevronDown} />
+                        </button>
+                        {openSubmenu && (
+                          <div className="pl-6 mt-2 space-y-2">
+                            {item.submenu.map((sub, i) =>
+                              isHomePage ? (
+                                <ScrollLink
+                                  key={i}
+                                  to={sub.to}
+                                  smooth={true}
+                                  duration={800}
+                                  onClick={() => {
+                                    setIsOpen(false);
+                                    setOpenSubmenu(false);
+                                  }}
+                                  className="block px-4 py-2 text-gray-600 hover:text-blue-600"
+                                >
+                                  {sub.label}
+                                </ScrollLink>
+                              ) : (
+                                <RouterLink
+                                  key={i}
+                                  to={`/#${sub.to}`}
+                                  onClick={() => {
+                                    setIsOpen(false);
+                                    setOpenSubmenu(false);
+                                  }}
+                                  className="block px-4 py-2 text-gray-600 hover:text-blue-600"
+                                >
+                                  {sub.label}
+                                </RouterLink>
+                              )
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    ) : item.isRouterLink ? (
+                      <RouterLink
+                        to={item.to}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setOpenSubmenu(false);
+                        }}
+                        className="block px-4 py-3 text-gray-700 font-medium border rounded hover:text-blue-600"
+                      >
                         <FontAwesomeIcon icon={item.icon} className="mr-2" />
                         {item.label}
-                      </span>
-                      <FontAwesomeIcon icon={faChevronDown} />
-                    </button>
-                    {openSubmenu && (
-                      <div className="pl-6 mt-2 space-y-2">
-                        {item.submenu.map((sub, i) => (
-                          <Link
-                            key={i}
-                            to={sub.to}
-                            smooth={true}
-                            duration={800}
-                            onClick={() => setIsOpen(false)}
-                            className="block px-4 py-2 text-gray-600 hover:text-blue-600"
-                          >
-                            {sub.label}
-                          </Link>
-                        ))}
-                      </div>
+                      </RouterLink>
+                    ) : isHomePage ? (
+                      <ScrollLink
+                        to={item.to}
+                        smooth={true}
+                        duration={800}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setOpenSubmenu(false);
+                        }}
+                        className="block px-4 py-3 text-gray-700 font-medium border rounded hover:text-blue-600"
+                      >
+                        <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                        {item.label}
+                      </ScrollLink>
+                    ) : (
+                      <RouterLink
+                        to={`/#${item.to}`}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setOpenSubmenu(false);
+                        }}
+                        className="block px-4 py-3 text-gray-700 font-medium border rounded hover:text-blue-600"
+                      >
+                        <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                        {item.label}
+                      </RouterLink>
                     )}
                   </div>
-                ) : (
-                  <Link
-                    to={item.to}
-                    smooth={true}
-                    duration={800}
-                    onClick={() => setIsOpen(false)}
-                    className="block px-4 py-3 text-gray-700 font-medium border rounded hover:text-blue-600"
-                  >
-                    <FontAwesomeIcon icon={item.icon} className="mr-2" />
-                    {item.label}
-                  </Link>
-                )}
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

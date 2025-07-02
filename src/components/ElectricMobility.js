@@ -454,7 +454,6 @@ const ElectricMobility = () => {
                   {/* Model badge */}
 
                   <div className="aspect-square bg-gradient-to-br from-blue-50 to-gray-100 p-8 flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1716383219/grid-pattern_ml4s0d.png')] opacity-10"></div>
                     <img
                       src={model.image}
                       alt={model.title}
@@ -700,7 +699,7 @@ const ElectricMobility = () => {
       </div>
 
       {/* Global styles for animations */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0%,
           100% {

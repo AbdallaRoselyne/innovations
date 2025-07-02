@@ -6,5 +6,11 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+  <loc>https://innovations.mu/gallery</loc>
+  <lastmod>2025-06-30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
   <!-- Add more URLs here -->
 </urlset>

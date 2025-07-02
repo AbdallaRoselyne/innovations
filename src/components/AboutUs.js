@@ -423,7 +423,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes spin-slow {
           from {
             transform: rotate(0deg);

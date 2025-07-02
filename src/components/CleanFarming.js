@@ -176,19 +176,23 @@ const CleanFarming = () => {
           </div>
 
           <div className="mx-auto space-y-6 text-lg text-slate-600 leading-relaxed">
-            <p className="bg-white/80 backdrop-blur-sm p-6 py-16 px-6 rounded-2xl border border-slate-200/50 shadow-sm">
-              Farming relies on the use of pesticides, chemical fertilizers and
-              water. 70% of our global fresh water is used in agriculture.
-              Excessive use of chemicals is polluting our environment and a
-              major concern to our health. A high prevalence of cancer has been
-              associated with exposure to pesticides in the vegetables we
-              consume.
-              <p className="p-6 rounded-2x ">
-                <strong className="text-slate-800">
+            <div className="bg-white/80 backdrop-blur-sm p-6 py-16 px-6 rounded-2xl border border-slate-200/50 shadow-sm space-y-6">
+              <p>
+                Farming relies on the use of pesticides, chemical fertilizers
+                and water. 70% of our global fresh water is used in agriculture.
+                Excessive use of chemicals is polluting our environment and a
+                major concern to our health. A high prevalence of cancer has
+                been associated with exposure to pesticides in the vegetables we
+                consume.
+              </p>
+
+              <div className="p-6 rounded-2xl bg-white/90">
+                <p className="text-slate-800 font-semibold">
                   The future of food will be grown indoors—cleaner, smarter, and
                   closer to home.
-                </strong>
-              </p>
+                </p>
+              </div>
+
               <p className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/50 shadow-sm">
                 At Prodesign Innovation, we are developing scalable,
                 tech-enabled farming systems that address food security, water
@@ -196,139 +200,169 @@ const CleanFarming = () => {
                 farms use precision-engineered lighting, IoT connectivity, and
                 data-driven insights to grow high-value crops with zero
                 pesticides and minimal water. Backed by real-world trials,
-                proprietary designs, and over two years of focused R&D, we’re
-                not just experimenting—we’re building a viable model for clean,
+                proprietary designs, and over two years of focused R&D, we're
+                not just experimenting—we're building a viable model for clean,
                 local food production in a climate-uncertain world.
               </p>
-            </p>
+            </div>
           </div>
         </div>
 
-       {/* Main Projects Section */}
-<div className="mb-20 bg-[#0072CE]/5 py-16 px-6 rounded-3xl relative overflow-hidden">
-  <div className="relative z-10">
-    {/* Project Navigation */}
-    <div className="flex flex-wrap justify-center gap-4 mb-12">
-      {farmingProjects.map((project, index) => (
-        <button
-          key={index}
-          onClick={() => setActiveProject(index)}
-          className={`flex items-center gap-3 px-6 py-3 rounded-full transition-all duration-300 font-semibold ${
-            activeProject === index
-              ? "bg-gradient-to-r from-[#0072CE] to-emerald-500 text-white shadow-lg scale-105"
-              : "bg-white/90 backdrop-blur-sm text-slate-700 hover:bg-white hover:shadow-md border border-slate-200/50"
-          }`}
-        >
-          <FontAwesomeIcon icon={project.icon} />
-          <span className="hidden sm:inline">{project.title}</span>
-        </button>
-      ))}
-    </div>
-
-    {/* Active Project Display */}
-    <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-slate-200/50 shadow-xl">
-      {/* Navigation Arrows */}
-      <div className="absolute -left-6 top-1/2 -translate-y-1/2 z-10">
-        <button
-          onClick={() => setActiveProject((prev) => (prev === 0 ? farmingProjects.length - 1 : prev - 1))}
-          className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#0072CE] hover:bg-[#0072CE] hover:text-white transition-colors duration-300 border border-slate-200/50"
-          aria-label="Previous project"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-      </div>
-      
-      <div className="absolute -right-6 top-1/2 -translate-y-1/2 z-10">
-        <button
-          onClick={() => setActiveProject((prev) => (prev === farmingProjects.length - 1 ? 0 : prev + 1))}
-          className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#0072CE] hover:bg-[#0072CE] hover:text-white transition-colors duration-300 border border-slate-200/50"
-          aria-label="Next project"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        {/* Project Info */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-4 mb-6">
-            <div
-              className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${farmingProjects[activeProject].gradient} text-white flex items-center justify-center`}
-            >
-              <FontAwesomeIcon
-                icon={farmingProjects[activeProject].icon}
-                className="text-2xl"
-              />
+        {/* Main Projects Section */}
+        <div className="mb-20 bg-[#0072CE]/5 py-16 px-6 rounded-3xl relative overflow-hidden">
+          <div className="relative z-10">
+            {/* Project Navigation */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {farmingProjects.map((project, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveProject(index)}
+                  className={`flex items-center gap-3 px-6 py-3 rounded-full transition-all duration-300 font-semibold ${
+                    activeProject === index
+                      ? "bg-gradient-to-r from-[#0072CE] to-emerald-500 text-white shadow-lg scale-105"
+                      : "bg-white/90 backdrop-blur-sm text-slate-700 hover:bg-white hover:shadow-md border border-slate-200/50"
+                  }`}
+                >
+                  <FontAwesomeIcon icon={project.icon} />
+                  <span className="hidden sm:inline">{project.title}</span>
+                </button>
+              ))}
             </div>
-            <div>
-              <h3 className="text-3xl font-bold text-slate-800">
-                {farmingProjects[activeProject].title}
-              </h3>
-              <p className="text-[#0072CE] font-semibold">
-                {farmingProjects[activeProject].subtitle}
-              </p>
-            </div>
-          </div>
 
-          <p className="text-slate-600 text-lg leading-relaxed">
-            {farmingProjects[activeProject].description}
-          </p>
+            {/* Active Project Display */}
+            <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-slate-200/50 shadow-xl">
+              {/* Navigation Arrows */}
+              <div className="absolute -left-6 top-1/2 -translate-y-1/2 z-10">
+                <button
+                  onClick={() =>
+                    setActiveProject((prev) =>
+                      prev === 0 ? farmingProjects.length - 1 : prev - 1
+                    )
+                  }
+                  className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#0072CE] hover:bg-[#0072CE] hover:text-white transition-colors duration-300 border border-slate-200/50"
+                  aria-label="Previous project"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
 
-          <div className="space-y-3">
-            <h4 className="font-bold text-slate-800">Key Features:</h4>
-            {farmingProjects[activeProject].features.map(
-              (feature, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-[#0072CE] to-emerald-500 rounded-full"></div>
-                  <span className="text-slate-600">{feature}</span>
+              <div className="absolute -right-6 top-1/2 -translate-y-1/2 z-10">
+                <button
+                  onClick={() =>
+                    setActiveProject((prev) =>
+                      prev === farmingProjects.length - 1 ? 0 : prev + 1
+                    )
+                  }
+                  className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#0072CE] hover:bg-[#0072CE] hover:text-white transition-colors duration-300 border border-slate-200/50"
+                  aria-label="Next project"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Project Info */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${farmingProjects[activeProject].gradient} text-white flex items-center justify-center`}
+                    >
+                      <FontAwesomeIcon
+                        icon={farmingProjects[activeProject].icon}
+                        className="text-2xl"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-slate-800">
+                        {farmingProjects[activeProject].title}
+                      </h3>
+                      <p className="text-[#0072CE] font-semibold">
+                        {farmingProjects[activeProject].subtitle}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-slate-600 text-lg leading-relaxed">
+                    {farmingProjects[activeProject].description}
+                  </p>
+
+                  <div className="space-y-3">
+                    <h4 className="font-bold text-slate-800">Key Features:</h4>
+                    {farmingProjects[activeProject].features.map(
+                      (feature, i) => (
+                        <div key={i} className="flex items-center gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-[#0072CE] to-emerald-500 rounded-full"></div>
+                          <span className="text-slate-600">{feature}</span>
+                        </div>
+                      )
+                    )}
+                  </div>
+
+                  <div className="flex flex-wrap gap-3 pt-4">
+                    {farmingProjects[activeProject].tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-4 py-2 bg-gradient-to-r from-[#0072CE]/10 to-emerald-100 text-[#0072CE] rounded-full text-sm font-semibold border border-[#0072CE]/20"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              )
-            )}
-          </div>
 
-          <div className="flex flex-wrap gap-3 pt-4">
-            {farmingProjects[activeProject].tags.map((tag, i) => (
-              <span
-                key={i}
-                className="px-4 py-2 bg-gradient-to-r from-[#0072CE]/10 to-emerald-100 text-[#0072CE] rounded-full text-sm font-semibold border border-[#0072CE]/20"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
+                {/* Project Image */}
+                <div className="relative group">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img
+                      src={farmingProjects[activeProject].image}
+                      alt={farmingProjects[activeProject].title}
+                      className="w-full h-80 md:h-96 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
 
-        {/* Project Image */}
-        <div className="relative group">
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-            <img
-              src={farmingProjects[activeProject].image}
-              alt={farmingProjects[activeProject].title}
-              className="w-full h-80 md:h-96 object-cover transform group-hover:scale-110 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                    {/* Overlay Icon */}
+                    <div className="absolute top-6 right-6 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                      <FontAwesomeIcon
+                        icon={farmingProjects[activeProject].icon}
+                        className="text-white text-xl"
+                      />
+                    </div>
+                  </div>
 
-            {/* Overlay Icon */}
-            <div className="absolute top-6 right-6 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-              <FontAwesomeIcon
-                icon={farmingProjects[activeProject].icon}
-                className="text-white text-xl"
-              />
+                  {/* Decorative Elements */}
+                  <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-[#0072CE] to-emerald-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-gradient-to-br from-emerald-400 to-[#0072CE] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Decorative Elements */}
-          <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-[#0072CE] to-emerald-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-gradient-to-br from-emerald-400 to-[#0072CE] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
         {/* What Sets Us Apart */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -411,7 +445,7 @@ const CleanFarming = () => {
       </div>
 
       {/* Add some global styles for animations */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0% {
             transform: translateY(0) rotate(0deg);
