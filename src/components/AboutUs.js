@@ -205,17 +205,30 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Story & Video Section - Updated for equal height */}
-        <div className="bg-gray-200/50 rounded-2xl p-8 md:p-12 mb-12 md:mb-20">
+        {/* Story & Video Section - Full-width background */}
+        <div className="relative bg-gray-200/50 rounded-2xl p-8 md:p-12 mb-12 md:mb-20 overflow-hidden">
+          {/* Background Image - Full width */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1751542901/aboutus_2_olqoq7.png"
+              alt="Background"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 to-gray-900/10"></div>
+          </div>
+
           <div
-            className={`mb-12 md:mb-20 transition-all duration-700 delay-200 ${
+            className={`relative z-10 mb-12 md:mb-20 transition-all duration-700 delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
-              {/* Story Column */}
+              {/* Left side - Empty but maintains grid structure */}
+              <div className="hidden lg:block"></div>
+
+              {/* Text Content - Right side */}
               <div className="flex flex-col gap-6 md:gap-8 h-full">
                 <div className="relative flex-1">
                   <div className="absolute -left-4 md:-left-6 top-0 w-0.5 md:w-1 h-full bg-gradient-to-b from-blue-500 to-emerald-500 rounded-full"></div>
@@ -254,17 +267,6 @@ const AboutUs = () => {
                     prototyping, and scalable technology development.
                   </p>
                 </div>
-              </div>
-              {/* 3d logo image in cloudinary */}
-              <div className="flex items-center justify-center">
-                <div className="w-full max-w-md">
-                  <img
-                    src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1750663378/3d-no-background_bsfztn.png"
-                    alt="Prodesign Logo"
-                    className="w-full h-auto"
-                  />
-                </div>
-                <div className="hidden md:block md:absolute md:-right-6 md:-top-6 md:w-24 md:h-20 bg-blue-400/10 rounded-full blur-xl"></div>
               </div>
             </div>
           </div>
