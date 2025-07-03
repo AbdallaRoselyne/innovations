@@ -20,7 +20,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-20 pb-8">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-20 pb-8"
+    >
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src={`${CLOUDINARY_URL}/video/upload/q_auto/shutterstock_a0tog9.mp4`}

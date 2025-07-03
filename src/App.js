@@ -15,7 +15,9 @@ import CleanFarming from "./components/CleanFarming";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
-import GalleryPage from "./components/GalleryPage";
+import WhyDifferent from "./components/WhyDifferent";
+import GalleryPage from "./components/pages/GalleryPage";
+import NewsPage from "./components/pages/NewsPage";
 
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
@@ -46,6 +48,7 @@ function App() {
               <Header />
               <Hero />
               <Mission />
+              <WhyDifferent />
               <WorkSection />
               <DigitalConstruction />
               <ElectricMobility />
@@ -56,7 +59,9 @@ function App() {
             </div>
           }
         />
+
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/news" element={<NewsPage />} />
       </Routes>
     </Router>
   );

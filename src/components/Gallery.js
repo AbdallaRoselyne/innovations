@@ -569,8 +569,8 @@ const Gallery = () => {
                 {selectedMedia.type === "image" ? (
                   <img
                     src={generateCloudinaryUrl(selectedMedia.src, {
-                      width: window.innerWidth < 768 ? 600 : 1200,
-                      height: window.innerWidth < 768 ? 400 : 800,
+                      width: window.innerWidth < 600 ? 600 : 600,
+                      height: window.innerWidth < 600 ? 600 : 600,
                       quality: "auto:best",
                       format: "auto",
                     })}

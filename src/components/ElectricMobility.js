@@ -290,7 +290,7 @@ const ElectricMobility = () => {
                 Mauritius and similar markets across Africa and the Indian
                 Ocean.
               </p>
-              <div className="p-6 bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-xl border border-cyan-500/30 backdrop-blur-sm max-w-lg">
+              <div className="p-6 bg-gradient-to-r from-blue-900/40 to-gray-900/40 rounded-xl border border-gray-500/30 backdrop-blur-sm ">
                 <p className="text-xl font-bold text-white">
                   This is not just an environmental solution—it's a business
                   opportunity in a fast-growing, underserved segment.
