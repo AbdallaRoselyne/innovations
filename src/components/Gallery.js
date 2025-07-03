@@ -142,6 +142,15 @@ const Gallery = () => {
       alt: "Model 005",
       tags: ["scooter", "electric", "prototype"],
     },
+    {
+      id: 16,
+      type: "video",
+      name: "MBC video on Container Farming",
+      category: "Clean farming",
+      src: "mbc_otopp9.mp4",
+      alt: "MBC video",
+      tags: ["Container farming", "Vegetables", "MBC", "Mauritius"],
+    }
   ];
 
   const generateCloudinaryUrl = (src, transformations = {}) => {

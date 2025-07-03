@@ -59,7 +59,7 @@ const Footer = () => {
       title: "Quick Links",
       links: [
         { to: "mission", text: "Our Mission", type: "scroll" },
-        { to: "work", text: "Our Work", type: "scroll" },
+        { to: "work", text: "Our Innovations", type: "scroll" },
         { to: "about", text: "About Us", type: "scroll" },
         { to: "contact", text: "Contact", type: "scroll" },
       ],
