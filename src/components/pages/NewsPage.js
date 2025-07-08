@@ -37,7 +37,7 @@ const NewsPage = () => {
                 Our news section is coming soon.
               </p>
               <p className="text-gray-500">
-                Check back later for updates on our projects and innovations.
+                Stay tuned updates on our projects and innovations.
               </p>
             </div>
           </div>

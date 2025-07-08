@@ -151,6 +151,7 @@ const Gallery = () => {
       alt: "MBC video",
       tags: ["Container farming", "Vegetables", "MBC", "Mauritius"],
     }
+
   ];
 
   const generateCloudinaryUrl = (src, transformations = {}) => {
@@ -280,9 +281,8 @@ const Gallery = () => {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-300 ${
-        darkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
-      }`}
+      className={`min-h-screen transition-colors duration-300 ${darkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
+        }`}
     >
       {/* Fixed padding to account for fixed header */}
       <div className="pt-20 lg:pt-24"></div>
@@ -294,9 +294,8 @@ const Gallery = () => {
             Innovation Showcase
           </h1>
           <p
-            className={`text-base sm:text-lg md:text-xl max-w-2xl mx-auto ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
+            className={`text-base sm:text-lg md:text-xl max-w-2xl mx-auto ${darkMode ? "text-gray-300" : "text-gray-600"
+              }`}
           >
             Explore our cutting-edge projects in digital construction, electric
             mobility, and clean farming
@@ -310,9 +309,8 @@ const Gallery = () => {
             <div className="relative h-full">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search
-                  className={`h-5 w-5 ${
-                    darkMode ? "text-gray-400" : "text-gray-500"
-                  }`}
+                  className={`h-5 w-5 ${darkMode ? "text-gray-400" : "text-gray-500"
+                    }`}
                 />
               </div>
               <input
@@ -320,11 +318,10 @@ const Gallery = () => {
                 placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className={`block w-full h-full pl-10 pr-3 py-2 rounded-lg border ${
-                  darkMode
+                className={`block w-full h-full pl-10 pr-3 py-2 rounded-lg border ${darkMode
                     ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
                     : "bg-white border-gray-300 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500"
-                }`}
+                  }`}
               />
             </div>
           </div>
@@ -341,19 +338,18 @@ const Gallery = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`shrink-0 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full transition-all whitespace-nowrap ${
-                    activeTab === tab
+                  className={`shrink-0 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full transition-all whitespace-nowrap ${activeTab === tab
                       ? "bg-blue-600 text-white shadow-md"
                       : darkMode
-                      ? "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                      : "bg-white text-gray-700 hover:bg-gray-100"
-                  }`}
+                        ? "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                        : "bg-white text-gray-700 hover:bg-gray-100"
+                    }`}
                 >
                   {tab === "all"
                     ? "All"
                     : window.innerWidth < 640
-                    ? tab.split(" ")[0]
-                    : tab}
+                      ? tab.split(" ")[0]
+                      : tab}
                 </button>
               ))}
             </div>
@@ -398,9 +394,8 @@ const Gallery = () => {
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className={`relative group overflow-hidden rounded-xl shadow-lg transition-transform duration-300 ${
-                darkMode ? "bg-gray-800" : "bg-white"
-              }`}
+              className={`relative group overflow-hidden rounded-xl shadow-lg transition-transform duration-300 ${darkMode ? "bg-gray-800" : "bg-white"
+                }`}
             >
               {/* Media container with consistent aspect ratio */}
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -442,11 +437,10 @@ const Gallery = () => {
                           e.stopPropagation();
                           toggleVideoPlay(item.id);
                         }}
-                        className={`p-2 sm:p-3 rounded-full backdrop-blur-sm ${
-                          videoStates[item.id]?.playing
+                        className={`p-2 sm:p-3 rounded-full backdrop-blur-sm ${videoStates[item.id]?.playing
                             ? "bg-black/30"
                             : "bg-black/50"
-                        }`}
+                          }`}
                       >
                         {videoStates[item.id]?.playing ? (
                           <Pause className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
@@ -470,21 +464,18 @@ const Gallery = () => {
 
               {/* Always visible caption for both images and videos */}
               <div
-                className={`p-3 sm:p-4 min-h-[72px] ${
-                  darkMode ? "bg-gray-800" : "bg-white"
-                }`}
+                className={`p-3 sm:p-4 min-h-[72px] ${darkMode ? "bg-gray-800" : "bg-white"
+                  }`}
               >
                 <h3
-                  className={`text-base sm:text-lg font-bold ${
-                    darkMode ? "text-white" : "text-gray-800"
-                  }`}
+                  className={`text-base sm:text-lg font-bold ${darkMode ? "text-white" : "text-gray-800"
+                    }`}
                 >
                   {item.name}
                 </h3>
                 <p
-                  className={`text-xs sm:text-sm ${
-                    darkMode ? "text-gray-300" : "text-gray-600"
-                  }`}
+                  className={`text-xs sm:text-sm ${darkMode ? "text-gray-300" : "text-gray-600"
+                    }`}
                 >
                   {item.category}
                 </p>
@@ -492,11 +483,10 @@ const Gallery = () => {
                   {item.tags.slice(0, 3).map((tag, i) => (
                     <span
                       key={i}
-                      className={`text-xs px-2 py-0.5 rounded-full ${
-                        darkMode
+                      className={`text-xs px-2 py-0.5 rounded-full ${darkMode
                           ? "bg-gray-700/80 text-gray-200"
                           : "bg-gray-100 text-gray-800"
-                      }`}
+                        }`}
                     >
                       {tag}
                     </span>
@@ -510,9 +500,8 @@ const Gallery = () => {
         {/* Empty state */}
         {filteredItems.length === 0 && (
           <div
-            className={`text-center py-16 sm:py-20 rounded-xl ${
-              darkMode ? "bg-gray-800/50" : "bg-white"
-            }`}
+            className={`text-center py-16 sm:py-20 rounded-xl ${darkMode ? "bg-gray-800/50" : "bg-white"
+              }`}
           >
             <div className="text-5xl mb-4">🧐</div>
             <h3 className="text-xl font-semibold mb-2">No projects found</h3>
@@ -525,9 +514,8 @@ const Gallery = () => {
         {/* Enhanced Lightbox Component */}
         {selectedMedia && (
           <div
-            className={`fixed inset-0 z-50 flex items-center justify-center p-4 ${
-              darkMode ? "bg-gray-900/95" : "bg-black/95"
-            } backdrop-blur-md transition-opacity duration-300`}
+            className={`fixed inset-0 z-50 flex items-center justify-center p-4 ${darkMode ? "bg-gray-900/95" : "bg-black/95"
+              } backdrop-blur-md transition-opacity duration-300`}
             onKeyDown={(e) => {
               if (e.key === "Escape") closeLightbox();
               if (e.key === "ArrowLeft") navigateLightbox("prev");
@@ -571,9 +559,8 @@ const Gallery = () => {
               )}
 
               <div
-                className={`transition-opacity duration-200 ${
-                  isLoading ? "opacity-0" : "opacity-100"
-                }`}
+                className={`transition-opacity duration-200 ${isLoading ? "opacity-0" : "opacity-100"
+                  }`}
               >
                 {selectedMedia.type === "image" ? (
                   <img
@@ -619,11 +606,10 @@ const Gallery = () => {
                   {selectedMedia.tags.slice(0, 3).map((tag, i) => (
                     <span
                       key={i}
-                      className={`text-xs px-2 py-0.5 rounded-full ${
-                        darkMode
+                      className={`text-xs px-2 py-0.5 rounded-full ${darkMode
                           ? "bg-gray-700/80 text-gray-200"
                           : "bg-gray-100 text-gray-800"
-                      }`}
+                        }`}
                     >
                       {tag}
                     </span>
