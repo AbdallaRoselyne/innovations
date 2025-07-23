@@ -512,7 +512,6 @@ const ElectricMobility = () => {
                   <div className="grid md:grid-cols-2 gap-10">
                     <div>
                       <div className="aspect-square bg-gradient-to-br from-blue-50 to-gray-100 rounded-xl p-8 flex items-center justify-center mb-8 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1716383219/grid-pattern_ml4s0d.png')] opacity-10"></div>
                         <img
                           src={selectedModel.image}
                           alt={selectedModel.name}
