@@ -31,7 +31,6 @@ const Gallery = () => {
       category: "Digital construction",
       src: "MyVideo_1_wutn7p",
       alt: "BIM AR Integration",
-      tags: ["VR", "prototype", "BIM"],
     },
     {
       id: 2,
@@ -40,7 +39,6 @@ const Gallery = () => {
       category: "Electric mobility",
       src: "electric-scooter_zozkiu.mp4",
       alt: "Electric scooter",
-      tags: ["scooter", "electric", "mobility"],
     },
     {
       id: 3,
@@ -49,7 +47,6 @@ const Gallery = () => {
       category: "Clean farming",
       src: "seedlings-2_jaz2aw.jpg",
       alt: "Clean Farming",
-      tags: ["vertical", "farming", "sustainable"],
     },
     {
       id: 4,
@@ -58,7 +55,6 @@ const Gallery = () => {
       category: "Digital construction",
       src: "Digital-Construction-Video_uy1bb0",
       alt: "Construction Video",
-      tags: ["BIM", "modeling", "construction"],
     },
     {
       id: 5,
@@ -67,7 +63,6 @@ const Gallery = () => {
       category: "Electric mobility",
       src: "Three_wheel_Scooter_kdsfdm.png",
       alt: "Electric Scooter",
-      tags: ["scooter", "electric", "prototype"],
     },
     {
       id: 6,
@@ -76,7 +71,6 @@ const Gallery = () => {
       category: "Clean farming",
       src: "vertical-farm_figzcd.jpg",
       alt: "Vertical indoor farm",
-      tags: ["container", "farming", "innovation"],
     },
     {
       id: 7,
@@ -85,7 +79,6 @@ const Gallery = () => {
       category: "Digital construction",
       src: "interactive_sq5pte.mp4",
       alt: "interactive user manuals",
-      tags: ["manuals", "interactive", "construction"],
     },
     {
       id: 8,
@@ -94,7 +87,6 @@ const Gallery = () => {
       category: "Electric mobility",
       src: "image_5_atsbxp.png",
       alt: "EV Prototype",
-      tags: ["prototype", "electric", "scooter"],
     },
     {
       id: 9,
@@ -103,7 +95,6 @@ const Gallery = () => {
       category: "Clean farming",
       src: "grow_lights_vnxg0c.jpg",
       alt: "Energy-efficient grow lights",
-      tags: ["grow lights", "LED", "farming"],
     },
     {
       id: 10,
@@ -112,7 +103,6 @@ const Gallery = () => {
       category: "Clean farming",
       src: "container_dfex3i.jpg",
       alt: "Electric Scooter Prototype",
-      tags: ["Container", "farming", "vegetables"],
     },
     {
       id: 11,
@@ -121,9 +111,7 @@ const Gallery = () => {
       category: "Electric mobility",
       src: "Mountain_Scooter_ygvfzb.png",
       alt: "Model 003",
-      tags: ["scooter", "electric", "prototype"],
     },
-
     {
       id: 12,
       type: "image",
@@ -131,7 +119,6 @@ const Gallery = () => {
       category: "Electric mobility",
       src: "Kids_Scooter-B1_bh2b9s.png",
       alt: "Model 004",
-      tags: ["scooter", "electric", "prototype"],
     },
     {
       id: 15,
@@ -140,7 +127,6 @@ const Gallery = () => {
       category: "Electric mobility",
       src: "image_6_jmalij.png",
       alt: "Model 005",
-      tags: ["scooter", "electric", "prototype"],
     },
     {
       id: 16,
@@ -149,7 +135,6 @@ const Gallery = () => {
       category: "Clean farming",
       src: "mbc_otopp9.mp4",
       alt: "MBC video",
-      tags: ["Container farming", "Vegetables", "MBC", "Mauritius"],
     },
     {
       id: 17,
@@ -158,7 +143,6 @@ const Gallery = () => {
       category: "Clean farming",
       src: "salad2_pjypkj.jpg",
       alt: "A bowl of fresh salad mix",
-      tags: ["salad", "fresh", "sustainable"],
     },
     {
       id: 18,
@@ -167,7 +151,6 @@ const Gallery = () => {
       category: "Clean farming",
       src: "salad_c3msns.jpg",
       alt: "A bowl of fresh salad mix",
-      tags: ["salad", "fresh", "sustainable"],
     },
   ];
 
@@ -506,20 +489,6 @@ const Gallery = () => {
                 >
                   {item.category}
                 </p>
-                <div className="flex flex-wrap gap-1 mt-1">
-                  {item.tags.slice(0, 3).map((tag, i) => (
-                    <span
-                      key={i}
-                      className={`text-xs px-2 py-0.5 rounded-full ${
-                        darkMode
-                          ? "bg-gray-700/80 text-gray-200"
-                          : "bg-gray-100 text-gray-800"
-                      }`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}
@@ -633,25 +602,6 @@ const Gallery = () => {
                 <p className="text-sm md:text-base text-gray-300 mb-2 drop-shadow-md">
                   {selectedMedia.category}
                 </p>
-                <div className="flex flex-wrap justify-center gap-1">
-                  {selectedMedia.tags.slice(0, 3).map((tag, i) => (
-                    <span
-                      key={i}
-                      className={`text-xs px-2 py-0.5 rounded-full ${
-                        darkMode
-                          ? "bg-gray-700/80 text-gray-200"
-                          : "bg-gray-100 text-gray-800"
-                      }`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                  {selectedMedia.tags.length > 3 && (
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-white/20 text-white">
-                      +{selectedMedia.tags.length - 3}
-                    </span>
-                  )}
-                </div>
               </div>
             </div>
           </div>
