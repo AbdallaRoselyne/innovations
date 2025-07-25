@@ -15,9 +15,7 @@ import {
 const NewsPage = () => {
   const location = useLocation();
   const [selectedNews, setSelectedNews] = useState(null);
-  
 
-  // Sample news data with Cloudinary URLs
   const newsArticles = [
     {
       id: 1,
@@ -38,7 +36,7 @@ const NewsPage = () => {
         <p class="text-gray-700 leading-relaxed">Prodesign Innovation plans to begin pilot programs with select partners in the coming months, with broader commercial availability expected by next year.</p>
       `,
       images: [
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922693/1000018469_tbfpxr.jpg",
+        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1753419504/salad2_pjypkj.jpg",
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922695/1000018453_oyh3v0.jpg",
       ],
       date: "2024-03-15",
@@ -207,7 +205,6 @@ const NewsPage = () => {
 
           <main className="flex-grow">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-              {/* Back button */}
               <button
                 onClick={handleBackToNews}
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8 transition-colors duration-200 group"
@@ -219,7 +216,6 @@ const NewsPage = () => {
                 All News
               </button>
 
-              {/* Article header */}
               <div className="mb-12">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
                   <div className="flex items-center">
@@ -242,17 +238,18 @@ const NewsPage = () => {
                   {selectedNews.title}
                 </h1>
 
-                {/* Featured image */}
                 <div className="mb-12 rounded-xl overflow-hidden shadow-xl">
-                  <img
-                    src={selectedNews.images[0]}
-                    alt={selectedNews.title}
-                    className="w-full h-auto object-cover"
-                  />
+                  <div className="relative aspect-video w-full">
+                    <img
+                      src={selectedNews.images[0]}
+                      alt={selectedNews.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* Article content */}
               <div className="flex flex-col lg:flex-row gap-12">
                 <div className="w-full lg:w-2/3">
                   <div className="prose prose-lg max-w-none">
@@ -262,16 +259,17 @@ const NewsPage = () => {
                     />
                   </div>
 
-                  {/* Secondary image */}
                   <div className="mt-12 rounded-xl overflow-hidden shadow-lg">
-                    <img
-                      src={selectedNews.images[1]}
-                      alt={`${selectedNews.title} details`}
-                      className="w-full h-auto object-cover"
-                    />
+                    <div className="relative aspect-video w-full">
+                      <img
+                        src={selectedNews.images[1]}
+                        alt={`${selectedNews.title} details`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
 
-                  {/* Related articles */}
                   <div className="mt-16">
                     <h3 className="text-2xl font-bold text-gray-900 mb-6">
                       More News
@@ -286,11 +284,12 @@ const NewsPage = () => {
                             className="cursor-pointer group"
                             onClick={() => handleNewsClick(article)}
                           >
-                            <div className="rounded-lg overflow-hidden mb-3">
+                            <div className="rounded-lg overflow-hidden mb-3 aspect-video">
                               <img
                                 src={article.images[0]}
                                 alt={article.title}
-                                className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                loading="lazy"
                               />
                             </div>
                             <div className="flex items-center text-xs text-gray-500 mb-1">
@@ -307,7 +306,6 @@ const NewsPage = () => {
                   </div>
                 </div>
 
-                {/* Sidebar - Recent news */}
                 <div className="w-full lg:w-1/3">
                   <div className="bg-gray-50 p-6 rounded-xl sticky top-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-6">
@@ -325,11 +323,14 @@ const NewsPage = () => {
                           >
                             <div className="flex items-start">
                               <div className="flex-shrink-0 mr-4">
-                                <img
-                                  src={article.images[0]}
-                                  alt={article.title}
-                                  className="w-16 h-16 object-cover rounded-lg"
-                                />
+                                <div className="w-16 h-16 relative rounded-lg overflow-hidden">
+                                  <img
+                                    src={article.images[0]}
+                                    alt={article.title}
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                  />
+                                </div>
                               </div>
                               <div>
                                 <div className="text-xs text-gray-500 mb-1">
@@ -371,14 +372,16 @@ const NewsPage = () => {
         <div className="pt-20 lg:pt-24"></div>
 
         <main className="flex-grow">
-          {/* Hero section with background image */}
           <div className="relative">
             <div className="absolute inset-0 bg-black/50 z-0"></div>
-            <img
-              src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1748494528/samples/ecommerce/analog-classic.jpg"
-              alt="Innovation background"
-              className="absolute inset-0 w-full h-full object-cover z-0"
-            />
+            <div className="absolute inset-0 w-full h-full">
+              <img
+                src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1748494528/samples/ecommerce/analog-classic.jpg"
+                alt="Innovation background"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
               <div className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full p-6 mb-8 border border-white/20">
                 <FontAwesomeIcon
@@ -396,18 +399,18 @@ const NewsPage = () => {
             </div>
           </div>
 
-          {/* Featured article */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20">
             <div
               className="bg-white rounded-xl shadow-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
               onClick={() => handleNewsClick(newsArticles[0])}
             >
               <div className="md:flex">
-                <div className="md:w-2/3">
+                <div className="md:w-2/3 relative aspect-video">
                   <img
                     src={newsArticles[0].images[0]}
                     alt={newsArticles[0].title}
-                    className="w-800 h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-8 md:w-1/3">
@@ -434,7 +437,6 @@ const NewsPage = () => {
             </div>
           </div>
 
-          {/* News grid */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="flex justify-between items-center mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
@@ -449,17 +451,16 @@ const NewsPage = () => {
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden group"
                   onClick={() => handleNewsClick(article)}
                 >
-                  {/* Card image */}
-                  <div className="relative overflow-hidden h-48">
+                  <div className="relative aspect-video overflow-hidden">
                     <img
                       src={article.images[0]}
                       alt={article.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                   </div>
 
-                  {/* Card content */}
                   <div className="p-6">
                     <div className="flex items-center text-xs text-gray-500 mb-3">
                       <span>{formatDate(article.date)}</span>
@@ -487,7 +488,6 @@ const NewsPage = () => {
               ))}
             </div>
 
-            {/* Load more button */}
             <div className="mt-16 text-center">
               <button className="bg-white border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 font-medium shadow-sm hover:shadow-md">
                 View More Articles
@@ -495,7 +495,6 @@ const NewsPage = () => {
             </div>
           </div>
 
-          {/* Highlight section */}
           <div className="bg-gray-50 py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
