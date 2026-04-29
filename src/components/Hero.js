@@ -26,7 +26,7 @@ const Hero = () => {
     >
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src={`${CLOUDINARY_URL}/video/upload/q_auto/shutterstock_a0tog9.mp4`}
+        src={`${CLOUDINARY_URL}/video/upload/q_auto/f_auto/shutterstock_8799457_xjje0b.mp4`}
         autoPlay
         muted
         loop
