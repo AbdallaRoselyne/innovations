@@ -21,7 +21,7 @@ const ElectricMobility = () => {
       title: "Model 001",
       tagline: "Safe. Stylish. Built for Fun.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922690/Three_wheel_Scooter_kdsfdm.png",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777381841/Mountain_Scooter_cnapg0.png",
       detailImages: [
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922693/1000018469_tbfpxr.jpg",
         "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922695/1000018453_oyh3v0.jpg",
