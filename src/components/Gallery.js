@@ -29,7 +29,7 @@ const Gallery = () => {
       type: "video",
       name: "BIM Integration with Augmented Reality",
       category: "Digital construction",
-      src: "MyVideo_1_wutn7p",
+      src: "MyVideo_1_wutn7p_oo7i5x.mp4",
       alt: "BIM AR Integration",
     },
     {
@@ -37,7 +37,7 @@ const Gallery = () => {
       type: "video",
       name: "Electrical Scooter Video",
       category: "Electric mobility",
-      src: "electric-scooter_zozkiu.mp4",
+      src: "Electric_Scooter-Video_kyl5bx.mp4",
       alt: "Electric scooter",
     },
     {
@@ -45,7 +45,7 @@ const Gallery = () => {
       type: "image",
       name: "Seedlings in Vertical Indoor Farm",
       category: "Clean farming",
-      src: "1000018434_meyukq_o9c1zd.jpg",
+      src: "IMG_20220830_145252_b8vifx.jpg",
       alt: "Clean Farming",
     },
     {
@@ -53,7 +53,7 @@ const Gallery = () => {
       type: "video",
       name: "Automated BIM Coordination & Compliance",
       category: "Digital construction",
-      src: "Digital-Construction-Video_uy1bb0",
+      src: "Digital-Construction-Video_uy1bb0_p5vc5o.mp4",
       alt: "Construction Video",
     },
     {
@@ -61,7 +61,7 @@ const Gallery = () => {
       type: "image",
       name: "Model 001",
       category: "Electric mobility",
-      src: "Three_wheel_Scooter_kdsfdm.png",
+      src: "Three_wheel_Scooter_veojut.png",
       alt: "Electric Scooter",
     },
     {
@@ -69,7 +69,7 @@ const Gallery = () => {
       type: "image",
       name: "Vertical Indoor Farm",
       category: "Clean farming",
-      src: "vertical-farm_figzcd.jpg",
+      src: "vertical-farm_figzcd_zbuey0.jpg",
       alt: "Vertical indoor farm",
     },
     {
@@ -77,7 +77,7 @@ const Gallery = () => {
       type: "video",
       name: "Interactive User Manuals",
       category: "Digital construction",
-      src: "interactive_sq5pte.mp4",
+      src: "interactive_sq5pte_ytpqey.mp4",
       alt: "interactive user manuals",
     },
     {
@@ -85,7 +85,7 @@ const Gallery = () => {
       type: "image",
       name: "Model 002",
       category: "Electric mobility",
-      src: "image_5_atsbxp.png",
+      src: "Adult_Scooter_gfqbpd.png",
       alt: "EV Prototype",
     },
     {
@@ -93,7 +93,7 @@ const Gallery = () => {
       type: "image",
       name: "Energy-Efficient Grow Lighting",
       category: "Clean farming",
-      src: "grow_lights_vnxg0c.jpg",
+      src: "IMG_9113_sgzxwe.jpg",
       alt: "Energy-efficient grow lights",
     },
     {
@@ -101,15 +101,15 @@ const Gallery = () => {
       type: "image",
       name: "Automated Container Farm",
       category: "Clean farming",
-      src: "container_dfex3i.jpg",
-      alt: "Electric Scooter Prototype",
+      src: "container_t2umio_trfl7t.jpg",
+      alt: "Automated Container Farm",
     },
     {
       id: 11,
       type: "image",
       name: "Model 003",
       category: "Electric mobility",
-      src: "Mountain_Scooter_ygvfzb.png",
+      src: "Mountain_Scooter_cnapg0.png",
       alt: "Model 003",
     },
     {
@@ -117,7 +117,7 @@ const Gallery = () => {
       type: "image",
       name: "Model 004",
       category: "Electric mobility",
-      src: "Kids_Scooter-B1_bh2b9s.png",
+      src: "Kids_Scooter-B1_ypjuwb.png",
       alt: "Model 004",
     },
     {
@@ -125,7 +125,7 @@ const Gallery = () => {
       type: "image",
       name: "Model 005",
       category: "Electric mobility",
-      src: "image_6_jmalij.png",
+      src: "Kids_Scooter-B3_srtkjx.png",
       alt: "Model 005",
     },
     {
@@ -133,7 +133,7 @@ const Gallery = () => {
       type: "video",
       name: "MBC video on Container Farming",
       category: "Clean farming",
-      src: "mbc_otopp9.mp4",
+      src: "mbc_otopp9_utou7g.mp4",
       alt: "MBC video",
     },
     {
@@ -141,7 +141,7 @@ const Gallery = () => {
       type: "image",
       name: "A bowl of fresh salad mix featuring Swiss Chard,Leaf Beet ‘Bull’s Blood,’ Green Mizuna, and more - sustainably grown from our Container Farming",
       category: "Clean farming",
-      src: "salad2_pjypkj.jpg",
+      src: "salad2_pjypkj_fdjd2n.jpg",
       alt: "A bowl of fresh salad mix",
     },
     {
@@ -149,7 +149,7 @@ const Gallery = () => {
       type: "image",
       name: "A fresh salad mix cultivated in our container farm featuring Swiss Chard, Red Komatsuna, Lettuce Red Salad and more",
       category: "Clean farming",
-      src: "salad_c3msns.jpg",
+      src: "salad_c3msns_tpfimh.jpg",
       alt: "A bowl of fresh salad mix",
     },
     {
@@ -157,7 +157,7 @@ const Gallery = () => {
       type: "image",
       name: "Bowl of salad mix - Chef choice harvested from our Container Farming",
       category: "Clean farming",
-      src: "Chef_Choice_hqhgqi.png",
+      src: "Chef_Choice_hqhgqi_ju5b6j.png",
       alt: "A bowl of fresh salad mix",
     },
     {
@@ -165,7 +165,7 @@ const Gallery = () => {
       type: "image",
       name: "Bowl of salad mix - Ruby Fusion harvested from our Container Farming",
       category: "Clean farming",
-      src: "Ruby_Fusion_vapaxl.png",
+      src: "Ruby_Fusion_vapaxl_mswuge.png",
       alt: "A bowl of fresh salad mix",
     },
     {
@@ -173,7 +173,7 @@ const Gallery = () => {
       type: "image",
       name: "Bowl of salad mix - Everyday balance harvested from our Container Farming",
       category: "Clean farming",
-      src: "Everyday_balance_izmglm.png",
+      src: "Everyday_balance_izmglm_tkfxva.png",
       alt: "A bowl of fresh salad mix",
     },
     {
@@ -181,7 +181,7 @@ const Gallery = () => {
       type: "image",
       name: "Bowl of salad mix - Crunch Curl harvested from our Container Farming",
       category: "Clean farming",
-      src: "Crunch_curl_dz8l7z.png",
+      src: "Crunch_curl_dz8l7z_cpd5r9.png",
       alt: "A bowl of fresh salad mix",
     },
   ];
