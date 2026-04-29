@@ -35,7 +35,7 @@ const DigitalConstruction = () => {
           "We've successfully demonstrated how Building Information Modelling (BIM) can be integrated with Augmented Reality (AR) to enhance construction accuracy—especially in complex, services-dense environments like plant rooms. By superimposing BIM models directly onto real-world spaces through AR, contractors can visualise the exact installation layout before any work begins.",
         icon: faVrCardboard,
         image:
-          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495142/VR_zoxeil.jpg",
+          "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777440778/VR_zoxeil_chj4jk.jpg",
         color: "bg-purple-500",
         benefits: [
           "Millimetre-level precision during installation",
@@ -54,7 +54,7 @@ const DigitalConstruction = () => {
           "We are developing a rule-based automation engine that enhances BIM coordination by embedding code compliance and clash detection into the design process. Our system can automatically verify fire safety requirements, detect design conflicts, and flag non-compliant layouts—all within the BIM environment.",
         icon: faCode,
         image:
-          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750678520/Clash-detection_k1yzvb.png",
+          "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777440314/Clash_detection_tv2w0i.png",
         color: "bg-prodesign-blue",
         benefits: [
           "Accelerate design approvals",
@@ -73,7 +73,7 @@ const DigitalConstruction = () => {
           "We are developing a construction-focused digital twin framework to improve how buildings are designed, constructed, and managed throughout their lifecycle. This initiative is co-funded by the Mauritius Research and Innovation Council (MRIC) and aims to bridge the gap between virtual planning and physical performance.",
         icon: faProjectDiagram,
         image:
-          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495141/prototype_jnqj9y.png",
+          "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777440778/prototype_jnqj9y_awbwnm.png",
         color: "bg-green-500",
         benefits: [
           "Enhanced decision-making during construction",
@@ -91,7 +91,7 @@ const DigitalConstruction = () => {
           "We're building a digital procurement platform tailored to the construction industry—designed to streamline sourcing, improve transparency, and create new business opportunities for contractors and suppliers.",
         icon: faShoppingCart,
         image:
-          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748867506/ibid_a92qfm.png",
+          "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777437989/MicrosoftTeams-image_4_qgpvpu.png",
         color: "bg-rose-500",
         benefits: [
           "Browse and compare suppliers in real-time",
@@ -110,7 +110,7 @@ const DigitalConstruction = () => {
           "We have produced an interactive user guide for building owners. This guide is easy to use and contains information on how to operate and maintain installation through an interactive web browser.",
         icon: faBookOpen,
         image:
-          "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750678133/interactive_vst5ht.png",
+          "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777440778/interactive_vst5ht_mvshej.png",
         color: "bg-amber-500",
         benefits: [
           "Easy-to-use interactive interface",
