@@ -45,7 +45,7 @@ const Gallery = () => {
       type: "image",
       name: "Seedlings in Vertical Indoor Farm",
       category: "Clean farming",
-      src: "seedlings-2_jaz2aw.jpg",
+      src: "1000018434_meyukq_o9c1zd.jpg",
       alt: "Clean Farming",
     },
     {
