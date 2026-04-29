@@ -210,7 +210,7 @@ const AboutUs = () => {
           {/* Background Image - Full width */}
           <div className="absolute inset-0 z-0">
             <img
-              src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1751542901/aboutus_2_olqoq7.png"
+              src="https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777440314/3d_logo_-_Website_Innovation_draq4q.png"
               alt="Background"
               className="w-full h-full object-cover"
             />
