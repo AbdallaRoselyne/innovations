@@ -36,8 +36,8 @@ const NewsPage = () => {
         <p class="text-gray-700 leading-relaxed">Prodesign Innovation plans to begin pilot programs with select partners in the coming months, with broader commercial availability expected by next year.</p>
       `,
       images: [
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1753419504/salad2_pjypkj.jpg",
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922695/1000018453_oyh3v0.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777449040/salad2_pjypkj_fdjd2n.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777442790/1000018453_oyh3v0_rgv5v8.jpg",
       ],
       date: "2024-03-15",
       readTime: "5 min read",
@@ -247,7 +247,7 @@ const NewsPage = () => {
             <div className="absolute inset-0 bg-black/50 z-0"></div>
             <div className="absolute inset-0 w-full h-full">
               <img
-                src="https://res.cloudinary.com/dbhnlfdva/image/upload/v1748494528/samples/ecommerce/analog-classic.jpg"
+                src="https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777449039/analog-classic_wyk1dt.jpg"
                 alt="Innovation background"
                 className="w-full h-full object-cover"
                 loading="lazy"
