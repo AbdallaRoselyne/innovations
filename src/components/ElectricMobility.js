@@ -21,11 +21,11 @@ const ElectricMobility = () => {
       title: "Model 001",
       tagline: "Safe. Stylish. Built for Fun.",
       image:
-        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777381841/Mountain_Scooter_cnapg0.png",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777437580/Three_wheel_Scooter_veojut.png",
       detailImages: [
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922693/1000018469_tbfpxr.jpg",
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922695/1000018453_oyh3v0.jpg",
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922692/1000018456_bqhebv.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777442778/1000018469_tbfpxr_u0bzjw.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777442790/1000018453_oyh3v0_rgv5v8.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777442778/1000018456_bqhebv_naxwt3.jpg",
       ],
     },
     {
@@ -33,11 +33,11 @@ const ElectricMobility = () => {
       title: "Model 002",
       tagline: "Strong. Smooth. Built to Go Further.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931216/image_5_atsbxp.png",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777437580/Adult_Scooter_gfqbpd.png",
       detailImages: [
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922690/1000018434_meyukq.jpg",
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922692/1000018419_tebab2.jpg",
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931088/image_s5f0bl.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777443118/1000018434_meyukq_o9c1zd.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777443118/1000018419_tebab2_vgxcaj.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777443117/image_s5f0bl_qac732.jpg",
       ],
     },
     {
@@ -45,11 +45,11 @@ const ElectricMobility = () => {
       title: "Model 003",
       tagline: "Rugged. Reinforced. Ready for Adventure.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750933269/Mountain_Scooter_ygvfzb.png",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777381841/Mountain_Scooter_cnapg0.png",
       detailImages: [
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922692/1000018575_egu2hw.jpg",
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922697/1000018578_g81k9z.jpg",
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922691/1000018579_savpdl.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777443396/1000018575_egu2hw_ali5x4.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777443397/1000018578_g81k9z_jcisun.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777443395/1000018579_savpdl_qc0nnd.jpg",
       ],
     },
     {
@@ -57,9 +57,9 @@ const ElectricMobility = () => {
       title: "Model 004",
       tagline: "Compact. Safe. Ready to Ride.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922688/Kids_Scooter-B1_bh2b9s.png",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777437576/Kids_Scooter-B1_ypjuwb.png",
       detailImages: [
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750922688/Kids_Scooter-B1_bh2b9s.png",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777437576/Kids_Scooter-B1_ypjuwb.png",
       ],
     },
     {
@@ -67,9 +67,9 @@ const ElectricMobility = () => {
       title: "Model 005",
       tagline: "Gentle Power. Confident Starts. Kid-Friendly Design.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931467/image_6_jmalij.png",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777437577/Kids_Scooter-B3_srtkjx.png",
       detailImages: [
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1750931467/image_6_jmalij.png",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777437577/Kids_Scooter-B3_srtkjx.png",
       ],
     },
   ];
@@ -259,7 +259,7 @@ const ElectricMobility = () => {
         className="relative h-screen bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/dbhnlfdva/image/upload/v1750675949/hero_2_vmxjx6.png')",
+            "url('https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777440315/Electric_scooter_section_zjwxy3.png')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent"></div>
