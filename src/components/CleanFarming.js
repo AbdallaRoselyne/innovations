@@ -28,7 +28,7 @@ const CleanFarming = () => {
       description:
         "Developed with support from the Mauritius Research and Innovation Council (MRIC), our vertical indoor farm is a high-performance, precision-controlled solution for growing baby leaves and microgreens—without soil, pesticides, or excess water. At its core is a custom-designed horticultural lighting system, engineered to deliver targeted light spectra that optimise plant growth and energy efficiency.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495156/vertical-farm_figzcd.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777447202/vertical-farm_figzcd_zbuey0.jpg",
       tags: ["Engineered lighting", "Scalable", "Optimised growth"],
       icon: faSeedling,
       features: [
@@ -45,7 +45,7 @@ const CleanFarming = () => {
       description:
         "Our containerised farm is a fully integrated, IoT-connected growing system designed for rapid deployment and remote monitoring. Unlike mass-produced alternatives, every element has been engineered for performance, durability, and plant health—from custom-designed LED lighting and precision nutrient control to automated irrigation and real-time data analytics.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495158/container_t2umio.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777447204/container_t2umio_trfl7t.jpg",
       tags: ["Smart farming", "Data driven", "High profitability"],
       icon: faBoxOpen,
       features: [
@@ -62,7 +62,7 @@ const CleanFarming = () => {
       description:
         "Most indoor farms rely on generic, mass-produced LEDs that aren't optimized for plant growth—leading to poor yields and wasted energy. At Prodesign Innovation, we’ve spent over two years studying plant responses to light through photomorphogenesis, the science of how light shapes plant development. We've tested different LED colour combinations, tracked growth under various wavelengths and intensities, and fine-tuned lighting based on how plants react to timing and environmental shifts. Instead of just using LEDs, we design lighting systems that give plants exactly what they need to thrive.",
       image:
-        "https://res.cloudinary.com/dbhnlfdva/image/upload/v1748495156/grow_lights_vnxg0c.jpg",
+        "https://res.cloudinary.com/dxn2hjf3e/image/upload/v1777440318/IMG_9113_sgzxwe.jpg",
       tags: ["Optimised spectrum", "High efficiency", "Long life"],
       icon: faLightbulb,
       features: [
