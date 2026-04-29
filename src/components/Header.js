@@ -101,7 +101,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <RouterLink to="/">
               <img
-                src={`${CLOUDINARY_URL}/image/upload/f_auto,q_auto/logo_kfzpbo.png`}
+                src={`${CLOUDINARY_URL}/image/upload/f_auto,q_auto/f_auto/PDI_-_Logo_ysrk3r.png`}
                 alt="Prodesign Innovation"
                 className={`object-contain transition-all duration-500 ${
                   scrolled ? "h-16 md:h-20" : "h-20 md:h-24"
